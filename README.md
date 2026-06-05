@@ -120,4 +120,4 @@ uv run --with playwright python <skill>/scripts/verify.py --dir .
 
 ---
 
-<sub>以 <a href="https://claude.com/claude-code">Claude Code</a> 的 <code>lazy-data2web</code> 工作流建置 · 純靜態 · Material Design 3。</sub>
+<sub>純靜態網站 · Material Design 3。</sub>

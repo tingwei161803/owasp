@@ -17,8 +17,8 @@ window.SITE_META = {
     "zh": "十一個 OWASP 旗艦專案的詳盡雙語導覽。"
   },
   "footer": {
-    "en": "Unofficial educational guide · content © OWASP under each project's own license · built with lazy-data2web (static, no build).",
-    "zh": "非官方教育用導覽 · 內容著作權屬 OWASP,依各專案授權條款 · 以 lazy-data2web 建置(純靜態、無建置流程)。"
+    "en": "Unofficial educational guide · content © OWASP under each project's own license.",
+    "zh": "非官方教育用導覽 · 內容著作權屬 OWASP,依各專案授權條款。"
   }
 };
 
