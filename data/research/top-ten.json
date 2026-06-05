@@ -1,0 +1,252 @@
+{
+  "slug": "top-ten",
+  "category": "guide",
+  "icon": "format_list_numbered",
+  "title": {
+    "en": "OWASP Top 10",
+    "zh": "OWASP Top 10"
+  },
+  "subtitle": {
+    "en": "The data-driven awareness list of the ten most critical web application security risks.",
+    "zh": "以資料驅動的十大網頁應用程式安全風險意識清單。"
+  },
+  "tags": ["web", "appsec", "awareness", "risks", "cwe", "guide"],
+  "meta": {
+    "type": {
+      "en": "Awareness document",
+      "zh": "意識文件"
+    },
+    "latest": {
+      "en": "Top 10:2025",
+      "zh": "Top 10:2025"
+    },
+    "audience": {
+      "en": "Developers, AppSec engineers, security architects, and management",
+      "zh": "開發人員、應用程式安全工程師、資安架構師與管理階層"
+    },
+    "format": {
+      "en": "Web pages + PDF + slides, with many community translations",
+      "zh": "網頁 + PDF + 簡報,並有眾多社群翻譯版本"
+    },
+    "license": "CC BY-SA 4.0",
+    "url": "https://owasp.org/www-project-top-ten/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "heading": {
+        "en": "Overview",
+        "zh": "概覽"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "The OWASP Top 10 is a standard awareness document that represents a broad consensus about the most critical security risks to web applications. First published in 2003, it has become the de facto starting point for application security worldwide and is referenced by standards, procurement requirements, and developer training programs across the industry.",
+            "zh": "OWASP Top 10 是一份標準意識文件,呈現業界對網頁應用程式最關鍵安全風險的廣泛共識。它自 2003 年首次發布以來,已成為全球應用程式安全事實上的起點,並被各類標準、採購需求與開發人員訓練課程廣泛引用。"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "The most current edition is OWASP Top 10:2025, whose final version was released in January 2026 after being announced at the OWASP Global AppSec conference in Washington, D.C. in November 2025. It supersedes the long-standing 2021 edition and introduces two brand-new risk categories alongside several re-rankings and renames.",
+            "zh": "最新版本為 OWASP Top 10:2025,於 2025 年 11 月在華盛頓特區舉行的 OWASP Global AppSec 大會上公布,並於 2026 年 1 月發布正式版。它取代了沿用多年的 2021 版,並新增兩個全新風險類別,同時調整了多個排名與名稱。"
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "The OWASP Top 10 is an awareness document, not a formal certifiable standard — it tells you where to focus, not exactly how to comply.",
+            "zh": "OWASP Top 10 是一份意識文件,而非可認證的正式標準——它告訴你該把重點放在哪裡,而不是該如何逐條稽核合規。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "heading": {
+        "en": "The Top 10:2025 Categories",
+        "zh": "Top 10:2025 風險類別"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Each category is identified by a stable code (A01:2025 through A10:2025) and groups together many related Common Weakness Enumeration (CWE) entries that share a common root cause.",
+            "zh": "每個類別都以固定代碼標示(A01:2025 至 A10:2025),並將多個具有相同根本原因的相關 CWE(通用弱點列舉)歸納在一起。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "A01:2025 – Broken Access Control — Users can act outside their intended permissions; now also absorbs Server-Side Request Forgery (SSRF).",
+              "A02:2025 – Security Misconfiguration — Insecure default settings, verbose errors, and improperly hardened systems; risen from #5 in 2021.",
+              "A03:2025 – Software Supply Chain Failures — NEW: compromises in building, distributing, or updating software, broadening the old vulnerable-components category.",
+              "A04:2025 – Cryptographic Failures — Missing, weak, or misused cryptography that exposes sensitive data and keys.",
+              "A05:2025 – Injection — Untrusted input alters commands or queries (SQL, OS, LDAP, and Cross-Site Scripting); fell from #3.",
+              "A06:2025 – Insecure Design — Missing or ineffective security controls baked into the architecture and design.",
+              "A07:2025 – Authentication Failures — Broken identity verification, session management, and credential handling; renamed from Identification and Authentication Failures.",
+              "A08:2025 – Software or Data Integrity Failures — Code and data trusted without integrity verification, including insecure deserialization and CI/CD pipelines.",
+              "A09:2025 – Security Logging & Alerting Failures — Insufficient logging, detection, and alerting that delays incident response.",
+              "A10:2025 – Mishandling of Exceptional Conditions — NEW: improper error handling, failing open, and logic errors arising from abnormal conditions."
+            ],
+            "zh": [
+              "A01:2025 – 權限控制失效(Broken Access Control)——使用者得以超出其授權範圍行動;現也納入伺服器端請求偽造(SSRF)。",
+              "A02:2025 – 安全設定錯誤(Security Misconfiguration)——不安全的預設值、過於詳盡的錯誤訊息與未妥善強化的系統;由 2021 年的第 5 名上升。",
+              "A03:2025 – 軟體供應鏈失效(Software Supply Chain Failures)——全新類別:軟體建置、散布或更新過程中遭破壞,擴大了舊有的脆弱元件類別。",
+              "A04:2025 – 加密機制失效(Cryptographic Failures)——缺乏、過弱或誤用加密,導致敏感資料與金鑰外洩。",
+              "A05:2025 – 注入攻擊(Injection)——不受信任的輸入竄改指令或查詢(SQL、OS、LDAP 及跨網站指令碼 XSS);由第 3 名下滑。",
+              "A06:2025 – 不安全設計(Insecure Design)——架構與設計階段缺少或失效的安全控制。",
+              "A07:2025 – 身分驗證失效(Authentication Failures)——身分驗證、工作階段管理與憑證處理失當;由「識別與驗證失效」更名而來。",
+              "A08:2025 – 軟體與資料完整性失效(Software or Data Integrity Failures)——未經完整性驗證即信任程式碼與資料,包含不安全的反序列化與 CI/CD 管線。",
+              "A09:2025 – 安全記錄與警示失效(Security Logging & Alerting Failures)——記錄、偵測與警示不足,拖延事件應變。",
+              "A10:2025 – 例外狀況處理不當(Mishandling of Exceptional Conditions)——全新類別:不當的錯誤處理、失敗時開放(failing open)與異常情況衍生的邏輯錯誤。"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "methodology",
+      "heading": {
+        "en": "How the List Is Built",
+        "zh": "清單如何建構"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "The Top 10 is data-driven. For 2025, OWASP analyzed testing data from 13 contributing organizations covering more than 2.8 million applications, mapping roughly 220,000 CVEs onto 643 unique CWEs — a major expansion over the ~400 CWEs considered in 2021.",
+            "zh": "Top 10 是資料驅動的。2025 版中,OWASP 分析了 13 個貢獻組織、涵蓋逾 280 萬個應用程式的測試資料,將約 22 萬筆 CVE 對應到 643 個獨特的 CWE——相較 2021 年約 400 個 CWE 大幅擴增。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "Eight of the ten categories are selected directly from the contributed vulnerability data, ranked by incidence and weighted with CVSS exploitability and impact scores.",
+              "Two slots are reserved for a community survey, capturing emerging risks that historical scan data cannot yet show — this is how forward-looking categories like Insecure Design enter the list.",
+              "Related CWEs are clustered by root cause rather than symptom, with categories capped at about 40 CWEs each to keep guidance actionable.",
+              "Contributors to the 2025 data set included vendors such as Veracode, Contrast Security, and Semgrep, supplying both human-assisted and tooling-derived results."
+            ],
+            "zh": [
+              "十個類別中有八個直接自貢獻的弱點資料挑選,依出現頻率排名,並以 CVSS 的可利用性與衝擊分數加權。",
+              "另保留兩個名額給社群問卷調查,用以捕捉歷史掃描資料尚無法呈現的新興風險——這也是「不安全設計」等前瞻性類別納入清單的途徑。",
+              "相關 CWE 依根本原因(而非表面症狀)分群,每個類別上限約 40 個 CWE,以維持指引的可執行性。",
+              "2025 版資料貢獻者包含 Veracode、Contrast Security 與 Semgrep 等廠商,提供人工輔助與工具產出的結果。"
+            ]
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Because the data always looks backward, OWASP explicitly combines it with the survey so the list reflects both measured prevalence and the judgement of practitioners about where the field is heading.",
+            "zh": "由於資料本質上是回顧過去,OWASP 刻意結合問卷調查,使清單同時反映可量測的普遍程度,以及實務工作者對領域未來走向的判斷。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "heading": {
+        "en": "How to Use It",
+        "zh": "如何運用"
+      },
+      "blocks": [
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "Treat it as a prioritized awareness baseline, not a complete checklist — use the OWASP Application Security Verification Standard (ASVS) when you need testable requirements.",
+              "Map your threat modeling, code review, and pentest findings to the ten categories so risk is communicated in a shared vocabulary.",
+              "Drive secure-coding training and developer onboarding from the categories, pairing each with concrete prevention guidance and CWE references.",
+              "Use it in CI/CD gates and vendor assessments, but pair it with deeper standards rather than treating Top 10 'coverage' as proof of security.",
+              "Reference the per-category pages for prevention tips, example attack scenarios, and the mapped CWE list."
+            ],
+            "zh": [
+              "將其視為排序過的意識基準,而非完整檢核表——需要可測試的要求時,請改用 OWASP 應用程式安全驗證標準(ASVS)。",
+              "將威脅建模、程式碼審查與滲透測試的發現對應到這十個類別,以共通詞彙溝通風險。",
+              "以這些類別驅動安全程式設計訓練與開發人員上手流程,並為每項搭配具體防護指引與 CWE 參照。",
+              "可用於 CI/CD 關卡與廠商評估,但應搭配更深入的標準,切勿將「涵蓋 Top 10」當作安全的證明。",
+              "參考各類別頁面提供的防護建議、攻擊情境範例與對應的 CWE 清單。"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "heading": {
+        "en": "History & Evolution",
+        "zh": "歷史與演進"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "Across two decades the Top 10 has evolved from an expert-curated list into a rigorous, partly data-driven methodology, refreshed roughly every three to four years rather than annually.",
+            "zh": "歷經二十年,Top 10 已從專家彙整的清單演進為嚴謹且部分資料驅動的方法論,更新週期約為每三到四年,而非每年。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "2003 & 2004 — First editions, based largely on expert consensus about common web vulnerabilities.",
+              "2007 — Refined to track the shifting web threat landscape, with greater emphasis on XSS and injection.",
+              "2010 — Reframed explicitly around risk (likelihood and impact) rather than just raw vulnerability counts.",
+              "2013 — Restructured categories and added components-with-known-vulnerabilities concerns.",
+              "2017 — Strengthened the data-driven approach and introduced Insufficient Logging & Monitoring.",
+              "2021 — Added Insecure Design and Software & Data Integrity Failures; built on data from 40+ organizations plus a community survey.",
+              "2025 — Current edition: added Software Supply Chain Failures and Mishandling of Exceptional Conditions, merged SSRF into Broken Access Control, and analyzed 2.8M+ applications."
+            ],
+            "zh": [
+              "2003 與 2004——首批版本,主要依專家對常見網頁弱點的共識而成。",
+              "2007——配合不斷變化的網頁威脅情勢調整,並更著重 XSS 與注入攻擊。",
+              "2010——明確改以「風險」(可能性與衝擊)為框架,而不僅是弱點數量。",
+              "2013——重整類別架構,新增「使用含已知漏洞的元件」議題。",
+              "2017——強化資料驅動方法,並引入「記錄與監控不足」類別。",
+              "2021——新增「不安全設計」與「軟體與資料完整性失效」;以 40 多個組織的資料加上社群問卷為基礎。",
+              "2025——現行版本:新增「軟體供應鏈失效」與「例外狀況處理不當」,將 SSRF 併入「權限控制失效」,並分析逾 280 萬個應用程式。"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "heading": {
+        "en": "Resources",
+        "zh": "資源"
+      },
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "OWASP Top Ten — Project Home",
+              "url": "https://owasp.org/www-project-top-ten/"
+            },
+            {
+              "label": "OWASP Top 10:2025 (latest edition)",
+              "url": "https://owasp.org/Top10/2025/"
+            },
+            {
+              "label": "Top 10:2025 Introduction & Methodology",
+              "url": "https://owasp.org/Top10/2025/0x00_2025-Introduction/"
+            },
+            {
+              "label": "OWASP Top 10:2021 (previous edition)",
+              "url": "https://owasp.org/Top10/"
+            },
+            {
+              "label": "OWASP Top 10 GitHub Repository",
+              "url": "https://github.com/OWASP/Top10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

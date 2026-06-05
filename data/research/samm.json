@@ -1,0 +1,171 @@
+{
+  "slug": "samm",
+  "category": "guide",
+  "icon": "trending_up",
+  "title": {
+    "en": "OWASP SAMM",
+    "zh": "OWASP SAMM 軟體保障成熟度模型"
+  },
+  "subtitle": {
+    "en": "An open, measurable framework to assess and improve an organization's secure software development lifecycle.",
+    "zh": "一套開放、可量測的框架,用於評估並改善組織的安全軟體開發生命週期(SDLC)。"
+  },
+  "tags": ["maturity-model", "sdlc", "appsec", "governance", "assessment", "framework"],
+  "meta": {
+    "type": {
+      "en": "Maturity model / prescriptive framework",
+      "zh": "成熟度模型 / 規範性框架"
+    },
+    "latest": {
+      "en": "SAMM v2.0.3 (2022); v2.0 announced Feb 2020",
+      "zh": "SAMM v2.0.3(2022 年);v2.0 於 2020 年 2 月發布"
+    },
+    "audience": {
+      "en": "Security leaders, CISOs, SDLC owners, AppSec program managers",
+      "zh": "資安主管、資安長(CISO)、SDLC 負責人、應用安全計畫管理者"
+    },
+    "format": {
+      "en": "Reference model + assessment toolbox (spreadsheet)",
+      "zh": "參考模型 + 評估工具箱(試算表)"
+    },
+    "license": "CC BY-SA 4.0",
+    "url": "https://owasp.org/www-project-samm/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "總覽" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP SAMM (Software Assurance Maturity Model) is an open framework that helps organizations formulate and implement a strategy for software security tailored to the specific risks the organization faces. It provides a measurable, risk-driven way to analyze and improve an organization's entire secure software development lifecycle (SDLC), and is deliberately technology- and process-agnostic so it fits any development methodology, language, or toolchain.",
+          "zh": "OWASP SAMM(軟體保障成熟度模型)是一套開放框架,協助組織針對自身面臨的特定風險,擬定並落實軟體安全策略。它提供一種可量測、以風險為導向的方式,用以分析並改善組織整個安全軟體開發生命週期(SDLC),且刻意保持技術與流程中立,因此可適用於任何開發方法論、程式語言或工具鏈。"
+        },
+        {
+          "type": "p",
+          "en": "SAMM is an OWASP Flagship project, led by Seba Deleersnyder and Bart De Win. Rather than mandating a single 'right' way to build software, it lets organizations evaluate their existing practices, define a balanced security assurance program in well-defined iterations, and demonstrate concrete, measurable improvements over time.",
+          "zh": "SAMM 是 OWASP 旗艦級專案,由 Seba Deleersnyder 與 Bart De Win 領導。它不規定建置軟體唯一「正確」的做法,而是讓組織評估現有實務、以明確定義的迭代來建立平衡的安全保障計畫,並隨時間展現具體、可量測的改善成果。"
+        },
+        {
+          "type": "quote",
+          "en": "SAMM provides an effective and measurable way for all types of organizations to analyze and improve their software security posture.",
+          "zh": "SAMM 為各類型組織提供一種有效且可量測的方式,以分析並改善其軟體安全態勢。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "Model structure", "zh": "模型結構" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The SAMM v2 model is organized around five core Business Functions, each representing a critical area of activity in building and operating software. Each Business Function is broken down into three Security Practices, giving 15 practices in total.",
+          "zh": "SAMM v2 模型以五大核心業務功能(Business Functions)為架構,每一項代表建置與營運軟體時的關鍵活動領域。每個業務功能再細分為三項安全實務(Security Practices),合計共 15 項實務。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Governance: Strategy & Metrics, Policy & Compliance, Education & Guidance",
+            "Design: Threat Assessment, Security Requirements, Security Architecture",
+            "Implementation: Secure Build, Secure Deployment, Defect Management",
+            "Verification: Architecture Assessment, Requirements-driven Testing, Security Testing",
+            "Operations: Incident Management, Environment Management, Operational Management"
+          ],
+          "zh": [
+            "治理(Governance):策略與指標、政策與合規、教育與指引",
+            "設計(Design):威脅評估、安全需求、安全架構",
+            "實作(Implementation):安全建置、安全部署、缺陷管理",
+            "驗證(Verification):架構評估、需求導向測試、安全測試",
+            "營運(Operations):事件管理、環境管理、營運管理"
+          ]
+        },
+        {
+          "type": "p",
+          "en": "Each of the 15 Security Practices is further divided into two Streams, two related but distinct sets of activities that mature in parallel. Within each stream, activities are mapped to three Maturity Levels (1 to 3), expressing a progression from an initial, ad-hoc adoption (Level 1) through to comprehensive mastery and continuous improvement (Level 3).",
+          "zh": "15 項安全實務又各自細分為兩條工作流(Streams),即兩組相關但不同、並行成熟的活動。每條工作流中的活動對應到三個成熟度等級(1 至 3 級),呈現從初步、臨時性的採用(第 1 級)逐步進展到全面精通與持續改善(第 3 級)的成長路徑。"
+        }
+      ]
+    },
+    {
+      "id": "assessment",
+      "title": { "en": "Assessment", "zh": "評估" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Organizations measure their current posture using the SAMM Assessment Toolbox, a spreadsheet available in both Microsoft Excel and Google Sheets formats. An Interview tab poses questions for each activity in the model, and as answers are recorded the Scorecard tab automatically calculates a maturity score for every Security Practice. The assessment can be run as a lightweight self-assessment or a more detailed evaluation via stakeholder interviews and workshops.",
+          "zh": "組織可使用 SAMM 評估工具箱(Assessment Toolbox)量測目前的態勢,該試算表同時提供 Microsoft Excel 與 Google 試算表兩種版本。其中「Interview」分頁針對模型中每項活動提出問題,當記錄答案時,「Scorecard」分頁會自動計算每項安全實務的成熟度分數。評估可採輕量自評,或透過利害關係人訪談與工作坊進行更詳細的評鑑。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Score each of the 15 practices against the three maturity levels to capture the current state",
+            "Perform gap analysis by comparing current scores against target maturity goals",
+            "Build a prioritized roadmap of activities to close gaps over successive iterations",
+            "Re-assess periodically to track progress and demonstrate measurable improvement",
+            "Optionally contribute anonymized results to SAMM Benchmarking to compare against peers"
+          ],
+          "zh": [
+            "依三個成熟度等級為 15 項實務評分,以掌握現況",
+            "將現況分數與目標成熟度進行比較,執行差距分析",
+            "建立優先排序的活動路線圖,於連續迭代中逐步彌補差距",
+            "定期重新評估以追蹤進度,並展現可量測的改善成效",
+            "(選用)將匿名化結果提交至 SAMM Benchmarking,以與同業比較"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "How it is used", "zh": "使用方式" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "SAMM is designed to be used iteratively rather than as a one-time audit. A typical adoption starts by measuring the organization's current software security posture, then setting realistic target maturity levels based on business risk, and finally building an improvement roadmap that sequences activities into achievable phases. Successive iterations raise maturity where it matters most.",
+          "zh": "SAMM 的設計是反覆迭代使用,而非一次性稽核。典型導入流程會先量測組織當前的軟體安全態勢,接著依業務風險設定務實的目標成熟度等級,最後建立改善路線圖,將活動排序成可達成的階段。透過連續迭代,在最關鍵之處提升成熟度。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Benchmark current capability and identify the weakest practices to prioritize",
+            "Define a target maturity profile aligned to the organization's risk appetite",
+            "Drive and govern an enterprise AppSec program with a common, shared vocabulary",
+            "Compare maturity against industry peers and report progress to leadership"
+          ],
+          "zh": [
+            "對現有能力進行基準量測,辨識最薄弱的實務並排定優先順序",
+            "依組織的風險胃納定義目標成熟度輪廓",
+            "以共通、共享的詞彙推動並治理企業級應用安全(AppSec)計畫",
+            "與同業比較成熟度,並向高階主管回報進度"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History", "zh": "發展歷程" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "SAMM began as OpenSAMM 1.0, created by Pravir Chandra and released in 2009. The project subsequently moved under OWASP and evolved through the 1.x line (including v1.5). In February 2020 the project team published SAMM v2.0, a full rewrite that introduced the Streams concept and restructured the practices, with the model maintained at v2.0.3 (2022). The framework is published under the CC BY-SA 4.0 license and developed openly with community contributions.",
+          "zh": "SAMM 最初是由 Pravir Chandra 於 2009 年發布的 OpenSAMM 1.0。專案後續納入 OWASP 旗下,並沿著 1.x 系列演進(含 v1.5)。2020 年 2 月,專案團隊發布 SAMM v2.0,這是一次徹底改寫,引入工作流(Streams)概念並重整各項實務,目前模型維護在 v2.0.3(2022 年)。該框架以 CC BY-SA 4.0 授權發布,並以社群貢獻方式公開開發。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Resources", "zh": "資源連結" },
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": { "en": "OWASP project page", "zh": "OWASP 專案頁面" }, "url": "https://owasp.org/www-project-samm/" },
+            { "label": { "en": "Official website", "zh": "官方網站" }, "url": "https://owaspsamm.org/" },
+            { "label": { "en": "The SAMM model", "zh": "SAMM 模型" }, "url": "https://owaspsamm.org/model/" },
+            { "label": { "en": "Assessment & toolbox", "zh": "評估與工具箱" }, "url": "https://owaspsamm.org/assessment/" },
+            { "label": { "en": "GitHub repository", "zh": "GitHub 程式碼庫" }, "url": "https://github.com/OWASP/SAMM" }
+          ]
+        }
+      ]
+    }
+  ]
+}

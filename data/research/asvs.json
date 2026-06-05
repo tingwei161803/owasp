@@ -1,0 +1,273 @@
+{
+  "slug": "asvs",
+  "category": "guide",
+  "icon": "verified_user",
+  "title": {
+    "en": "OWASP Application Security Verification Standard (ASVS)",
+    "zh": "OWASP 應用程式安全驗證標準 (ASVS)"
+  },
+  "subtitle": {
+    "en": "A community-driven catalog of testable security requirements for designing, building, and verifying web apps.",
+    "zh": "社群驅動的可測試安全需求清單,用於設計、開發與驗證 Web 應用程式。"
+  },
+  "tags": ["verification", "standard", "requirements", "appsec", "testing", "secure-design"],
+  "meta": {
+    "type": {
+      "en": "Verification standard",
+      "zh": "驗證標準"
+    },
+    "latest": {
+      "en": "5.0.0 (May 2025)",
+      "zh": "5.0.0 版(2025 年 5 月)"
+    },
+    "audience": {
+      "en": "Developers, testers, architects, and procurement teams",
+      "zh": "開發人員、測試人員、架構師與採購團隊"
+    },
+    "format": {
+      "en": "Markdown, PDF, CSV, JSON",
+      "zh": "Markdown、PDF、CSV、JSON"
+    },
+    "license": "CC BY-SA 4.0",
+    "url": "https://owasp.org/www-project-application-security-verification-standard/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "heading": {
+        "en": "Overview",
+        "zh": "概觀"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "The OWASP Application Security Verification Standard (ASVS) is an open, community-driven framework of security requirements for web applications and web services. Rather than telling you which tool to run, it defines what a secure application must do — providing a normalized, testable list of controls that developers, architects, and testers can use as a single source of truth.",
+            "zh": "OWASP 應用程式安全驗證標準(ASVS)是一套開放、社群驅動的 Web 應用程式與 Web 服務安全需求框架。它不規定你該執行哪個工具,而是定義「安全的應用程式必須做到什麼」,提供一份正規化、可測試的控制項清單,讓開發人員、架構師與測試人員都能以此作為唯一的事實依據(single source of truth)。"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "ASVS serves two primary purposes: it gives organizations a metric to gauge the degree of trust that can be placed in their applications, and it gives guidance to anyone building or assessing security controls on exactly what to implement and verify. Each requirement is written so it can be objectively tested, making it suitable for both manual review and as input to automated tooling.",
+            "zh": "ASVS 主要有兩大用途:一是提供組織一個衡量指標,評估其應用程式可被信任的程度;二是為任何建置或評估安全控制的人,清楚指引到底該實作與驗證哪些項目。每條需求都以「可被客觀測試」的方式撰寫,因此既適合人工審查,也可作為自動化工具的輸入依據。"
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "en": "ASVS aims to normalize the range of coverage and level of rigor available when it comes to performing web application security verification.",
+            "zh": "ASVS 旨在將 Web 應用程式安全驗證的涵蓋範圍與嚴謹程度予以標準化。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "heading": {
+        "en": "Verification Levels",
+        "zh": "驗證等級"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "ASVS defines three increasing levels of verification rigor. You select a target level based on the risk and value of the application, then verify that it meets every requirement at and below that level. Level 5.0 rebalanced the levels so L1 has a lower barrier to entry while L3 grew substantially with high-assurance controls.",
+            "zh": "ASVS 定義了三個逐級提高的驗證嚴謹度等級。你依據應用程式的風險與價值選定目標等級,再驗證它是否符合該等級(含)以下的所有需求。5.0 版重新平衡了各等級,讓 L1 的進入門檻更低,而 L3 則大幅擴充了高保證(high-assurance)控制項。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "Level 1 (Opportunistic / Basic): the minimum baseline that every application should meet. Designed to be largely black-box testable without access to source code, configuration, or developers — suitable for low-assurance apps and as a first step for everyone.",
+              "Level 2 (Standard / Recommended): the level appropriate for most applications that handle sensitive data and business-critical functions. It defends against the majority of risks present in software today and is OWASP's recommended target for most projects.",
+              "Level 3 (Advanced / High-assurance): for the most critical applications — those performing high-value transactions, holding sensitive medical data, or requiring the highest levels of trust. It demands deep, thorough verification including new high-assurance controls added in 5.0."
+            ],
+            "zh": [
+              "等級 1(機會性 / 基礎):每個應用程式都應達到的最低基準。設計上幾乎可完全以黑箱方式測試,無需存取原始碼、設定或開發人員,適合低保證應用程式,也是所有人的第一步。",
+              "等級 2(標準 / 建議):適用於處理敏感資料與業務關鍵功能的多數應用程式。能防禦當今軟體中大多數的風險,是 OWASP 為多數專案建議採用的目標等級。",
+              "等級 3(進階 / 高保證):針對最關鍵的應用程式——執行高價值交易、保存敏感醫療資料,或需要最高信任程度者。要求深入而徹底的驗證,包含 5.0 版新增的高保證控制項。"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "heading": {
+        "en": "Chapter Structure (ASVS 5.0)",
+        "zh": "章節結構(ASVS 5.0)"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "ASVS 5.0 (released May 2025) reorganized and renumbered the standard into 17 chapters, each grouping related requirements. Requirements use a <chapter>.<section>.<requirement> numbering format (e.g. 1.2.5). The standard contains roughly 350 individual, testable controls across these chapters.",
+            "zh": "ASVS 5.0(2025 年 5 月發布)將標準重新編排與編號為 17 個章節,各章節彙整相關需求。需求採用 <章>.<節>.<需求> 的編號格式(例如 1.2.5)。整份標準在這些章節中包含約 350 條可獨立測試的控制項。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "V1 Encoding and Sanitization — output encoding, injection prevention, and safe handling of untrusted data",
+              "V2 Validation and Business Logic — input validation and business-logic integrity",
+              "V3 Web Frontend Security — browser-side protections, headers, CSP, and frontend hardening",
+              "V4 API and Web Service — REST, GraphQL, and web service security",
+              "V5 File Handling — secure upload, storage, and processing of files",
+              "V6 Authentication — credential and authenticator lifecycle, including password rules",
+              "V7 Session Management — session lifecycle, tokens, and timeouts",
+              "V8 Authorization — access control and enforcement of permissions",
+              "V9 Self-contained Tokens — JWT and other stateless token security",
+              "V10 OAuth and OIDC — OAuth 2.0 / OpenID Connect authorization-server and client controls (heavily expanded in 5.0)",
+              "V11 Cryptography — algorithms, key management, and post-quantum planning",
+              "V12 Secure Communication — TLS and transport-layer protection",
+              "V13 Configuration — secure defaults, secrets, and dependency/build configuration",
+              "V14 Data Protection — confidentiality, privacy, and protection of sensitive data",
+              "V15 Secure Coding and Architecture — architectural and coding-level defenses, including malicious-code concerns",
+              "V16 Security Logging and Error Handling — logging, monitoring, and safe error handling",
+              "V17 WebRTC — security requirements specific to real-time communications"
+            ],
+            "zh": [
+              "V1 編碼與淨化 — 輸出編碼、注入防護,以及安全處理不受信任的資料",
+              "V2 驗證與業務邏輯 — 輸入驗證與業務邏輯完整性",
+              "V3 Web 前端安全 — 瀏覽器端防護、HTTP 標頭、CSP 與前端強化",
+              "V4 API 與 Web 服務 — REST、GraphQL 與 Web 服務安全",
+              "V5 檔案處理 — 檔案的安全上傳、儲存與處理",
+              "V6 身分驗證 — 憑證與驗證器生命週期,含密碼規則",
+              "V7 工作階段管理 — 工作階段(session)生命週期、權杖與逾時",
+              "V8 授權 — 存取控制與權限執行",
+              "V9 自包含權杖 — JWT 與其他無狀態權杖安全",
+              "V10 OAuth 與 OIDC — OAuth 2.0 / OpenID Connect 授權伺服器與用戶端控制項(5.0 大幅擴充)",
+              "V11 密碼學 — 演算法、金鑰管理與後量子(post-quantum)規劃",
+              "V12 安全通訊 — TLS 與傳輸層保護",
+              "V13 組態設定 — 安全預設值、機密管理,以及相依套件與建置設定",
+              "V14 資料保護 — 機密性、隱私與敏感資料保護",
+              "V15 安全程式設計與架構 — 架構與程式層級防禦,含惡意程式碼考量",
+              "V16 安全記錄與錯誤處理 — 記錄、監控與安全的錯誤處理",
+              "V17 WebRTC — 即時通訊專屬的安全需求"
+            ]
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "Note: ASVS 5.0 removed the direct mappings to MITRE CWE that earlier versions carried (some links were ambiguous), with future cross-references planned via OWASP's Common Requirement Enumeration (CRE). The previous 4.0 structure used 14 chapters (V1 Architecture through V14 Configuration) with each requirement mapped to a CWE.",
+            "zh": "註:ASVS 5.0 移除了早期版本中對 MITRE CWE 的直接對應(部分連結語意模糊),未來的交叉參照計畫改透過 OWASP 的共同需求列舉(CRE)專案進行。先前的 4.0 結構則使用 14 個章節(V1 架構至 V14 組態),且每條需求都對應到一個 CWE。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "heading": {
+        "en": "How to Use ASVS",
+        "zh": "如何使用 ASVS"
+      },
+      "blocks": [
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "As a verification checklist: pick a target level (L1/L2/L3) and assess each requirement to produce a coverage report.",
+              "To drive secure design: use the requirements as architectural and security-story inputs early in the SDLC, baking controls into the design rather than bolting them on.",
+              "In procurement and contracts: specify an ASVS level as an objective, testable acceptance criterion for software you buy or commission.",
+              "For testing and assurance: combine ASVS (the 'what') with the OWASP Web Security Testing Guide / WSTG (the 'how to test') to plan and execute assessments.",
+              "Alongside the OWASP Top 10: the Top 10 raises awareness of the most critical risks, while ASVS provides the detailed, measurable requirements needed to actually defend against them."
+            ],
+            "zh": [
+              "作為驗證檢查表:選定目標等級(L1/L2/L3),逐條評估每項需求以產生涵蓋率報告。",
+              "驅動安全設計:在軟體開發生命週期(SDLC)早期,將需求作為架構與安全使用者故事的輸入,把控制項內建於設計中,而非事後補強。",
+              "用於採購與合約:以特定 ASVS 等級作為採購或委外軟體的客觀、可測試之驗收標準。",
+              "用於測試與保證:將 ASVS(定義「要做什麼」)與 OWASP Web 安全測試指南 WSTG(說明「如何測試」)搭配使用,以規劃與執行評估。",
+              "搭配 OWASP Top 10:Top 10 提升對最關鍵風險的認知,而 ASVS 提供實際防禦這些風險所需的詳細、可量測的需求。"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "heading": {
+        "en": "Version History",
+        "zh": "版本歷史"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "en": "ASVS has evolved steadily since 2008, with each major version expanding coverage and refining the requirement structure.",
+            "zh": "ASVS 自 2008 年以來持續演進,每個主要版本都擴大涵蓋範圍並精煉需求結構。"
+          }
+        },
+        {
+          "type": "ul",
+          "items": {
+            "en": [
+              "1.0 (2008–2009): first release establishing the verification-standard concept.",
+              "2.0 (Aug 2014): refreshed requirement set and structure.",
+              "3.0 / 3.0.1 (2015–2016): reorganized chapters and broadened coverage.",
+              "4.0 (Mar 2019): major rework into 14 chapters (V1–V14) with the three-level model and CWE mappings.",
+              "4.0.2 (Oct 2020) and 4.0.3 (Oct 2021): maintenance releases with fixes and clarifications.",
+              "5.0.0 (May 30, 2025): launched at Global AppSec EU Barcelona — full reorganization into 17 chapters, rebalanced L1–L3, expanded OAuth/OIDC coverage, post-quantum crypto planning, and removal of direct CWE mappings."
+            ],
+            "zh": [
+              "1.0(2008–2009):首次發布,確立驗證標準的概念。",
+              "2.0(2014 年 8 月):更新需求集與結構。",
+              "3.0 / 3.0.1(2015–2016):重新編排章節並擴大涵蓋範圍。",
+              "4.0(2019 年 3 月):重大改版,整理為 14 個章節(V1–V14),導入三等級模型與 CWE 對應。",
+              "4.0.2(2020 年 10 月)與 4.0.3(2021 年 10 月):維護版本,修正與釐清內容。",
+              "5.0.0(2025 年 5 月 30 日):於 Global AppSec EU 巴塞隆納發布——全面重組為 17 個章節,重新平衡 L1–L3,擴充 OAuth/OIDC,新增後量子密碼學規劃,並移除直接的 CWE 對應。"
+            ]
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "en": "ASVS is led by Daniel Cuthbert, Elar Lang, and Josh Grossman, supported by an active working group and a broad community of contributors. It is published free of charge under the Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) license.",
+            "zh": "ASVS 由 Daniel Cuthbert、Elar Lang 與 Josh Grossman 主導,並由活躍的工作小組與廣大社群貢獻者支援。本標準以創用 CC 姓名標示-相同方式分享 4.0(CC BY-SA 4.0)授權免費發布。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "heading": {
+        "en": "Resources",
+        "zh": "資源"
+      },
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            {
+              "label": "OWASP ASVS Project Page",
+              "url": "https://owasp.org/www-project-application-security-verification-standard/"
+            },
+            {
+              "label": "ASVS GitHub Repository",
+              "url": "https://github.com/OWASP/ASVS"
+            },
+            {
+              "label": "ASVS 5.0.0 (English PDF)",
+              "url": "https://github.com/OWASP/ASVS/raw/v5.0.0/5.0/OWASP_Application_Security_Verification_Standard_5.0.0_en.pdf"
+            },
+            {
+              "label": "ASVS 5.0.0 Release Tag",
+              "url": "https://github.com/OWASP/ASVS/tree/v5.0.0"
+            },
+            {
+              "label": "OWASP Web Security Testing Guide (WSTG)",
+              "url": "https://owasp.org/www-project-web-security-testing-guide/"
+            },
+            {
+              "label": "OWASP Top 10",
+              "url": "https://owasp.org/www-project-top-ten/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

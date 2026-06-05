@@ -1,0 +1,160 @@
+{
+  "slug": "crs",
+  "category": "tool",
+  "icon": "shield",
+  "title": {
+    "en": "OWASP CRS (Core Rule Set)",
+    "zh": "OWASP CRS 核心規則集"
+  },
+  "subtitle": {
+    "en": "Generic, engine-agnostic attack-detection rules that give web app firewalls a first line of defense.",
+    "zh": "通用且不綁定引擎的攻擊偵測規則集,為 Web 應用防火牆提供第一道防線。"
+  },
+  "tags": ["waf", "rules", "modsecurity", "coraza", "anomaly-scoring", "owasp", "appsec"],
+  "meta": {
+    "type": {
+      "en": "WAF rule set (open source)",
+      "zh": "WAF 規則集(開源)"
+    },
+    "latest": {
+      "en": "CRS 4.27.0 (June 2026); 4.25.0 is the first LTS line",
+      "zh": "CRS 4.27.0(2026 年 6 月);4.25.0 為首個 LTS 版本"
+    },
+    "audience": {
+      "en": "Ops, SRE and security engineers running a WAF",
+      "zh": "維運、SRE 與導入 WAF 的資安工程師"
+    },
+    "format": {
+      "en": "WAF rules/config plus engine plugins",
+      "zh": "WAF 規則/設定檔與引擎外掛"
+    },
+    "license": "Apache-2.0",
+    "url": "https://owasp.org/www-project-modsecurity-core-rule-set/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "概觀" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The OWASP CRS (Core Rule Set) is a free, open-source collection of generic attack-detection rules for web application firewalls. It provides a first line of defense for web applications, targeting the OWASP Top Ten and other common threats while aiming to protect with a minimum of false positives. CRS is signature- and behaviour-based and ships independently of any single web app, so it can be dropped in front of almost any service.",
+          "zh": "OWASP CRS(核心規則集)是一套免費、開源的通用攻擊偵測規則,專為 Web 應用防火牆設計。它為 Web 應用提供第一道防線,聚焦 OWASP Top Ten 與其他常見威脅,並力求在最少誤判的前提下達成防護。CRS 同時採用特徵碼與行為偵測,且不依賴特定應用,因此幾乎可部署在任何服務之前。"
+        },
+        {
+          "type": "p",
+          "en": "Although still widely known by its former name 'ModSecurity Core Rule Set', the project is now engine-agnostic: the same rules run on ModSecurity (Apache, Nginx, IIS) and on the Go-based Coraza engine. CRS 4 added a plugin architecture, early-blocking options, web-shell detection, improved UTF-8 handling and HTTP/3 support, and closed over 500 individual rule bypasses found through bug-bounty work.",
+          "zh": "儘管許多人仍以舊名「ModSecurity 核心規則集」稱呼它,此專案如今已不綁定特定引擎:同一份規則可在 ModSecurity(Apache、Nginx、IIS)以及以 Go 撰寫的 Coraza 引擎上運行。CRS 4 新增了外掛架構、提前封鎖(early-blocking)選項、Web shell 偵測、改良的 UTF-8 處理與 HTTP/3 支援,並透過漏洞獎勵計畫修補了 500 多個規則繞過問題。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "What it detects", "zh": "偵測範圍" },
+      "blocks": [
+        {
+          "type": "h3",
+          "en": "Attack categories covered",
+          "zh": "涵蓋的攻擊類別"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "SQL injection (SQLi) and NoSQL/MongoDB operator injection",
+            "Cross-site scripting (XSS)",
+            "Local and remote file inclusion (LFI/RFI)",
+            "Remote code execution (RCE) and OS/shell command injection",
+            "PHP and Java injection, plus server-side template injection (SSTI)",
+            "HTTP protocol violations, anomalies and enforcement (methods, headers, encodings)",
+            "Scanner, bot and crawler detection; session fixation; common application attacks",
+            "Outbound data and error leakage detection in responses"
+          ],
+          "zh": [
+            "SQL 注入(SQLi)以及 NoSQL/MongoDB 運算子注入",
+            "跨站腳本攻擊(XSS)",
+            "本地與遠端檔案引入(LFI/RFI)",
+            "遠端程式碼執行(RCE)與作業系統/shell 命令注入",
+            "PHP 與 Java 注入,以及伺服器端樣板注入(SSTI)",
+            "HTTP 協定違規、異常與強制檢查(方法、標頭、編碼)",
+            "掃描器、機器人與爬蟲偵測;Session 固著;常見應用層攻擊",
+            "回應中的對外資料外洩與錯誤訊息洩漏偵測"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "concepts",
+      "title": { "en": "Key concepts", "zh": "核心概念" },
+      "blocks": [
+        {
+          "type": "h3",
+          "en": "How CRS makes decisions",
+          "zh": "CRS 如何做出判斷"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Anomaly scoring: detection is decoupled from blocking; each matched rule adds to a running score and a single blocking rule fires once a threshold is exceeded, instead of traditional self-contained per-rule blocking.",
+            "Separate inbound (request) and outbound (response) scores, with default thresholds of 5 inbound and 4 outbound; severities map to increments (CRITICAL 5, ERROR 4, WARNING 3, NOTICE 2).",
+            "Paranoia levels PL1–PL4: PL1 is the lightly-tuned baseline default; each higher level enables stricter rules that catch more attacks but generate more false positives (PL4 = 'crown jewels').",
+            "Executing paranoia level: run higher-PL rules in scoring/detection only, so you can test stricter detection before it affects blocking.",
+            "Sampling mode: route only a percentage of traffic (e.g. 1% rising to 100%) through CRS for a low-risk, gradual rollout.",
+            "False-positive tuning via exclusion rules; rules use structured ID ranges (e.g. 9xxxxx) so categories and tuning are predictable."
+          ],
+          "zh": [
+            "異常評分(Anomaly Scoring):將偵測與封鎖解耦;每條命中的規則累加分數,超過閾值時才由單一封鎖規則觸發,有別於傳統各規則自行封鎖的做法。",
+            "區分入向(請求)與出向(回應)分數,預設閾值入向為 5、出向為 4;嚴重度對應加分(CRITICAL 5、ERROR 4、WARNING 3、NOTICE 2)。",
+            "偏執等級 PL1–PL4:PL1 為僅需少量調校的預設基準;等級越高,規則越嚴格、可攔下更多攻擊,但誤判也越多(PL4 用於守護「皇冠寶石」)。",
+            "執行偏執等級(Executing PL):讓較高 PL 的規則僅進行評分/偵測,可在影響封鎖前先測試更嚴格的偵測。",
+            "取樣模式(Sampling):僅讓一定比例的流量(例如從 1% 逐步提升到 100%)經過 CRS,以低風險方式漸進上線。",
+            "透過排除規則(exclusion rules)進行誤判調校;規則採用結構化的 ID 區段(例如 9xxxxx),使分類與調校可預期。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "Deploying & tuning", "zh": "部署與調校" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "CRS is deployed in front of applications as a defense-in-depth layer, loaded by a WAF engine such as ModSecurity (with Apache, Nginx or IIS) or Coraza, and is also bundled by many cloud and CDN WAFs (AWS, Azure, Cloudflare, Fastly and others). A typical rollout starts in detection-only mode at PL1, uses sampling and log review to surface false positives, then writes targeted exclusion rules and raises the paranoia level before switching to blocking.",
+          "zh": "CRS 部署於應用之前,作為縱深防禦的一層,由 ModSecurity(搭配 Apache、Nginx 或 IIS)或 Coraza 等 WAF 引擎載入,也被許多雲端與 CDN WAF(AWS、Azure、Cloudflare、Fastly 等)內建採用。典型導入流程為:先以偵測模式在 PL1 啟用,透過取樣與日誌檢視找出誤判,再撰寫針對性的排除規則並提高偏執等級,最後才切換為封鎖模式。"
+        },
+        {
+          "type": "quote",
+          "en": "Setting a high paranoia level in blocking mode without adequate tuning to deal with false positives is very risky.",
+          "zh": "在未充分調校誤判的情況下,於封鎖模式啟用高偏執等級是非常危險的。"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History", "zh": "歷史沿革" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The Core Rule Set began in 2006 within Breach Security and was later maintained by Trustwave SpiderLabs before becoming an independent OWASP flagship project. The 3.x series established anomaly scoring and paranoia levels as the modern model. CRS 4.0 shipped in 2023, adding the plugin system and making the rules engine-agnostic across ModSecurity and Coraza. Development now moves on a fast minor-release cadence; the latest release is 4.27.0 (June 2026), and 4.25.0 marks the first Long-Term Support (LTS) line, while support for the legacy CRS 3.3.x series ends in Q3 2026.",
+          "zh": "核心規則集始於 2006 年的 Breach Security,後由 Trustwave SpiderLabs 維護,最終成為獨立的 OWASP 旗艦專案。3.x 系列確立了異常評分與偏執等級此一現代模型。CRS 4.0 於 2023 年推出,新增外掛系統並讓規則跨 ModSecurity 與 Coraza 不再綁定引擎。如今開發以快速的次版本節奏推進;最新版本為 4.27.0(2026 年 6 月),而 4.25.0 為首個長期支援(LTS)版本;舊有的 CRS 3.3.x 系列支援將於 2026 年第三季結束。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Resources", "zh": "資源" },
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": { "en": "OWASP project page", "zh": "OWASP 專案頁面" }, "url": "https://owasp.org/www-project-modsecurity-core-rule-set/" },
+            { "label": { "en": "Official CRS website", "zh": "CRS 官方網站" }, "url": "https://coreruleset.org/" },
+            { "label": { "en": "CRS documentation", "zh": "CRS 文件" }, "url": "https://coreruleset.org/docs/" },
+            { "label": { "en": "GitHub repository", "zh": "GitHub 儲存庫" }, "url": "https://github.com/coreruleset/coreruleset" },
+            { "label": { "en": "Releases & changelog", "zh": "版本與更新紀錄" }, "url": "https://github.com/coreruleset/coreruleset/releases" },
+            { "label": { "en": "Installation guide", "zh": "安裝指南" }, "url": "https://coreruleset.org/docs/deployment/install/" }
+          ]
+        }
+      ]
+    }
+  ]
+}

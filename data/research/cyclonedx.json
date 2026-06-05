@@ -1,0 +1,202 @@
+{
+  "slug": "cyclonedx",
+  "category": "supply-chain",
+  "icon": "inventory_2",
+  "title": {
+    "en": "OWASP CycloneDX",
+    "zh": "OWASP CycloneDX"
+  },
+  "subtitle": {
+    "en": "Full-stack Bill of Materials standard for software supply chain security and risk reduction.",
+    "zh": "全端物料清單(BOM)標準,用於軟體供應鏈安全與風險降低。"
+  },
+  "tags": ["sbom", "supply-chain", "vex", "ecma-424", "standard", "transparency"],
+  "meta": {
+    "type": {
+      "en": "Standard / specification",
+      "zh": "標準 / 規範"
+    },
+    "latest": {
+      "en": "Spec v1.7 (2025-10-21); ECMA-424",
+      "zh": "規範 v1.7(2025-10-21);ECMA-424"
+    },
+    "audience": {
+      "en": "AppSec, DevSecOps, compliance & procurement teams",
+      "zh": "應用程式安全、DevSecOps、合規與採購團隊"
+    },
+    "format": {
+      "en": "Specification + tooling ecosystem",
+      "zh": "規範 + 工具生態系"
+    },
+    "license": "Apache-2.0",
+    "url": "https://owasp.org/www-project-cyclonedx/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP CycloneDX is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. It lets organizations describe exactly what a product is made of — software components, services, hardware, machine learning models, cryptographic assets and their dependencies — in a machine-readable, interoperable format.",
+          "zh": "OWASP CycloneDX 是一套全端物料清單(BOM)標準,提供進階的供應鏈能力以降低資安風險。它讓組織能以機器可讀、可互通的格式,精確描述一項產品由什麼構成——軟體元件、服務、硬體、機器學習模型、密碼學資產及其相依關係。"
+        },
+        {
+          "type": "p",
+          "en": "Originating in 2017 from the OWASP Dependency-Track ecosystem, CycloneDX became an OWASP flagship project in June 2021 and is now an official Ecma International standard published as ECMA-424. The latest specification is version 1.7, released on 2025-10-21.",
+          "zh": "CycloneDX 源於 2017 年的 OWASP Dependency-Track 生態系,於 2021 年 6 月成為 OWASP 旗艦專案,如今已是 Ecma International 的正式國際標準,以 ECMA-424 名義發布。最新規範版本為 1.7,於 2025-10-21 發布。"
+        },
+        {
+          "type": "quote",
+          "en": "A full-stack Bill of Materials standard that provides advanced supply chain capabilities for cyber risk reduction.",
+          "zh": "一套提供進階供應鏈能力、用以降低資安風險的全端物料清單標準。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "blocks": [
+        {
+          "type": "h3",
+          "en": "BOM types & vulnerability artifacts",
+          "zh": "BOM 類型與漏洞文件"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "SBOM — Software Bill of Materials: inventory of software components and libraries",
+            "SaaSBOM — describes services, endpoints, data flows and trust boundaries of SaaS",
+            "HBOM — Hardware Bill of Materials for physical devices and components",
+            "ML-BOM / AI-BOM — machine learning models, datasets and AI transparency",
+            "CBOM — Cryptography Bill of Materials: cryptographic assets and algorithms",
+            "OBOM — Operations Bill of Materials: running/operational runtime inventory",
+            "MBOM — Manufacturing Bill of Materials for build and assembly processes",
+            "VEX — Vulnerability Exploitability eXchange: communicates exploitability status",
+            "VDR — Vulnerability Disclosure Report: discloses known vulnerabilities in a product"
+          ],
+          "zh": [
+            "SBOM — 軟體物料清單:軟體元件與函式庫的清單",
+            "SaaSBOM — 描述 SaaS 的服務、端點、資料流與信任邊界",
+            "HBOM — 硬體物料清單,涵蓋實體裝置與元件",
+            "ML-BOM / AI-BOM — 機器學習模型、資料集與 AI 透明度",
+            "CBOM — 密碼學物料清單:密碼學資產與演算法",
+            "OBOM — 維運物料清單:執行中/運作中的執行環境清單",
+            "MBOM — 製造物料清單,涵蓋建置與組裝流程",
+            "VEX — 漏洞可利用性交換:傳達漏洞的可利用性狀態",
+            "VDR — 漏洞揭露報告:揭露產品中已知的漏洞"
+          ]
+        },
+        {
+          "type": "h3",
+          "en": "Formats & core capabilities",
+          "zh": "格式與核心能力"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Formats: JSON, XML and Protocol Buffers (protobuf)",
+            "Component inventory with rich metadata, identifiers (PURL, CPE, SWID) and licensing",
+            "Dependency graph capturing both direct and transitive relationships",
+            "Pedigree and provenance — full lineage and origin of every component",
+            "Services modeling for external APIs, endpoints and data flows",
+            "Vulnerabilities, VEX and formulation (how a component was built/deployed)",
+            "Digital signing and attestation for tamper-evidence and integrity"
+          ],
+          "zh": [
+            "格式:JSON、XML 與 Protocol Buffers(protobuf)",
+            "具備豐富中繼資料的元件清單,含識別碼(PURL、CPE、SWID)與授權資訊",
+            "相依關係圖,涵蓋直接與遞移(transitive)相依",
+            "譜系(pedigree)與來源(provenance)——記錄每個元件完整的血統與出處",
+            "服務建模,描述外部 API、端點與資料流",
+            "漏洞、VEX 與配方(formulation,記錄元件如何建置/部署)",
+            "數位簽章與證明(attestation),確保防竄改與完整性"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ecosystem",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "CycloneDX is backed by a large ecosystem of official and community tools that generate, validate, merge and consume BOMs across languages and build systems. Generation can be automated in CI/CD pipelines and distributed through a BOM Repository Server for storage and exchange.",
+          "zh": "CycloneDX 擁有龐大的官方與社群工具生態系,可跨多種語言與建置系統來產生、驗證、合併及消費 BOM。產生流程可在 CI/CD 管線中自動化,並透過 BOM Repository Server 進行儲存與交換。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "cdxgen — a multi-language SBOM/BOM generator covering many ecosystems",
+            "Language-specific generators and plugins for Maven, Gradle, npm, Python and more",
+            "Core libraries for producing and parsing BOMs in major programming languages",
+            "BOM Repository Server for centralized storage, distribution and exchange",
+            "OWASP Dependency-Track natively consumes CycloneDX BOMs for continuous analysis"
+          ],
+          "zh": [
+            "cdxgen — 支援多種生態系的多語言 SBOM/BOM 產生器",
+            "針對 Maven、Gradle、npm、Python 等的語言專屬產生器與外掛",
+            "於主流程式語言中產生與解析 BOM 的核心函式庫",
+            "BOM Repository Server,用於集中儲存、散布與交換",
+            "OWASP Dependency-Track 原生消費 CycloneDX BOM 以進行持續分析"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "CycloneDX is used to achieve software supply chain transparency, accelerate vulnerability management, enforce license compliance and meet regulatory requirements. Because a BOM enumerates every component and its provenance, teams can quickly answer questions like 'are we affected by this CVE?' or 'what cryptography are we shipping?'.",
+          "zh": "CycloneDX 用於達成軟體供應鏈透明度、加速漏洞管理、落實授權合規,並符合法規要求。由於 BOM 列舉了每個元件及其來源,團隊能快速回答諸如「我們是否受此 CVE 影響?」或「我們交付了哪些密碼學?」等問題。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Supply chain transparency — share a verifiable inventory with customers and auditors",
+            "Vulnerability management — map components to CVEs and triage with VEX",
+            "License compliance — track licenses and obligations across all dependencies",
+            "Regulatory drivers — US Executive Order 14028 and the EU Cyber Resilience Act (CRA)"
+          ],
+          "zh": [
+            "供應鏈透明度——向客戶與稽核者提供可驗證的清單",
+            "漏洞管理——將元件對應到 CVE,並以 VEX 進行分流",
+            "授權合規——追蹤所有相依項的授權與義務",
+            "法規驅動——美國第 14028 號行政命令與歐盟網路韌性法案(CRA)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "CycloneDX traces its origins to 2017, emerging from OWASP Dependency-Track (issue #52), with the 1.0 specification released in March 2018. It joined OWASP as a flagship project in June 2021 and has since gone through multiple backward-compatible revisions adding services, vulnerabilities, formulation, AI/ML and cryptography support.",
+          "zh": "CycloneDX 起源於 2017 年,脫胎自 OWASP Dependency-Track(issue #52),並於 2018 年 3 月發布 1.0 規範。它在 2021 年 6 月成為 OWASP 旗艦專案,之後歷經多次向後相容的修訂,陸續新增服務、漏洞、配方、AI/ML 與密碼學支援。"
+        },
+        {
+          "type": "p",
+          "en": "In December 2023, Ecma International chartered Technical Committee TC54 for Software & System Transparency. In June 2024, CycloneDX v1.6 was ratified as an international standard and published as ECMA-424 (1st Edition). The specification continues to advance, with v1.7 released on 2025-10-21.",
+          "zh": "2023 年 12 月,Ecma International 成立軟體與系統透明度技術委員會 TC54。2024 年 6 月,CycloneDX v1.6 獲批准為國際標準並以 ECMA-424(第 1 版)發布。規範持續演進,v1.7 已於 2025-10-21 發布。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "blocks": [
+        {
+          "type": "links",
+          "en": "Official resources",
+          "zh": "官方資源",
+          "links": [
+            { "label": "OWASP CycloneDX project", "url": "https://owasp.org/www-project-cyclonedx/" },
+            { "label": "CycloneDX website", "url": "https://cyclonedx.org/" },
+            { "label": "Specification overview", "url": "https://cyclonedx.org/specification/overview/" },
+            { "label": "Tool Center (ecosystem)", "url": "https://cyclonedx.org/tool-center/" },
+            { "label": "Specification on GitHub", "url": "https://github.com/CycloneDX/specification" },
+            { "label": "Ecma International TC54", "url": "https://www.ecma-international.org/technical-committees/tc54/" }
+          ]
+        }
+      ]
+    }
+  ]
+}

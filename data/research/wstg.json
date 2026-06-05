@@ -1,0 +1,170 @@
+{
+  "slug": "wstg",
+  "category": "guide",
+  "icon": "checklist",
+  "title": {
+    "en": "OWASP Web Security Testing Guide (WSTG)",
+    "zh": "OWASP 網頁安全測試指南(WSTG)"
+  },
+  "subtitle": {
+    "en": "The premier methodology and checklist for testing the security of web applications and web services.",
+    "zh": "業界首選的網頁應用程式與網頁服務安全測試方法論與檢查清單。"
+  },
+  "tags": ["pentest", "methodology", "checklist", "web-appsec", "testing", "owasp"],
+  "meta": {
+    "type": {
+      "en": "Testing guide / methodology",
+      "zh": "測試指南 / 方法論"
+    },
+    "latest": {
+      "en": "v4.2 stable (Dec 2020); v5.0 in development",
+      "zh": "v4.2 穩定版(2020 年 12 月);v5.0 開發中"
+    },
+    "audience": {
+      "en": "Penetration testers, security testers, developers",
+      "zh": "滲透測試人員、安全測試人員、開發者"
+    },
+    "format": {
+      "en": "Web / PDF + GitHub (Markdown)",
+      "zh": "網頁 / PDF + GitHub(Markdown)"
+    },
+    "license": "CC BY-SA 4.0",
+    "url": "https://owasp.org/www-project-web-security-testing-guide/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "總覽" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The OWASP Web Security Testing Guide (WSTG) is the premier cybersecurity testing resource for web application developers and security professionals. It is a comprehensive, community-driven methodology for performing penetration tests and security assessments of web applications and web services, maintained as an OWASP Flagship project.",
+          "zh": "OWASP 網頁安全測試指南(WSTG)是網頁應用程式開發者與安全專業人員首選的資安測試資源。它是一套由社群驅動、內容完整的方法論,用於對網頁應用程式與網頁服務執行滲透測試與安全評估,並由 OWASP 以旗艦級專案的形式維護。"
+        },
+        {
+          "type": "p",
+          "en": "Rather than a loose list of tips, WSTG provides a repeatable, structured framework: each individual test maps to a stable identifier (e.g. WSTG-INFO-02), so findings, reports, and tooling can reference an exact, versioned test that does not change meaning between releases. This makes it a de facto community standard adopted by pentesters, testers, and development teams worldwide.",
+          "zh": "WSTG 並非零散的建議清單,而是提供可重複、結構化的框架:每一項測試都對應到一個穩定識別碼(例如 WSTG-INFO-02),讓檢測結果、報告與工具能夠引用精確且帶版本的測試項目,且其意義不會隨版本更迭而改變。這使它成為全球滲透測試人員、測試人員與開發團隊普遍採用的實質社群標準。"
+        },
+        {
+          "type": "quote",
+          "en": "The Web Security Testing Guide is the premier cybersecurity testing resource for web application developers and security professionals.",
+          "zh": "網頁安全測試指南是網頁應用程式開發者與安全專業人員首選的資安測試資源。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "Test categories", "zh": "測試類別" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The bulk of WSTG is organised into twelve top-level test categories, each with a four-character code prefix. The categories cover the full attack surface of a modern web application, from reconnaissance through business logic abuse to client-side and API weaknesses.",
+          "zh": "WSTG 的核心內容劃分為十二個頂層測試類別,每個類別都有一個四字元的代碼前綴。這些類別涵蓋現代網頁應用程式的完整攻擊面,從情資蒐集、商業邏輯濫用,一直到用戶端與 API 弱點。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "WSTG-INFO — Information Gathering: fingerprinting, mapping the application, and discovering exposed metadata",
+            "WSTG-CONF — Configuration and Deployment Management: server, platform, TLS, and infrastructure hardening checks",
+            "WSTG-IDNT — Identity Management: role definitions, registration, and account provisioning flaws",
+            "WSTG-ATHN — Authentication: credential handling, brute-force protection, and login logic",
+            "WSTG-ATHZ — Authorization: privilege escalation, IDOR, and access-control bypass",
+            "WSTG-SESS — Session Management: cookie attributes, fixation, and session lifecycle",
+            "WSTG-INPV — Input Validation: injection (SQL, XSS, command, etc.) and improper input handling",
+            "WSTG-ERRH — Error Handling: information leakage via error messages and stack traces",
+            "WSTG-CRYP — Weak Cryptography: transport security, weak ciphers, and padding/encryption flaws",
+            "WSTG-BUSL — Business Logic: abuse of legitimate workflows and process timing/integrity flaws",
+            "WSTG-CLNT — Client-side Testing: DOM-based XSS, CSP, clickjacking, and browser-side issues",
+            "WSTG-APIT — API Testing: REST/GraphQL and web-service-specific testing"
+          ],
+          "zh": [
+            "WSTG-INFO — 情資蒐集:指紋辨識、應用程式測繪,以及揭露的中繼資料探查",
+            "WSTG-CONF — 組態與部署管理:伺服器、平台、TLS 與基礎架構的強化檢查",
+            "WSTG-IDNT — 身分管理:角色定義、註冊與帳號開通流程的缺陷",
+            "WSTG-ATHN — 身分驗證:憑證處理、暴力破解防護與登入邏輯",
+            "WSTG-ATHZ — 授權:權限提升、IDOR(不安全的直接物件參考)與存取控制繞過",
+            "WSTG-SESS — 工作階段管理:Cookie 屬性、固定攻擊與工作階段生命週期",
+            "WSTG-INPV — 輸入驗證:注入攻擊(SQL、XSS、命令等)與不當的輸入處理",
+            "WSTG-ERRH — 錯誤處理:透過錯誤訊息與堆疊追蹤造成的資訊外洩",
+            "WSTG-CRYP — 弱加密:傳輸安全、弱加密演算法,以及填充 / 加密缺陷",
+            "WSTG-BUSL — 商業邏輯:濫用正常流程,以及流程時序 / 完整性缺陷",
+            "WSTG-CLNT — 用戶端測試:DOM 型 XSS、CSP、點擊劫持與瀏覽器端問題",
+            "WSTG-APIT — API 測試:REST/GraphQL 與網頁服務專屬的測試"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "methodology",
+      "title": { "en": "Methodology & framework", "zh": "方法論與框架" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "WSTG frames testing as part of a Secure SDLC rather than a single end-of-project event. Its testing framework spans five phases: before development begins; during definition and design; during development; during deployment; and during maintenance and operations. Embedding tests across these phases shifts security left and reduces the cost of fixing defects.",
+          "zh": "WSTG 將測試定位為安全軟體開發生命週期(Secure SDLC)的一環,而非專案結束時的單一事件。其測試框架涵蓋五個階段:開發開始前、定義與設計期間、開發期間、部署期間,以及維運與營運期間。將測試嵌入這些階段可讓安全左移,降低修補缺陷的成本。"
+        },
+        {
+          "type": "p",
+          "en": "The guide supports black-box (no internal knowledge), grey-box (partial knowledge), and white-box (full source and configuration access) approaches, letting teams choose the depth that fits the engagement. It complements other OWASP standards: the ASVS defines what security verification requirements an application should meet, the OWASP Top 10 highlights the most critical risk categories, and WSTG provides the concrete how-to for verifying them.",
+          "zh": "本指南支援黑箱(無內部知識)、灰箱(部分知識)與白箱(可完整存取原始碼與組態)三種測試方式,讓團隊依專案需求選擇適當的深度。它與其他 OWASP 標準互補:ASVS 定義應用程式應達成的安全驗證需求,OWASP Top 10 點出最關鍵的風險類別,而 WSTG 則提供驗證這些項目的具體實作方法。"
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "How it is used", "zh": "使用方式" },
+      "blocks": [
+        {
+          "type": "ul",
+          "en": [
+            "As a penetration-testing methodology and checklist to ensure consistent, complete coverage across engagements",
+            "For scoping assessments, agreeing test coverage with clients, and writing statements of work",
+            "To build internal test plans and standardise reporting using stable WSTG IDs",
+            "As a training and onboarding resource for new security testers and developers",
+            "To map findings back to ASVS requirements and OWASP Top 10 categories for risk context"
+          ],
+          "zh": [
+            "作為滲透測試的方法論與檢查清單,確保每次專案都有一致且完整的涵蓋率",
+            "用於評估範圍界定、與客戶議定測試涵蓋範圍,以及撰寫工作說明書(SOW)",
+            "以穩定的 WSTG 識別碼建立內部測試計畫並標準化報告",
+            "作為新進安全測試人員與開發者的訓練與上手資源",
+            "將檢測結果對應回 ASVS 需求與 OWASP Top 10 類別,提供風險脈絡"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History", "zh": "發展歷程" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "WSTG evolved from the OWASP Testing Guide, first published as v1 in 2004, followed by v2 (2007), v3 (2008), and the widely adopted v4 in 2014. The project was subsequently renamed the Web Security Testing Guide. Version 4.1 was released in April 2020, and the current stable release, version 4.2, followed on 3 December 2020, introducing new test scenarios and improved formatting alongside rolling updates on GitHub.",
+          "zh": "WSTG 源自 OWASP Testing Guide,最早於 2004 年發布 v1,接著推出 v2(2007)、v3(2008),以及在 2014 年廣受採用的 v4。此後專案更名為網頁安全測試指南(Web Security Testing Guide)。v4.1 於 2020 年 4 月發布,目前的穩定版 v4.2 則於 2020 年 12 月 3 日推出,引入新的測試情境與改良的排版,並在 GitHub 上持續滾動更新。"
+        },
+        {
+          "type": "p",
+          "en": "Development is now focused on version 5.0, worked on in the project's GitHub repository, which will refresh and expand the testing content. The latest in-progress material is always available from the repository, while v4.2 remains the recommended stable reference for production testing and reporting.",
+          "zh": "目前開發重心放在 v5.0,於專案的 GitHub 程式碼庫中進行,將更新並擴充測試內容。最新的開發中內容始終可在程式碼庫取得,而 v4.2 仍是正式測試與報告時建議引用的穩定版本。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Resources", "zh": "資源連結" },
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": { "en": "OWASP project page", "zh": "OWASP 專案頁面" }, "url": "https://owasp.org/www-project-web-security-testing-guide/" },
+            { "label": { "en": "Stable version (latest)", "zh": "穩定版(最新)" }, "url": "https://owasp.org/www-project-web-security-testing-guide/stable/" },
+            { "label": { "en": "Version 4.2 (stable release)", "zh": "v4.2 穩定版" }, "url": "https://owasp.org/www-project-web-security-testing-guide/v42/" },
+            { "label": { "en": "GitHub repository", "zh": "GitHub 程式碼庫" }, "url": "https://github.com/OWASP/wstg" },
+            { "label": { "en": "Checklists & ID reference", "zh": "檢查清單與識別碼參考" }, "url": "https://github.com/OWASP/wstg/tree/master/checklists" }
+          ]
+        }
+      ]
+    }
+  ]
+}

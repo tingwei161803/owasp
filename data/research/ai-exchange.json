@@ -1,0 +1,203 @@
+{
+  "slug": "ai-exchange",
+  "category": "ai",
+  "icon": "psychology",
+  "title": {
+    "en": "OWASP AI Exchange",
+    "zh": "OWASP AI Exchange(AI 安全交流框架)"
+  },
+  "subtitle": {
+    "en": "The world's open-source AI security & privacy guide and connective tissue to global AI standards.",
+    "zh": "全球開源 AI 安全與隱私指南,串接國際 AI 標準的「連接組織」。"
+  },
+  "tags": ["ai-security", "ai-privacy", "threat-model", "standards", "cc0", "machine-learning"],
+  "meta": {
+    "type": {
+      "en": "Reference framework / standards feeder",
+      "zh": "參考框架 / 標準輸入來源"
+    },
+    "latest": {
+      "en": "Living document (continuous delivery; flagship since Mar 2025)",
+      "zh": "持續更新的活文件(continuous delivery;2025 年 3 月起為旗艦專案)"
+    },
+    "audience": {
+      "en": "Security pros, AI/ML engineers, data scientists, standards bodies, policymakers",
+      "zh": "資安人員、AI/ML 工程師、資料科學家、標準組織、政策制定者"
+    },
+    "format": {
+      "en": "Single comprehensive website (300+ pages) + PDF, navigator diagram",
+      "zh": "單一完整網站(300+ 頁)+ PDF 與威脅導覽圖"
+    },
+    "license": "CC0 1.0 Universal (public domain dedication)",
+    "url": "https://owaspai.org/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "專案概觀" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP AI Exchange is described as 'the world's AI security guide': an openly licensed, 300+ page framework of practical threats and controls for securing AI and machine learning systems. It functions as a global think tank and as the key open-source input — the 'connective tissue' — feeding international AI security and privacy standards.",
+          "zh": "OWASP AI Exchange 自稱為「全球 AI 安全指南」:一套開放授權、超過 300 頁,涵蓋實務威脅與控制措施、用於保護 AI 與機器學習系統的框架。它同時是全球性的智庫,也是輸入國際 AI 安全與隱私標準的關鍵開源來源,扮演「連接組織」(connective tissue)的角色。"
+        },
+        {
+          "type": "p",
+          "en": "It is released under CC0 1.0 — a public domain dedication that lets anyone freely copy, adapt and reuse the content without attribution (attribution is appreciated but not required), which is precisely what makes it usable as raw material inside formal standards.",
+          "zh": "其內容以 CC0 1.0 釋出 —— 一種公眾領域宣告(public domain dedication),任何人皆可自由複製、修改與再利用,無需署名(歡迎但不強制標示來源)。正是這種極寬鬆的授權,讓它得以成為正式標準的原始素材。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Founded 22 Oct 2022 by Rob van der Veer (originally the 'AI security and privacy guide').",
+            "Awarded OWASP Flagship project status in March 2025.",
+            "Led by 70+ carefully selected experts: researchers, practitioners, vendors and data scientists."
+          ],
+          "zh": [
+            "由 Rob van der Veer 於 2022 年 10 月 22 日創立(最初名為「AI 安全與隱私指南」)。",
+            "於 2025 年 3 月獲頒 OWASP 旗艦專案(Flagship)地位。",
+            "由 70 多位精選專家共同維護:研究人員、實務工作者、廠商與資料科學家。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "Threats & Controls Structure", "zh": "威脅與控制措施架構" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The framework maps threats across the AI lifecycle and pairs each with controls, organized into deep-dive sections: general (governance) controls, threats through use (input threats), development-time threats, runtime conventional security threats, plus AI security testing and AI privacy.",
+          "zh": "此框架沿 AI 生命週期對應威脅,並為每項威脅搭配控制措施,組織成數個深入章節:一般(治理)控制、使用階段威脅(輸入威脅)、開發階段威脅、執行階段傳統資安威脅,另含 AI 安全測試與 AI 隱私。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Development-time threats: training-data poisoning, model poisoning, supply-chain compromise, and development-time data leaks in the engineering environment.",
+            "Runtime / use-time threats: evasion (adversarial input), prompt injection (direct & indirect), model theft/extraction, sensitive-data disclosure & membership inference, and AI resource exhaustion (model DoS).",
+            "Runtime conventional security: traditional IT attacks adapted to AI assets, including injection via model output."
+          ],
+          "zh": [
+            "開發階段威脅:訓練資料下毒(data poisoning)、模型下毒(model poisoning)、供應鏈遭破壞,以及工程環境中的開發階段資料外洩。",
+            "執行/使用階段威脅:規避攻擊(對抗式輸入)、提示注入(直接與間接)、模型竊取/萃取、敏感資料揭露與成員推斷(membership inference),以及 AI 資源耗盡(模型 DoS)。",
+            "執行階段傳統資安:套用於 AI 資產的傳統 IT 攻擊,包含透過模型輸出進行的注入攻擊。"
+          ]
+        },
+        {
+          "type": "ul",
+          "en": [
+            "General governance controls: AIPROGRAM, SECPROGRAM, DEVPROGRAM, SECDEVPROGRAM, CHECKCOMPLIANCE, SECEDUCATE, plus limiting unwanted model behaviour and data minimisation.",
+            "Development-time controls: dev-environment security, data segregation/protection, federated learning and supply-chain management.",
+            "Runtime app controls: model & I/O integrity, model confidentiality, access control, rate limiting, input validation and output filtering.",
+            "Data-science defenses: training-data hardening (poison resistance), adversarial/evasion robustness, ensembles and quality control."
+          ],
+          "zh": [
+            "一般治理控制:AIPROGRAM、SECPROGRAM、DEVPROGRAM、SECDEVPROGRAM、CHECKCOMPLIANCE、SECEDUCATE,並包含限制不當模型行為與資料最小化。",
+            "開發階段控制:開發環境安全、資料隔離/保護、聯邦式學習(federated learning)與供應鏈管理。",
+            "執行階段應用控制:模型與輸入輸出完整性、模型機密性、存取控制、速率限制、輸入驗證與輸出過濾。",
+            "資料科學防禦:訓練資料強化(抗下毒)、對抗式/規避攻擊韌性、模型集成(ensemble)與品質控管。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "standards",
+      "title": { "en": "Feeding Global Standards", "zh": "輸入全球標準" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Because it is CC0, AI Exchange acts as a standards feeder: its content is contributed directly into formal AI security and privacy standards, with founder Rob van der Veer serving as liaison officer and co-editor across the relevant bodies.",
+          "zh": "由於採用 CC0 授權,AI Exchange 得以作為「標準輸入來源」:其內容被直接貢獻進正式的 AI 安全與隱私標準,創辦人 Rob van der Veer 於相關組織擔任聯絡官(liaison officer)與共同編輯。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "ISO/IEC 27090 (AI security guidance): ~70 pages contributed; expected 2026.",
+            "ISO/IEC 27091 (AI privacy): in development, OWASP working-group participation.",
+            "EU AI Act / CEN-CENELEC prEN 18282 (AI security): substantial OWASP contribution; van der Veer is co-editor; public enquiry early 2026.",
+            "OWASP holds an official liaison partnership with CEN/CENELEC, approved unanimously by EU member states.",
+            "Aligns with NIST, ENISA and links security standards globally via OpenCRE."
+          ],
+          "zh": [
+            "ISO/IEC 27090(AI 安全指引):貢獻約 70 頁內容;預計 2026 年發布。",
+            "ISO/IEC 27091(AI 隱私):制定中,OWASP 參與工作小組。",
+            "歐盟 AI 法案 / CEN-CENELEC prEN 18282(AI 安全):OWASP 大幅貢獻內容;van der Veer 擔任共同編輯;2026 年初進入公眾諮詢。",
+            "OWASP 與 CEN/CENELEC 建立正式聯絡夥伴關係,並獲歐盟會員國一致通過。",
+            "與 NIST、ENISA 對齊,並透過 OpenCRE 在全球串接各項資安標準。"
+          ]
+        },
+        {
+          "type": "p",
+          "en": "AI Exchange is complementary to the OWASP GenAI Security Project (home of the LLM Top 10): the two cross-reference each other, with AI Exchange providing the broad, standards-grade depth across all AI types (including predictive ML) while GenAI focuses on generative AI and agentic threats.",
+          "zh": "AI Exchange 與 OWASP GenAI Security Project(LLM Top 10 的所屬專案)互補:兩者互相交叉引用,AI Exchange 提供涵蓋所有 AI 類型(包含預測式 ML)、達標準等級的廣度與深度,而 GenAI 則聚焦生成式 AI 與代理式(agentic)威脅。"
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "How to Use It", "zh": "如何運用" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Teams use AI Exchange as a single reference to build an AI security program, run threat modelling, select controls and prepare for regulation. The interactive Navigator diagram maps the relationships between threats, controls, risks and control types so users can drill from a risk to concrete mitigations.",
+          "zh": "團隊可將 AI Exchange 作為單一參考來源,用以建立 AI 安全計畫、進行威脅建模、選擇控制措施並為法規合規做準備。互動式 Navigator(導覽圖)呈現威脅、控制、風險與控制類型之間的關係,讓使用者能從某項風險逐層鑽研到具體緩解措施。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Map your AI use case to development-time vs runtime threats, then pick the matching controls.",
+            "Use it as a regulatory bridge — its content underpins forthcoming EU AI Act and ISO standards.",
+            "Combine with the OWASP GenAI/LLM Top 10 for generative-AI-specific awareness."
+          ],
+          "zh": [
+            "將你的 AI 使用情境對應到開發階段與執行階段威脅,再挑選對應的控制措施。",
+            "把它當作法規橋樑 —— 其內容支撐即將發布的歐盟 AI 法案與 ISO 標準。",
+            "搭配 OWASP GenAI/LLM Top 10,補強生成式 AI 專屬的風險認知。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History", "zh": "發展歷程" },
+      "blocks": [
+        {
+          "type": "ul",
+          "en": [
+            "2022 (Oct): Initiated by Rob van der Veer as the 'AI security and privacy guide'.",
+            "2023: Rebranded as 'AI Exchange' to emphasise global collaboration and standards alignment.",
+            "Mar 2025: Awarded OWASP Flagship project status (alongside the GenAI Security Project).",
+            "2025–2026: Grows rapidly as the open-source bridge into ISO/IEC and EU AI Act standards."
+          ],
+          "zh": [
+            "2022 年 10 月:由 Rob van der Veer 以「AI 安全與隱私指南」之名啟動。",
+            "2023 年:更名為「AI Exchange」,強調全球協作與標準對齊。",
+            "2025 年 3 月:獲頒 OWASP 旗艦專案地位(與 GenAI Security Project 同時)。",
+            "2025–2026 年:迅速成長為輸入 ISO/IEC 與歐盟 AI 法案標準的開源橋樑。"
+          ]
+        },
+        {
+          "type": "quote",
+          "en": "The world's AI security guide — connecting practitioners, researchers, industry and policymakers to bring clarity to AI security.",
+          "zh": "全球 AI 安全指南 —— 連結實務工作者、研究人員、產業與政策制定者,為 AI 安全帶來清晰方向。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Official Resources", "zh": "官方資源" },
+      "blocks": [
+        {
+          "type": "links",
+          "items": [
+            { "label": "OWASP AI Exchange — official site", "url": "https://owaspai.org/" },
+            { "label": "AI Security Overview (threats & controls)", "url": "https://owaspai.org/docs/ai_security_overview/" },
+            { "label": "General controls", "url": "https://owaspai.org/docs/1_general_controls/" },
+            { "label": "Full guide PDF", "url": "https://owaspai.org/OWASP-AI-Exchange.pdf" },
+            { "label": "OWASP blog: AI Exchange & EU regulation", "url": "https://owasp.org/blog/2025/05/06/AI-Exchage-Regulation" }
+          ]
+        }
+      ]
+    }
+  ]
+}

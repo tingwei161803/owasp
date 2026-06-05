@@ -1,0 +1,170 @@
+{
+  "slug": "juice-shop",
+  "category": "tool",
+  "icon": "local_cafe",
+  "title": {
+    "en": "OWASP Juice Shop",
+    "zh": "OWASP Juice Shop"
+  },
+  "subtitle": {
+    "en": "Probably the most modern and sophisticated insecure web app for security training and CTFs.",
+    "zh": "可能是最現代、最精緻的刻意不安全 Web 應用程式,用於資安訓練與 CTF。"
+  },
+  "tags": ["web-security", "training", "ctf", "owasp-top-10", "javascript", "vulnerable-app"],
+  "meta": {
+    "type": {
+      "en": "Deliberately insecure web application / hands-on training platform",
+      "zh": "刻意設計的不安全 Web 應用程式 / 動手實作訓練平台"
+    },
+    "latest": {
+      "en": "v20.0.0 (released 2026-05-12)",
+      "zh": "v20.0.0(2026-05-12 發布)"
+    },
+    "audience": {
+      "en": "Learners, trainers, pentesters and security tool vendors",
+      "zh": "學習者、講師、滲透測試人員與資安工具廠商"
+    },
+    "format": {
+      "en": "Docker / npm (Node.js) / Vagrant / one-click cloud deploy",
+      "zh": "Docker / npm(Node.js)/ Vagrant / 一鍵雲端部署"
+    },
+    "license": "MIT",
+    "url": "https://owasp.org/www-project-juice-shop/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "專案概觀" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP Juice Shop bills itself as \"probably the most modern and sophisticated insecure web application.\" It is a deliberately vulnerable application built to be hacked, used for security training, awareness demonstrations, Capture-The-Flag (CTF) events and as a guinea pig for testing security tools against a real-world, JavaScript-heavy stack.",
+          "zh": "OWASP Juice Shop 自稱「可能是最現代、最精緻的不安全 Web 應用程式」。它是一個刻意設計成可被入侵的脆弱應用,用於資安訓練、資安意識展示、奪旗(CTF)競賽,也作為測試資安工具對抗真實世界、以 JavaScript 為主的技術棧的實驗對象。"
+        },
+        {
+          "type": "p",
+          "en": "It is the first JavaScript-only application listed in the OWASP Vulnerable Web Applications Directory. The front end is an Angular single-page application styled with Angular Material, while the back end is a Node.js / Express server exposing a RESTful API, with SQLite (via Sequelize) and a MarsDB NoSQL store backing the data.",
+          "zh": "它是 OWASP 脆弱 Web 應用程式目錄(VWA Directory)中第一個純 JavaScript 應用程式。前端是以 Angular Material 美化的 Angular 單頁應用(SPA),後端則是 Node.js / Express 伺服器並提供 RESTful API,資料層以 SQLite(透過 Sequelize)與 MarsDB(NoSQL)儲存。"
+        },
+        {
+          "type": "quote",
+          "en": "Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications.",
+          "zh": "Juice Shop 涵蓋了整份 OWASP Top Ten 的弱點,以及許多在真實應用程式中發現的其他資安缺陷。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "Vulnerability Coverage", "zh": "弱點涵蓋範圍" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Juice Shop deliberately contains vulnerabilities spanning the entire OWASP Top 10 and far beyond, so a single application can be used to teach almost every common web weakness class:",
+          "zh": "Juice Shop 刻意內建涵蓋整份 OWASP Top 10 並遠超其範圍的弱點,因此單一應用程式即可用來教學幾乎所有常見的 Web 弱點類別:"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Injection - SQL injection and NoSQL injection",
+            "Broken Authentication and weak session / credential handling",
+            "Broken Access Control and insecure direct object references",
+            "Cross-Site Scripting (XSS) - reflected, stored and DOM-based",
+            "Sensitive Data Exposure and Cryptographic Issues",
+            "XML External Entities (XXE) and Insecure Deserialization",
+            "Security Misconfiguration and use of Vulnerable / outdated Components",
+            "Broken Anti-Automation, Unvalidated Redirects and Security through Obscurity"
+          ],
+          "zh": [
+            "注入(Injection)- SQL 注入與 NoSQL 注入",
+            "失效的身分驗證與脆弱的工作階段 / 憑證處理",
+            "失效的存取控制與不安全的直接物件參考(IDOR)",
+            "跨網站指令碼(XSS)- 反射型、儲存型與 DOM 型",
+            "敏感資料外洩與加密相關缺陷",
+            "XML 外部實體(XXE)與不安全的反序列化",
+            "資安組態設定錯誤,以及使用脆弱 / 過期的元件",
+            "失效的防自動化機制、未驗證的轉址與以隱晦求安全"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "challenges",
+      "title": { "en": "Hacking Challenges", "zh": "駭客挑戰系統" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Hacking is gamified through 112 challenges of varying difficulty, rated from ★ (trivial) to ★★★★★★ (hardest). Your first task is usually to find the hidden Score Board, which then tracks your progress and unlocks a real-time push notification each time a challenge is solved over WebSocket.",
+          "zh": "入侵過程被遊戲化為 112 道難度各異的挑戰,評級從 ★(極簡單)到 ★★★★★★(最困難)。你的第一個任務通常是找出隱藏的計分板(Score Board),它會追蹤你的進度,並在每次解出挑戰時透過 WebSocket 即時推播通知。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "112 challenges total, including 33 with optional coding (fix-the-code) challenges and 13 guided tutorials",
+            "Categories include Injection, Broken Authentication, Sensitive Data Exposure and XXE",
+            "Categories include Broken Access Control, Security Misconfiguration and Cross-Site Scripting",
+            "Categories include Insecure Deserialization, Vulnerable Components and Cryptographic Issues",
+            "Categories include Broken Anti-Automation, Unvalidated Redirects, Security through Obscurity and Improper Input Validation",
+            "A built-in Hacking Instructor offers interactive, step-by-step tutorials for beginners"
+          ],
+          "zh": [
+            "總共 112 道挑戰,其中 33 道附帶選用的修補程式碼(fix-the-code)挑戰,並有 13 道引導式教學",
+            "類別涵蓋注入、失效的身分驗證、敏感資料外洩與 XXE",
+            "類別涵蓋失效的存取控制、資安組態設定錯誤與跨網站指令碼(XSS)",
+            "類別涵蓋不安全的反序列化、脆弱元件與加密相關缺陷",
+            "類別涵蓋失效的防自動化、未驗證的轉址、以隱晦求安全與不當的輸入驗證",
+            "內建的 Hacking Instructor 為新手提供互動式、逐步的教學引導"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "Deployment, CTF & Customization", "zh": "部署、CTF 與客製化" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Juice Shop runs anywhere: from source via npm on Node.js, as an official Docker image, with Vagrant, or via one-click deploy to major cloud providers on Windows, macOS and Linux. It is highly customizable and supports re-theming and rebranding for tailored trainings.",
+          "zh": "Juice Shop 可在任何環境執行:在 Node.js 上以 npm 從原始碼啟動、使用官方 Docker 映像檔、透過 Vagrant,或在 Windows、macOS 與 Linux 上一鍵部署到主流雲端供應商。它高度可客製化,支援重新佈景與品牌化以打造客製化訓練。"
+        },
+        {
+          "type": "p",
+          "en": "For competitions, the companion juice-shop-ctf-cli tool generates challenge data that can be imported into popular CTF frameworks such as CTFd, FBCTF and RootTheBox, while the MultiJuicer project orchestrates many isolated instances for multi-user classroom or event use.",
+          "zh": "在競賽方面,搭配的 juice-shop-ctf-cli 工具可產生挑戰資料,匯入 CTFd、FBCTF、RootTheBox 等熱門 CTF 框架;而 MultiJuicer 專案則可調度多個彼此隔離的執行個體,供多人課堂或活動使用。"
+        },
+        {
+          "type": "p",
+          "en": "A free companion book, \"Pwning OWASP Juice Shop\" by project leader Björn Kimminich, documents every challenge with hints and full solutions and is published online and on Leanpub under CC BY-NC-ND 4.0.",
+          "zh": "由專案負責人 Björn Kimminich 撰寫的免費隨附書籍《Pwning OWASP Juice Shop》記錄了每一道挑戰的提示與完整解法,線上與 Leanpub 皆有提供,並以 CC BY-NC-ND 4.0 授權發布。"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History & Status", "zh": "歷史與專案狀態" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Juice Shop was started in 2014 by Björn Kimminich and is now co-led with Jannik Hollenbach. It was promoted to OWASP Flagship project status in 2018, recognizing it as one of OWASP's most mature and widely used projects. Released under the permissive MIT License, it remains free and open source, with v20.0.0 shipped on 2026-05-12.",
+          "zh": "Juice Shop 由 Björn Kimminich 於 2014 年發起,目前與 Jannik Hollenbach 共同領導。它於 2018 年晉升為 OWASP 旗艦(Flagship)專案,代表它是 OWASP 最成熟且廣泛使用的專案之一。專案以寬鬆的 MIT 授權發布,維持免費且開源,v20.0.0 於 2026-05-12 推出。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Official Resources", "zh": "官方資源" },
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": "OWASP Project Page", "url": "https://owasp.org/www-project-juice-shop/" },
+            { "label": "Official Website", "url": "https://owasp-juice.shop/" },
+            { "label": "Pwning OWASP Juice Shop (Companion Book)", "url": "https://pwning.owasp-juice.shop/" },
+            { "label": "GitHub Repository", "url": "https://github.com/juice-shop/juice-shop" },
+            { "label": "juice-shop-ctf-cli (CTF Extension)", "url": "https://github.com/juice-shop/juice-shop-ctf" },
+            { "label": "MultiJuicer (Multi-user Deployment)", "url": "https://github.com/juice-shop/multi-juicer" }
+          ]
+        }
+      ]
+    }
+  ]
+}

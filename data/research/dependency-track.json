@@ -1,0 +1,188 @@
+{
+  "slug": "dependency-track",
+  "category": "tool",
+  "icon": "account_tree",
+  "title": {
+    "en": "OWASP Dependency-Track",
+    "zh": "OWASP Dependency-Track"
+  },
+  "subtitle": {
+    "en": "Continuous SCA platform that consumes CycloneDX SBOMs to cut software supply chain risk across a portfolio.",
+    "zh": "持續性軟體組成分析平台,透過 CycloneDX SBOM 降低整個應用組合的軟體供應鏈風險。"
+  },
+  "tags": ["sca", "sbom", "cyclonedx", "supply-chain", "vulnerability", "policy"],
+  "meta": {
+    "type": {
+      "en": "Component analysis / SCA platform",
+      "zh": "軟體組成分析(SCA)平台"
+    },
+    "latest": {
+      "en": "v4.14.2 (May 2026); v5.0.0 in release-candidate",
+      "zh": "v4.14.2(2026 年 5 月);v5.0.0 釋出候選版本開發中"
+    },
+    "audience": {
+      "en": "AppSec teams, DevSecOps, builders & defenders",
+      "zh": "應用安全團隊、DevSecOps、開發者與防禦者"
+    },
+    "format": {
+      "en": "Self-hosted (Docker / Kubernetes / Java WAR)",
+      "zh": "自架部署(Docker / Kubernetes / Java WAR)"
+    },
+    "license": "Apache-2.0",
+    "url": "https://owasp.org/www-project-dependency-track/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "title": { "en": "Overview", "zh": "總覽" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP Dependency-Track is an intelligent, continuous Software Composition Analysis (SCA) and component analysis platform. Instead of running point-in-time scans, it ingests CycloneDX Software Bill of Materials (SBOM) documents and continuously monitors every component, in every version of every application across an organization's entire portfolio, to identify and reduce risk in the software supply chain.",
+          "zh": "OWASP Dependency-Track 是一套智慧型、持續性的軟體組成分析(SCA)與元件分析平台。它不採用一次性的時間點掃描,而是吸收 CycloneDX 軟體物料清單(SBOM)文件,持續監控組織整個應用組合中每個應用程式、每個版本裡的每個元件,以辨識並降低軟體供應鏈風險。"
+        },
+        {
+          "type": "p",
+          "en": "It is an OWASP Flagship project with an API-first design, making it well suited to CI/CD automation. The system ships as two main parts, an API server and a frontend, and is typically deployed via Docker, Kubernetes, or an executable WAR.",
+          "zh": "它是 OWASP 旗艦級專案,採用 API 優先的設計,非常適合整合進 CI/CD 自動化流程。系統主要由 API 伺服器與前端兩個元件組成,通常透過 Docker、Kubernetes 或可執行的 WAR 檔部署。"
+        },
+        {
+          "type": "quote",
+          "en": "Dependency-Track monitors component usage across all versions of every application in its portfolio in order to proactively identify risk across an organization.",
+          "zh": "Dependency-Track 監控其應用組合中每個應用程式所有版本的元件使用情形,以主動辨識整個組織的風險。"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": { "en": "Core capabilities", "zh": "核心能力" },
+      "blocks": [
+        {
+          "type": "ul",
+          "en": [
+            "Portfolio-wide component inventory across applications, libraries, frameworks, containers, operating systems, firmware, hardware, and services",
+            "Vulnerability identification correlating components against multiple intelligence feeds",
+            "Configurable policy engine enforcing security, license, and operational risk policies",
+            "License risk and compliance analysis with NIST and CISA alignment",
+            "Detection of outdated, modified, and end-of-life components",
+            "VEX (Vulnerability Exploitability Exchange) support and an audit / triage workflow",
+            "Risk scoring and time-series metrics, including EPSS-based prioritization",
+            "Broad integration ecosystem for CI/CD, ticketing, chat, and AppSec tooling"
+          ],
+          "zh": [
+            "涵蓋應用程式、函式庫、框架、容器、作業系統、韌體、硬體與服務的全組合元件清單",
+            "將元件與多個情資來源比對,辨識已知漏洞",
+            "可設定的政策引擎,落實安全、授權與營運風險政策",
+            "授權風險與合規分析,並對齊 NIST 與 CISA 規範",
+            "偵測過時、被竄改與已終止支援(EOL)的元件",
+            "支援 VEX(漏洞可利用性交換)並提供稽核 / 分流工作流程",
+            "風險評分與時間序列指標,並支援以 EPSS 為基礎的優先排序",
+            "完整的整合生態系,涵蓋 CI/CD、工單、即時通訊與應用安全工具"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "datasources",
+      "title": { "en": "Data sources & integrations", "zh": "資料來源與整合" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Dependency-Track enriches SBOM analysis by correlating components against several vulnerability intelligence datasources, blending the results to improve coverage and accuracy.",
+          "zh": "Dependency-Track 透過將元件與多個漏洞情資來源比對,並融合各來源結果,以提升涵蓋率與準確度,進而強化 SBOM 分析。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "National Vulnerability Database (NVD)",
+            "OSV (Open Source Vulnerabilities, Google)",
+            "GitHub Advisories",
+            "Sonatype OSS Index",
+            "Trivy",
+            "Snyk",
+            "VulnDB (Risk Based Security)",
+            "EPSS (Exploit Prediction Scoring System) for exploitability-based prioritization"
+          ],
+          "zh": [
+            "國家漏洞資料庫(NVD)",
+            "OSV(開源漏洞資料庫,Google)",
+            "GitHub Advisories 安全諮詢",
+            "Sonatype OSS Index",
+            "Trivy",
+            "Snyk",
+            "VulnDB(Risk Based Security)",
+            "EPSS(漏洞利用預測評分系統),用於以可利用性為基礎的優先排序"
+          ]
+        },
+        {
+          "type": "ul",
+          "en": [
+            "CI/CD: Jenkins plugin, GitHub Actions, and other pipeline tooling via REST API",
+            "Issue tracking & notifications: Jira, Slack, Microsoft Teams, Mattermost, email, and webhooks",
+            "AppSec aggregation: DefectDojo, ThreadFix, Fortify SSC, and Kenna Security",
+            "Authentication: OAuth 2.0 / OIDC SSO, Active Directory / LDAP, internal users, and API keys"
+          ],
+          "zh": [
+            "CI/CD:Jenkins 外掛、GitHub Actions,以及其他可透過 REST API 串接的管線工具",
+            "工單與通知:Jira、Slack、Microsoft Teams、Mattermost、電子郵件與 webhook",
+            "應用安全彙整:DefectDojo、ThreadFix、Fortify SSC 與 Kenna Security",
+            "身分驗證:OAuth 2.0 / OIDC 單一登入、Active Directory / LDAP、內部使用者與 API 金鑰"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "title": { "en": "How it is used", "zh": "使用方式" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "A typical workflow pairs SBOM generation with analysis: a CI/CD pipeline produces a CycloneDX SBOM during the build and uploads it to Dependency-Track via the REST API, the Jenkins plugin, or the web UI. From there the platform continuously re-evaluates that inventory as new vulnerability intelligence arrives.",
+          "zh": "典型的工作流程是將 SBOM 產生與分析配對:CI/CD 管線在建置過程中產生 CycloneDX SBOM,再透過 REST API、Jenkins 外掛或網頁介面上傳至 Dependency-Track。之後平台會在新的漏洞情資到來時,持續重新評估該元件清單。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Embed SBOM upload as a step in CI/CD builds for every release",
+            "Continuously monitor the whole portfolio, so newly disclosed CVEs surface against already-shipped software without re-scanning",
+            "Configure alerting (Slack, Teams, Jira, webhooks) to notify teams when new risk appears",
+            "Apply the policy engine and audit workflow to triage findings, record VEX justifications, and enforce gates"
+          ],
+          "zh": [
+            "在每次發布的 CI/CD 建置流程中,將 SBOM 上傳設為一個步驟",
+            "持續監控整個應用組合,讓新揭露的 CVE 能對應到已上線軟體,而無需重新掃描",
+            "設定告警(Slack、Teams、Jira、webhook),在出現新風險時通知團隊",
+            "運用政策引擎與稽核工作流程進行漏洞分流、記錄 VEX 判定理由並落實閘門控管"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": { "en": "History", "zh": "發展歷程" },
+      "blocks": [
+        {
+          "type": "p",
+          "en": "Dependency-Track originated in 2013 as a v1 desktop application. It was completely re-architected as a server platform in v3 (2018), then evolved into the modern API-first v4 platform. Development continues through the 4.x line, with the latest stable release being v4.14.2 (May 2026) and a major v5.0.0 currently in release-candidate stage.",
+          "zh": "Dependency-Track 起源於 2013 年的 v1 桌面應用程式。它在 v3(2018 年)被完全重新架構為伺服器平台,接著演進為現代 API 優先的 v4 平台。開發持續沿著 4.x 系列推進,最新穩定版為 v4.14.2(2026 年 5 月),而重大改版的 v5.0.0 目前處於釋出候選(RC)階段。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "title": { "en": "Resources", "zh": "資源連結" },
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": { "en": "OWASP project page", "zh": "OWASP 專案頁面" }, "url": "https://owasp.org/www-project-dependency-track/" },
+            { "label": { "en": "Official website", "zh": "官方網站" }, "url": "https://dependencytrack.org/" },
+            { "label": { "en": "Documentation", "zh": "官方文件" }, "url": "https://docs.dependencytrack.org/" },
+            { "label": { "en": "GitHub repository", "zh": "GitHub 程式碼庫" }, "url": "https://github.com/DependencyTrack/dependency-track" },
+            { "label": { "en": "Releases", "zh": "版本發布頁" }, "url": "https://github.com/DependencyTrack/dependency-track/releases" }
+          ]
+        }
+      ]
+    }
+  ]
+}

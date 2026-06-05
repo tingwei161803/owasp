@@ -1,0 +1,167 @@
+{
+  "slug": "mas",
+  "category": "guide",
+  "icon": "phone_iphone",
+  "title": {
+    "en": "OWASP Mobile Application Security (MAS)",
+    "zh": "OWASP 行動應用程式安全 (MAS)"
+  },
+  "subtitle": {
+    "en": "The industry standard for mobile app security: MASVS standard, MASTG testing guide, and MAS Checklist for iOS & Android.",
+    "zh": "行動應用程式安全的業界標準:MASVS 標準、MASTG 測試指南與 MAS 檢核表,涵蓋 iOS 與 Android。"
+  },
+  "tags": ["mobile", "ios", "android", "masvs", "mastg", "verification", "pentest"],
+  "meta": {
+    "type": {
+      "en": "Verification standard + testing guide",
+      "zh": "驗證標準 + 測試指南"
+    },
+    "latest": {
+      "en": "MASVS v2.1.0 (Jan 2024) · MASTG v1.7.0 (Oct 2024)",
+      "zh": "MASVS v2.1.0(2024 年 1 月)· MASTG v1.7.0(2024 年 10 月)"
+    },
+    "audience": {
+      "en": "Mobile developers, penetration testers, security architects, app reviewers",
+      "zh": "行動開發者、滲透測試人員、資安架構師、App 審查人員"
+    },
+    "format": {
+      "en": "Web + PDF standard, online testing guide, and YAML/Excel checklist",
+      "zh": "網頁 + PDF 標準、線上測試指南,以及 YAML/Excel 檢核表"
+    },
+    "license": "CC BY-SA 4.0",
+    "url": "https://owasp.org/www-project-mobile-app-security/"
+  },
+  "sections": [
+    {
+      "id": "overview",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "OWASP Mobile Application Security (MAS) is an OWASP flagship project whose mission is to define the industry standard for mobile application security. It provides a complete framework — a verification standard, a testing manual, and an assessment checklist — covering both Android and iOS. Security teams use it to verify app security, run penetration tests, define build requirements, and train staff.",
+          "zh": "OWASP 行動應用程式安全 (MAS) 是 OWASP 的旗艦專案,使命是為行動應用程式安全制定業界標準。它提供一套完整框架 — 驗證標準、測試手冊與評估檢核表 — 同時涵蓋 Android 與 iOS。資安團隊用它來驗證 App 安全性、執行滲透測試、定義開發需求,並進行人員培訓。"
+        },
+        {
+          "type": "p",
+          "en": "MAS is widely referenced by app stores, enterprises, and regulators as a vendor-neutral baseline. Unlike a vulnerability top-10 list, it pairs prescriptive security requirements (MASVS) with concrete, reproducible test cases (MASTG), so the same controls can drive both secure development and independent assessment.",
+          "zh": "MAS 被應用程式商店、企業與監理機關廣泛引用,作為廠商中立的安全基準。與「Top 10 弱點清單」不同,它將規範性的安全需求 (MASVS) 與具體、可重現的測試案例 (MASTG) 對應起來,讓同一套控制項既能驅動安全開發,也能用於獨立評估。"
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The project ships three core deliverables that work together, plus a legacy ranking and an emerging weakness catalog:",
+          "zh": "本專案提供三項可協同運作的核心交付物,另有一份既有的排名清單與一份新興的弱點目錄:"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "MASVS (Mobile Application Security Verification Standard) — the standard that defines what a secure mobile app must do, expressed as testable security controls grouped by domain.",
+            "MASTG (Mobile Application Security Testing Guide) — a comprehensive manual of OS internals, reverse-engineering techniques, tools, and platform-specific test cases mapped back to MASVS controls.",
+            "MAS Checklist — a spreadsheet/YAML artifact that links each MASVS control to the corresponding MASTG test cases, used to track and report assessment coverage.",
+            "MASWE (beta) — Mobile Application Security Weakness Enumeration, a catalog of common mobile weaknesses bridging the standard and the testing guide.",
+            "Mobile Top 10 — the legacy awareness ranking of common mobile risks, now superseded for verification by MASVS."
+          ],
+          "zh": [
+            "MASVS(行動應用程式安全驗證標準)— 定義安全行動 App「必須做到什麼」的標準,以可測試的安全控制項表示,並依領域分組。",
+            "MASTG(行動應用程式安全測試指南)— 涵蓋作業系統內部機制、逆向工程技術、工具與平台專屬測試案例的完整手冊,並對應回 MASVS 控制項。",
+            "MAS Checklist(檢核表)— 以試算表/YAML 形式提供,將每個 MASVS 控制項連結到對應的 MASTG 測試案例,用於追蹤與回報評估涵蓋率。",
+            "MASWE(beta)— 行動應用程式安全弱點列舉,作為標準與測試指南之間橋樑的常見行動弱點目錄。",
+            "Mobile Top 10 — 既有的行動風險意識排名清單,用於驗證用途已由 MASVS 取代。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "MASVS 2.x restructured the standard into eight technical control groups. Each group bundles the requirements for one security domain across both platforms:",
+          "zh": "MASVS 2.x 將標準重整為八個技術控制群組,每個群組整合了單一安全領域在兩個平台上的需求:"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "MASVS-STORAGE — protect sensitive data stored on the device and prevent unintended leakage through backups, logs, or IPC.",
+            "MASVS-CRYPTO — use strong, correctly configured cryptography and manage keys securely.",
+            "MASVS-AUTH — enforce sound authentication and authorization, including secure handling of credentials and biometrics.",
+            "MASVS-NETWORK — secure all network communication with TLS and validate the server identity.",
+            "MASVS-PLATFORM — interact safely with platform APIs, WebViews, IPC, and the surrounding mobile OS.",
+            "MASVS-CODE — maintain code quality and keep third-party dependencies patched and free of known vulnerabilities.",
+            "MASVS-RESILIENCE — resist reverse engineering and tampering through defense-in-depth hardening measures.",
+            "MASVS-PRIVACY — protect user privacy and handle personal data transparently and in line with regulations."
+          ],
+          "zh": [
+            "MASVS-STORAGE — 保護裝置上儲存的敏感資料,防止透過備份、日誌或 IPC 造成非預期外洩。",
+            "MASVS-CRYPTO — 使用強健且設定正確的加密機制,並安全地管理金鑰。",
+            "MASVS-AUTH — 落實健全的身分驗證與授權,包含安全處理憑證與生物辨識。",
+            "MASVS-NETWORK — 以 TLS 保護所有網路通訊,並驗證伺服器身分。",
+            "MASVS-PLATFORM — 安全地與平台 API、WebView、IPC 及行動作業系統互動。",
+            "MASVS-CODE — 維持程式碼品質,並讓第三方相依套件保持更新、無已知漏洞。",
+            "MASVS-RESILIENCE — 透過縱深防禦的強化措施,抵禦逆向工程與竄改。",
+            "MASVS-PRIVACY — 保護使用者隱私,並以透明且符合法規的方式處理個人資料。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "usage",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "MAS supports the full mobile security lifecycle. Developers use MASVS as a requirements catalog to define a target security level before coding; testers follow the MASTG methodology — static analysis, dynamic instrumentation, traffic interception, and reverse engineering — to validate each control on real devices and emulators for both iOS and Android.",
+          "zh": "MAS 支援完整的行動安全生命週期。開發者以 MASVS 作為需求目錄,在開發前定義目標安全等級;測試人員則依循 MASTG 方法論 — 靜態分析、動態插樁、流量攔截與逆向工程 — 在 iOS 與 Android 的實機與模擬器上驗證每一項控制項。"
+        },
+        {
+          "type": "ul",
+          "en": [
+            "Mobile penetration testing with a repeatable, evidence-based methodology.",
+            "App store and enterprise verification against a recognized security baseline.",
+            "Defining and contracting security requirements for in-house or vendor-built apps.",
+            "Security training and building hands-on skills with the MAS Crackmes challenge apps."
+          ],
+          "zh": [
+            "以可重複、以證據為基礎的方法論進行行動滲透測試。",
+            "依公認的安全基準進行應用程式商店與企業驗證。",
+            "為自研或委外開發的 App 定義並簽訂安全需求。",
+            "搭配 MAS Crackmes 挑戰題進行資安培訓與實作技能養成。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "blocks": [
+        {
+          "type": "p",
+          "en": "The project grew from two parallel efforts: the Mobile Application Security Verification Standard (MASVS) and the Mobile Security Testing Guide (originally MSTG). In April 2023, MASVS 2.0 delivered a major refactor that simplified and reorganized the controls into the modern technical groups and renamed MSTG to MASTG, consolidating everything under the unified 'OWASP MAS' brand.",
+          "zh": "本專案源自兩條並行的工作:行動應用程式安全驗證標準 (MASVS) 與行動安全測試指南(原名 MSTG)。2023 年 4 月,MASVS 2.0 完成重大重構,將控制項簡化並重整為現代化的技術群組,同時將 MSTG 更名為 MASTG,整合在統一的「OWASP MAS」品牌之下。"
+        },
+        {
+          "type": "p",
+          "en": "MASVS v2.1.0 (January 2024) added the MASVS-PRIVACY group and CycloneDX SBOM support, and is the current standard version. MASTG v1.7.0 (October 2024) completed the second phase of the testing-guide refactor, splitting content into Tests, Techniques, Tools, and Reference Apps to align with MASVS 2.x.",
+          "zh": "MASVS v2.1.0(2024 年 1 月)新增 MASVS-PRIVACY 群組與 CycloneDX SBOM 支援,為目前的標準版本。MASTG v1.7.0(2024 年 10 月)完成測試指南重構的第二階段,將內容拆分為 Tests、Techniques、Tools 與 Reference Apps,以對齊 MASVS 2.x。"
+        }
+      ]
+    },
+    {
+      "id": "resources",
+      "blocks": [
+        {
+          "type": "links",
+          "links": [
+            { "label": "OWASP MAS project page", "url": "https://owasp.org/www-project-mobile-app-security/" },
+            { "label": "MAS documentation site (mas.owasp.org)", "url": "https://mas.owasp.org/" },
+            { "label": "MASVS — Verification Standard", "url": "https://mas.owasp.org/MASVS/" },
+            { "label": "MASTG — Testing Guide", "url": "https://mas.owasp.org/MASTG/" },
+            { "label": "MASVS releases on GitHub", "url": "https://github.com/OWASP/masvs/releases" },
+            { "label": "MASTG releases on GitHub", "url": "https://github.com/OWASP/mastg/releases" }
+          ]
+        }
+      ]
+    }
+  ]
+}
