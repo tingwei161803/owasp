@@ -15,6 +15,7 @@ const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
 const SITE_URL = "https://tingwei161803.github.io/owasp/";
+const OG_IMAGE = SITE_URL + "assets/og-image.png";   // absolute URL — required by social crawlers
 
 global.window = {};
 require(path.join(__dirname, "data.js"));
@@ -71,11 +72,16 @@ function shell(p) {
   <meta property="og:title" content="${attr(pageTitleZh)}" />
   <meta property="og:description" content="${attr(subZh)}" />
   <meta property="og:url" content="${attr(canonical)}" />
+  <meta property="og:image" content="${OG_IMAGE}" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="OWASP 旗艦專案導覽 / OWASP Flagship Projects" />
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:locale:alternate" content="en_US" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="${attr(pageTitleEn)}" />
   <meta name="twitter:description" content="${attr(subEn)}" />
+  <meta name="twitter:image" content="${OG_IMAGE}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Flex:opsz,wght@8..144,400..700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
