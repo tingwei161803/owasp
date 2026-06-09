@@ -10,7 +10,7 @@
 
 | | |
 |---|---|
-| 🌐 網站 | <https://tingwei161803.github.io/owasp/> |
+| 🌐 網站 | <https://owasp.peteraim.com/> |
 
 > 直接點進去就能用,無需安裝。每個專案都有獨立網址(例如 `…/asvs.html`、`…/juice-shop.html`),可直接分享。
 
