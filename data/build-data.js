@@ -4,7 +4,7 @@
    Reads the 11 per-project research files in data/research/*.json (raw output
    from the research agents, which used slightly different shapes) and emits a
    single canonical data/data.js with window.SITE_META + window.SITE_PAGES for
-   the lazy-data2web multipage engine.
+   the site's multipage rendering engine.
 
    Run:  node data/build-data.js     (re-runnable; data/data.js is generated)
    ========================================================================= */
