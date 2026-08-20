@@ -1,5 +1,5 @@
 /* =========================================================================
-   lazy-data2web · multipage · app.js   (vanilla, no build, no chart lib)
+   multipage · app.js   (vanilla, no build, no chart lib)
 
    The PAGE-LEVEL LAYOUT ENGINE. shell.js has already injected the shared
    chrome and published window.LDW. This script:

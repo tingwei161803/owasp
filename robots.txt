@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://owasp.peteraim.com/sitemap.xml

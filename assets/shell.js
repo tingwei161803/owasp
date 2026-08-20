@@ -1,5 +1,5 @@
 /* =========================================================================
-   lazy-data2web · multipage · shell.js   (vanilla, no build)
+   multipage · shell.js   (vanilla, no build)
 
    The SHARED CHROME for every page: app bar, cross-page nav, footer and the
    detail <dialog>. It also owns global state (language + theme) and exposes a
