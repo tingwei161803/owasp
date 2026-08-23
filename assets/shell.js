@@ -198,7 +198,10 @@
   function refreshChrome() {
     var page = currentPage();
     var siteTitle = t(META.title);
-    var pageTitle = page ? t(page.title) : "";
+    /* the hub is the site, so it is titled with the site name alone — in English
+       the two strings are identical and appending one to the other read as a
+       stutter once each language had its own <title> in the static HTML. */
+    var pageTitle = page && page.slug !== "home" ? t(page.title) : "";
     document.title = pageTitle ? pageTitle + " · " + siteTitle : siteTitle;
 
     var brand = document.getElementById("brandName");
