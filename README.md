@@ -14,11 +14,14 @@
 
 > 直接點進去就能用,無需安裝。每個專案都有獨立網址(例如 `…/asvs.html`、`…/juice-shop.html`),可直接分享。
 
+**一個網址只有一種語言**:中文在 root(`…/asvs.html`),英文在 `/en/` 底下(`…/en/asvs.html`)。
+兩邊互相以 `hreflang` 標註,`canonical` 各指自己,分享哪一個網址就是哪一種語言。
+
 ---
 
 ## ✨ 功能特色
 
-- 🌏 **全頁雙語切換** — 中文 / English 一鍵切換,整頁(導覽、卡片、內文、事實框、頁尾)同步重繪,無殘留
+- 🌏 **中英雙語,各有網址** — 右上角的語言鈕是一個連結,指向同一頁的另一語言版本;語言由網址決定,不靠瀏覽器記憶
 - 🌗 **深色 / 淺色模式** — 一鍵切換,並以 `localStorage` 記憶
 - 🔍 **即時搜尋** — 在首頁輸入關鍵字立即過濾專案
 - 🏷️ **分類篩選** — 依「指南與標準 / AI 安全 / 供應鏈・SBOM / 工具」四大分類快速篩選
@@ -27,7 +30,7 @@
 - 🔗 **官方來源連結** — 每頁附上 3–6 個官方資源連結
 - 📱 **響應式設計** — 手機、平板、桌機皆適配(已於 375px 驗證無水平溢位)
 - ⚡ **純靜態、零 build** — 無後端、無打包工具,載入快、可離線瀏覽
-- 🔎 **SEO / 分享友善** — 每頁含 canonical、Open Graph、Twitter Card 與 JSON-LD 結構化資料
+- 🔎 **SEO / 分享友善** — 每頁含 canonical、hreflang、Open Graph、Twitter Card 與 JSON-LD 結構化資料,且都用該網址自己的語言
 
 ---
 
@@ -53,9 +56,11 @@
 
 ```
 owasp/
-├── index.html              # 首頁(hub:搜尋 + 分類 + 專案卡片)
+├── index.html              # 中文首頁(hub:搜尋 + 分類 + 專案卡片)
 ├── compare.html            # 專案對照表(可排序 / 篩選)
 ├── <slug>.html             # 11 個專案各自的詳情頁(article)
+├── en/                     # 同樣 13 頁的英文版,一個網址一種語言
+├── sitemap.xml             # 中英兩種語言的 26 個網址
 ├── assets/
 │   ├── styles.css          # MD3 設計 token + 元件樣式
 │   ├── shell.js            # 共用 chrome:app bar / 跨頁導覽 / footer / dialog / 語言・主題
@@ -63,7 +68,7 @@ owasp/
 ├── data/
 │   ├── data.js             # 產生的資料層(window.SITE_META + SITE_PAGES)— 勿手改
 │   ├── build-data.js       # 合併步驟:research/*.json → data.js
-│   ├── build-pages.js      # 產生各 .html 頁殼(含 SEO/OG/JSON-LD)
+│   ├── build-pages.js      # 早期的頁殼產生器,已不是頁面的來源(見下方說明,勿執行)
 │   └── research/*.json     # 各專案原始研究資料(可重現的來源)
 ├── favicon.svg
 └── .nojekyll               # 讓 GitHub Pages 原樣提供 assets/
@@ -91,14 +96,18 @@ uv run python -m http.server 4173
 
 > 本專案為純靜態網站,瀏覽不需安裝任何依賴。依使用者偏好,所有 Python 操作一律使用 `uv`。
 
-### 重新產生資料 / 頁面(可選)
+### 重新產生資料(可選)
 
-資料層與頁殼都是由 `data/research/*.json` 產生的,可重現:
+資料層是由 `data/research/*.json` 產生的,可重現:
 
 ```bash
 node data/build-data.js     # research/*.json → data/data.js
-node data/build-pages.js    # data/data.js   → 各 .html 頁殼
 ```
+
+> ⚠️ **`data/build-pages.js` 已經追不上現況,不要執行。** 它產生的是空的
+> `<main id="page"></main>` 頁殼,而各頁的內文現在直接寫在靜態 HTML 裡(關掉 JS
+> 也讀得到);它寫的網址還是舊的 `github.io`,也不知道 `/en/`、hreflang 與 GA4。
+> 跑下去會把 13 頁的內容洗掉。留著是為了保存頁殼當初的產生方式,修好它是另一件事。
 
 ### 驗證(Playwright)
 
