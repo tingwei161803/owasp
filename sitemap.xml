@@ -5,6 +5,9 @@
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://owasp.peteraim.com/</loc>
+  </url>
+  <url>
     <loc>https://owasp.peteraim.com/ai-exchange.html</loc>
   </url>
   <url>
@@ -23,10 +26,46 @@
     <loc>https://owasp.peteraim.com/dependency-track.html</loc>
   </url>
   <url>
-    <loc>https://owasp.peteraim.com/genai-security.html</loc>
+    <loc>https://owasp.peteraim.com/en/</loc>
   </url>
   <url>
-    <loc>https://owasp.peteraim.com/</loc>
+    <loc>https://owasp.peteraim.com/en/ai-exchange.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/asvs.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/compare.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/crs.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/cyclonedx.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/dependency-track.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/genai-security.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/juice-shop.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/mas.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/samm.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/top-ten.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/en/wstg.html</loc>
+  </url>
+  <url>
+    <loc>https://owasp.peteraim.com/genai-security.html</loc>
   </url>
   <url>
     <loc>https://owasp.peteraim.com/juice-shop.html</loc>
