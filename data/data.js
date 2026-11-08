@@ -18,7 +18,7 @@ window.SITE_META = {
   },
   "footer": {
     "en": "Unofficial educational guide · content © OWASP under each project's own license.",
-    "zh": "非官方教育用導覽 · 內容著作權屬 OWASP,依各專案授權條款。"
+    "zh": "非官方教育用導覽 · 內容著作權屬 OWASP，依各專案授權條款。"
   }
 };
 
@@ -33,7 +33,7 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Eleven of OWASP's flagship projects — the standards, guides and tools that define modern application security. Search or filter by category, then open any card for a detailed bilingual breakdown.",
-      "zh": "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選,再點任一張卡片查看詳盡的雙語解說。"
+      "zh": "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選，再點任一張卡片查看詳盡的雙語解說。"
     },
     "stats": [
       {
@@ -159,7 +159,7 @@ window.SITE_PAGES = [
       {
         "name": {
           "en": "OWASP Application Security Verification Standard (ASVS)",
-          "zh": "OWASP 應用程式安全驗證標準 (ASVS)"
+          "zh": "OWASP 應用程式安全驗證標準（ASVS）"
         },
         "cat": {
           "en": "Guides & Standards",
@@ -171,14 +171,14 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "5.0.0 (May 2025)",
-          "zh": "5.0.0 版(2025 年 5 月)"
+          "zh": "5.0.0 版（2025 年 5 月）"
         },
         "url": "https://owasp.org/www-project-application-security-verification-standard/"
       },
       {
         "name": {
           "en": "OWASP Web Security Testing Guide (WSTG)",
-          "zh": "OWASP 網頁安全測試指南(WSTG)"
+          "zh": "OWASP 網頁安全測試指南（WSTG）"
         },
         "cat": {
           "en": "Guides & Standards",
@@ -190,14 +190,14 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "v4.2 stable (Dec 2020); v5.0 in development",
-          "zh": "v4.2 穩定版(2020 年 12 月);v5.0 開發中"
+          "zh": "v4.2 穩定版（2020 年 12 月）；v5.0 開發中"
         },
         "url": "https://owasp.org/www-project-web-security-testing-guide/"
       },
       {
         "name": {
           "en": "OWASP Mobile Application Security (MAS)",
-          "zh": "OWASP 行動應用程式安全 (MAS)"
+          "zh": "OWASP 行動應用程式安全（MAS）"
         },
         "cat": {
           "en": "Guides & Standards",
@@ -209,7 +209,7 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "MASVS v2.1.0 (Jan 2024) · MASTG v1.7.0 (Oct 2024)",
-          "zh": "MASVS v2.1.0(2024 年 1 月)· MASTG v1.7.0(2024 年 10 月)"
+          "zh": "MASVS v2.1.0（2024 年 1 月）· MASTG v1.7.0（2024 年 10 月）"
         },
         "url": "https://owasp.org/www-project-mobile-app-security/"
       },
@@ -228,7 +228,7 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "SAMM v2.0.3 (2022); v2.0 announced Feb 2020",
-          "zh": "SAMM v2.0.3(2022 年);v2.0 於 2020 年 2 月發布"
+          "zh": "SAMM v2.0.3（2022 年）；v2.0 於 2020 年 2 月發布"
         },
         "url": "https://owasp.org/www-project-samm/"
       },
@@ -243,7 +243,7 @@ window.SITE_PAGES = [
         },
         "type": {
           "en": "Guidance & community project (OWASP flagship)",
-          "zh": "指南與社群專案(OWASP 旗艦級)"
+          "zh": "指南與社群專案（OWASP 旗艦級）"
         },
         "latest": {
           "en": "Top 10 for LLM Applications 2025",
@@ -254,7 +254,7 @@ window.SITE_PAGES = [
       {
         "name": {
           "en": "OWASP AI Exchange",
-          "zh": "OWASP AI Exchange(AI 安全交流框架)"
+          "zh": "OWASP AI Exchange（AI 安全交流框架）"
         },
         "cat": {
           "en": "AI Security",
@@ -266,7 +266,7 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "Living document (continuous delivery; flagship since Mar 2025)",
-          "zh": "持續更新的活文件(continuous delivery;2025 年 3 月起為旗艦專案)"
+          "zh": "持續更新的活文件（continuous delivery；2025 年 3 月起為旗艦專案）"
         },
         "url": "https://owaspai.org/"
       },
@@ -285,7 +285,7 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "Spec v1.7 (2025-10-21); ECMA-424",
-          "zh": "規範 v1.7(2025-10-21);ECMA-424"
+          "zh": "規範 v1.7(2025-10-21)；ECMA-424"
         },
         "url": "https://owasp.org/www-project-cyclonedx/"
       },
@@ -300,11 +300,11 @@ window.SITE_PAGES = [
         },
         "type": {
           "en": "Component analysis / SCA platform",
-          "zh": "軟體組成分析(SCA)平台"
+          "zh": "軟體組成分析（SCA）平台"
         },
         "latest": {
           "en": "v4.14.2 (May 2026); v5.0.0 in release-candidate",
-          "zh": "v4.14.2(2026 年 5 月);v5.0.0 釋出候選版本開發中"
+          "zh": "v4.14.2（2026 年 5 月）；v5.0.0 釋出候選版本開發中"
         },
         "url": "https://owasp.org/www-project-dependency-track/"
       },
@@ -323,7 +323,7 @@ window.SITE_PAGES = [
         },
         "latest": {
           "en": "v20.0.0 (released 2026-05-12)",
-          "zh": "v20.0.0(2026-05-12 發布)"
+          "zh": "v20.0.0（2026-05-12 發布）"
         },
         "url": "https://owasp.org/www-project-juice-shop/"
       },
@@ -338,11 +338,11 @@ window.SITE_PAGES = [
         },
         "type": {
           "en": "WAF rule set (open source)",
-          "zh": "WAF 規則集(開源)"
+          "zh": "WAF 規則集（開源）"
         },
         "latest": {
           "en": "CRS 4.27.0 (June 2026); 4.25.0 is the first LTS line",
-          "zh": "CRS 4.27.0(2026 年 6 月);4.25.0 為首個 LTS 版本"
+          "zh": "CRS 4.27.0（2026 年 6 月）；4.25.0 為首個 LTS 版本"
         },
         "url": "https://owasp.org/www-project-modsecurity-core-rule-set/"
       }
@@ -384,7 +384,7 @@ window.SITE_PAGES = [
       },
       "format": {
         "en": "Web pages + PDF + slides, with many community translations",
-        "zh": "網頁 + PDF + 簡報,並有眾多社群翻譯版本"
+        "zh": "網頁 + PDF + 簡報，並有眾多社群翻譯版本"
       },
       "license": "CC BY-SA 4.0",
       "url": "https://owasp.org/www-project-top-ten/"
@@ -401,21 +401,21 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The OWASP Top 10 is a standard awareness document that represents a broad consensus about the most critical security risks to web applications. First published in 2003, it has become the de facto starting point for application security worldwide and is referenced by standards, procurement requirements, and developer training programs across the industry.",
-              "zh": "OWASP Top 10 是一份標準意識文件,呈現業界對網頁應用程式最關鍵安全風險的廣泛共識。它自 2003 年首次發布以來,已成為全球應用程式安全事實上的起點,並被各類標準、採購需求與開發人員訓練課程廣泛引用。"
+              "zh": "OWASP Top 10 是一份標準意識文件，呈現業界對網頁應用程式最關鍵安全風險的廣泛共識。它自 2003 年首次發布以來，已成為全球應用程式安全事實上的起點，並被各類標準、採購需求與開發人員訓練課程廣泛引用。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "The most current edition is OWASP Top 10:2025, whose final version was released in January 2026 after being announced at the OWASP Global AppSec conference in Washington, D.C. in November 2025. It supersedes the long-standing 2021 edition and introduces two brand-new risk categories alongside several re-rankings and renames.",
-              "zh": "最新版本為 OWASP Top 10:2025,於 2025 年 11 月在華盛頓特區舉行的 OWASP Global AppSec 大會上公布,並於 2026 年 1 月發布正式版。它取代了沿用多年的 2021 版,並新增兩個全新風險類別,同時調整了多個排名與名稱。"
+              "zh": "最新版本為 OWASP Top 10:2025，於 2025 年 11 月在華盛頓特區舉行的 OWASP Global AppSec 大會上公布，並於 2026 年 1 月發布正式版。它取代了沿用多年的 2021 版，並新增兩個全新風險類別，同時調整了多個排名與名稱。"
             }
           },
           {
             "type": "quote",
             "text": {
               "en": "The OWASP Top 10 is an awareness document, not a formal certifiable standard — it tells you where to focus, not exactly how to comply.",
-              "zh": "OWASP Top 10 是一份意識文件,而非可認證的正式標準——它告訴你該把重點放在哪裡,而不是該如何逐條稽核合規。"
+              "zh": "OWASP Top 10 是一份意識文件，而非可認證的正式標準——它告訴你該把重點放在哪裡，而不是該如何逐條稽核合規。"
             }
           }
         ]
@@ -431,7 +431,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Each category is identified by a stable code (A01:2025 through A10:2025) and groups together many related Common Weakness Enumeration (CWE) entries that share a common root cause.",
-              "zh": "每個類別都以固定代碼標示(A01:2025 至 A10:2025),並將多個具有相同根本原因的相關 CWE(通用弱點列舉)歸納在一起。"
+              "zh": "每個類別都以固定代碼標示（A01:2025 至 A10:2025），並將多個具有相同根本原因的相關 CWE（通用弱點列舉）歸納在一起。"
             }
           },
           {
@@ -450,16 +450,16 @@ window.SITE_PAGES = [
                 "A10:2025 – Mishandling of Exceptional Conditions — NEW: improper error handling, failing open, and logic errors arising from abnormal conditions."
               ],
               "zh": [
-                "A01:2025 – 權限控制失效(Broken Access Control)——使用者得以超出其授權範圍行動;現也納入伺服器端請求偽造(SSRF)。",
-                "A02:2025 – 安全設定錯誤(Security Misconfiguration)——不安全的預設值、過於詳盡的錯誤訊息與未妥善強化的系統;由 2021 年的第 5 名上升。",
-                "A03:2025 – 軟體供應鏈失效(Software Supply Chain Failures)——全新類別:軟體建置、散布或更新過程中遭破壞,擴大了舊有的脆弱元件類別。",
-                "A04:2025 – 加密機制失效(Cryptographic Failures)——缺乏、過弱或誤用加密,導致敏感資料與金鑰外洩。",
-                "A05:2025 – 注入攻擊(Injection)——不受信任的輸入竄改指令或查詢(SQL、OS、LDAP 及跨網站指令碼 XSS);由第 3 名下滑。",
-                "A06:2025 – 不安全設計(Insecure Design)——架構與設計階段缺少或失效的安全控制。",
-                "A07:2025 – 身分驗證失效(Authentication Failures)——身分驗證、工作階段管理與憑證處理失當;由「識別與驗證失效」更名而來。",
-                "A08:2025 – 軟體與資料完整性失效(Software or Data Integrity Failures)——未經完整性驗證即信任程式碼與資料,包含不安全的反序列化與 CI/CD 管線。",
-                "A09:2025 – 安全記錄與警示失效(Security Logging & Alerting Failures)——記錄、偵測與警示不足,拖延事件應變。",
-                "A10:2025 – 例外狀況處理不當(Mishandling of Exceptional Conditions)——全新類別:不當的錯誤處理、失敗時開放(failing open)與異常情況衍生的邏輯錯誤。"
+                "A01:2025 – 權限控制失效（Broken Access Control）——使用者得以超出其授權範圍行動；現也納入伺服器端請求偽造（SSRF）。",
+                "A02:2025 – 安全設定錯誤（Security Misconfiguration）——不安全的預設值、過於詳盡的錯誤訊息與未妥善強化的系統；由 2021 年的第 5 名上升。",
+                "A03:2025 – 軟體供應鏈失效（Software Supply Chain Failures）——全新類別：軟體建置、散布或更新過程中遭破壞，擴大了舊有的脆弱元件類別。",
+                "A04:2025 – 加密機制失效（Cryptographic Failures）——缺乏、過弱或誤用加密，導致敏感資料與金鑰外洩。",
+                "A05:2025 – 注入攻擊（Injection）——不受信任的輸入竄改指令或查詢（SQL、OS、LDAP 及跨網站指令碼 XSS）；由第 3 名下滑。",
+                "A06:2025 – 不安全設計（Insecure Design）——架構與設計階段缺少或失效的安全控制。",
+                "A07:2025 – 身分驗證失效（Authentication Failures）——身分驗證、工作階段管理與憑證處理失當；由「識別與驗證失效」更名而來。",
+                "A08:2025 – 軟體與資料完整性失效（Software or Data Integrity Failures）——未經完整性驗證即信任程式碼與資料，包含不安全的反序列化與 CI/CD 管線。",
+                "A09:2025 – 安全記錄與警示失效（Security Logging & Alerting Failures）——記錄、偵測與警示不足，拖延事件應變。",
+                "A10:2025 – 例外狀況處理不當（Mishandling of Exceptional Conditions）——全新類別：不當的錯誤處理、失敗時開放（failing open）與異常情況衍生的邏輯錯誤。"
               ]
             }
           }
@@ -476,7 +476,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The Top 10 is data-driven. For 2025, OWASP analyzed testing data from 13 contributing organizations covering more than 2.8 million applications, mapping roughly 220,000 CVEs onto 643 unique CWEs — a major expansion over the ~400 CWEs considered in 2021.",
-              "zh": "Top 10 是資料驅動的。2025 版中,OWASP 分析了 13 個貢獻組織、涵蓋逾 280 萬個應用程式的測試資料,將約 22 萬筆 CVE 對應到 643 個獨特的 CWE——相較 2021 年約 400 個 CWE 大幅擴增。"
+              "zh": "Top 10 是資料驅動的。2025 版中，OWASP 分析了 13 個貢獻組織、涵蓋逾 280 萬個應用程式的測試資料，將約 22 萬筆 CVE 對應到 643 個獨特的 CWE——相較 2021 年約 400 個 CWE 大幅擴增。"
             }
           },
           {
@@ -489,10 +489,10 @@ window.SITE_PAGES = [
                 "Contributors to the 2025 data set included vendors such as Veracode, Contrast Security, and Semgrep, supplying both human-assisted and tooling-derived results."
               ],
               "zh": [
-                "十個類別中有八個直接自貢獻的弱點資料挑選,依出現頻率排名,並以 CVSS 的可利用性與衝擊分數加權。",
-                "另保留兩個名額給社群問卷調查,用以捕捉歷史掃描資料尚無法呈現的新興風險——這也是「不安全設計」等前瞻性類別納入清單的途徑。",
-                "相關 CWE 依根本原因(而非表面症狀)分群,每個類別上限約 40 個 CWE,以維持指引的可執行性。",
-                "2025 版資料貢獻者包含 Veracode、Contrast Security 與 Semgrep 等廠商,提供人工輔助與工具產出的結果。"
+                "十個類別中有八個直接自貢獻的弱點資料挑選，依出現頻率排名，並以 CVSS 的可利用性與衝擊分數加權。",
+                "另保留兩個名額給社群問卷調查，用以捕捉歷史掃描資料尚無法呈現的新興風險——這也是「不安全設計」等前瞻性類別納入清單的途徑。",
+                "相關 CWE 依根本原因（而非表面症狀）分群，每個類別上限約 40 個 CWE，以維持指引的可執行性。",
+                "2025 版資料貢獻者包含 Veracode、Contrast Security 與 Semgrep 等廠商，提供人工輔助與工具產出的結果。"
               ]
             }
           },
@@ -500,7 +500,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Because the data always looks backward, OWASP explicitly combines it with the survey so the list reflects both measured prevalence and the judgement of practitioners about where the field is heading.",
-              "zh": "由於資料本質上是回顧過去,OWASP 刻意結合問卷調查,使清單同時反映可量測的普遍程度,以及實務工作者對領域未來走向的判斷。"
+              "zh": "由於資料本質上是回顧過去，OWASP 刻意結合問卷調查，使清單同時反映可量測的普遍程度，以及實務工作者對領域未來走向的判斷。"
             }
           }
         ]
@@ -523,10 +523,10 @@ window.SITE_PAGES = [
                 "Reference the per-category pages for prevention tips, example attack scenarios, and the mapped CWE list."
               ],
               "zh": [
-                "將其視為排序過的意識基準,而非完整檢核表——需要可測試的要求時,請改用 OWASP 應用程式安全驗證標準(ASVS)。",
-                "將威脅建模、程式碼審查與滲透測試的發現對應到這十個類別,以共通詞彙溝通風險。",
-                "以這些類別驅動安全程式設計訓練與開發人員上手流程,並為每項搭配具體防護指引與 CWE 參照。",
-                "可用於 CI/CD 關卡與廠商評估,但應搭配更深入的標準,切勿將「涵蓋 Top 10」當作安全的證明。",
+                "將其視為排序過的意識基準，而非完整檢核表——需要可測試的要求時，請改用 OWASP 應用程式安全驗證標準（ASVS）。",
+                "將威脅建模、程式碼審查與滲透測試的發現對應到這十個類別，以共通詞彙溝通風險。",
+                "以這些類別驅動安全程式設計訓練與開發人員上手流程，並為每項搭配具體防護指引與 CWE 參照。",
+                "可用於 CI/CD 關卡與廠商評估，但應搭配更深入的標準，切勿將「涵蓋 Top 10」當作安全的證明。",
                 "參考各類別頁面提供的防護建議、攻擊情境範例與對應的 CWE 清單。"
               ]
             }
@@ -544,7 +544,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Across two decades the Top 10 has evolved from an expert-curated list into a rigorous, partly data-driven methodology, refreshed roughly every three to four years rather than annually.",
-              "zh": "歷經二十年,Top 10 已從專家彙整的清單演進為嚴謹且部分資料驅動的方法論,更新週期約為每三到四年,而非每年。"
+              "zh": "歷經二十年，Top 10 已從專家彙整的清單演進為嚴謹且部分資料驅動的方法論，更新週期約為每三到四年，而非每年。"
             }
           },
           {
@@ -560,13 +560,13 @@ window.SITE_PAGES = [
                 "2025 — Current edition: added Software Supply Chain Failures and Mishandling of Exceptional Conditions, merged SSRF into Broken Access Control, and analyzed 2.8M+ applications."
               ],
               "zh": [
-                "2003 與 2004——首批版本,主要依專家對常見網頁弱點的共識而成。",
-                "2007——配合不斷變化的網頁威脅情勢調整,並更著重 XSS 與注入攻擊。",
-                "2010——明確改以「風險」(可能性與衝擊)為框架,而不僅是弱點數量。",
-                "2013——重整類別架構,新增「使用含已知漏洞的元件」議題。",
-                "2017——強化資料驅動方法,並引入「記錄與監控不足」類別。",
-                "2021——新增「不安全設計」與「軟體與資料完整性失效」;以 40 多個組織的資料加上社群問卷為基礎。",
-                "2025——現行版本:新增「軟體供應鏈失效」與「例外狀況處理不當」,將 SSRF 併入「權限控制失效」,並分析逾 280 萬個應用程式。"
+                "2003 與 2004——首批版本，主要依專家對常見網頁弱點的共識而成。",
+                "2007——配合不斷變化的網頁威脅情勢調整，並更著重 XSS 與注入攻擊。",
+                "2010——明確改以「風險」（可能性與衝擊）為框架，而不僅是弱點數量。",
+                "2013——重整類別架構，新增「使用含已知漏洞的元件」議題。",
+                "2017——強化資料驅動方法，並引入「記錄與監控不足」類別。",
+                "2021——新增「不安全設計」與「軟體與資料完整性失效」；以 40 多個組織的資料加上社群問卷為基礎。",
+                "2025——現行版本：新增「軟體供應鏈失效」與「例外狀況處理不當」，將 SSRF 併入「權限控制失效」，並分析逾 280 萬個應用程式。"
               ]
             }
           }
@@ -638,11 +638,11 @@ window.SITE_PAGES = [
     ],
     "title": {
       "en": "OWASP Application Security Verification Standard (ASVS)",
-      "zh": "OWASP 應用程式安全驗證標準 (ASVS)"
+      "zh": "OWASP 應用程式安全驗證標準（ASVS）"
     },
     "subtitle": {
       "en": "A community-driven catalog of testable security requirements for designing, building, and verifying web apps.",
-      "zh": "社群驅動的可測試安全需求清單,用於設計、開發與驗證 Web 應用程式。"
+      "zh": "社群驅動的可測試安全需求清單，用於設計、開發與驗證 Web 應用程式。"
     },
     "meta": {
       "type": {
@@ -651,7 +651,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "5.0.0 (May 2025)",
-        "zh": "5.0.0 版(2025 年 5 月)"
+        "zh": "5.0.0 版（2025 年 5 月）"
       },
       "audience": {
         "en": "Developers, testers, architects, and procurement teams",
@@ -676,14 +676,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The OWASP Application Security Verification Standard (ASVS) is an open, community-driven framework of security requirements for web applications and web services. Rather than telling you which tool to run, it defines what a secure application must do — providing a normalized, testable list of controls that developers, architects, and testers can use as a single source of truth.",
-              "zh": "OWASP 應用程式安全驗證標準(ASVS)是一套開放、社群驅動的 Web 應用程式與 Web 服務安全需求框架。它不規定你該執行哪個工具,而是定義「安全的應用程式必須做到什麼」,提供一份正規化、可測試的控制項清單,讓開發人員、架構師與測試人員都能以此作為唯一的事實依據(single source of truth)。"
+              "zh": "OWASP 應用程式安全驗證標準（ASVS）是一套開放、社群驅動的 Web 應用程式與 Web 服務安全需求框架。它不規定你該執行哪個工具，而是定義「安全的應用程式必須做到什麼」，提供一份正規化、可測試的控制項清單，讓開發人員、架構師與測試人員都能以此作為唯一的事實依據（single source of truth）。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "ASVS serves two primary purposes: it gives organizations a metric to gauge the degree of trust that can be placed in their applications, and it gives guidance to anyone building or assessing security controls on exactly what to implement and verify. Each requirement is written so it can be objectively tested, making it suitable for both manual review and as input to automated tooling.",
-              "zh": "ASVS 主要有兩大用途:一是提供組織一個衡量指標,評估其應用程式可被信任的程度;二是為任何建置或評估安全控制的人,清楚指引到底該實作與驗證哪些項目。每條需求都以「可被客觀測試」的方式撰寫,因此既適合人工審查,也可作為自動化工具的輸入依據。"
+              "zh": "ASVS 主要有兩大用途：一是提供組織一個衡量指標，評估其應用程式可被信任的程度；二是為任何建置或評估安全控制的人，清楚指引到底該實作與驗證哪些項目。每條需求都以「可被客觀測試」的方式撰寫，因此既適合人工審查，也可作為自動化工具的輸入依據。"
             }
           },
           {
@@ -706,7 +706,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "ASVS defines three increasing levels of verification rigor. You select a target level based on the risk and value of the application, then verify that it meets every requirement at and below that level. Level 5.0 rebalanced the levels so L1 has a lower barrier to entry while L3 grew substantially with high-assurance controls.",
-              "zh": "ASVS 定義了三個逐級提高的驗證嚴謹度等級。你依據應用程式的風險與價值選定目標等級,再驗證它是否符合該等級(含)以下的所有需求。5.0 版重新平衡了各等級,讓 L1 的進入門檻更低,而 L3 則大幅擴充了高保證(high-assurance)控制項。"
+              "zh": "ASVS 定義了三個逐級提高的驗證嚴謹度等級。你依據應用程式的風險與價值選定目標等級，再驗證它是否符合該等級（含）以下的所有需求。5.0 版重新平衡了各等級，讓 L1 的進入門檻更低，而 L3 則大幅擴充了高保證（high-assurance）控制項。"
             }
           },
           {
@@ -718,9 +718,9 @@ window.SITE_PAGES = [
                 "Level 3 (Advanced / High-assurance): for the most critical applications — those performing high-value transactions, holding sensitive medical data, or requiring the highest levels of trust. It demands deep, thorough verification including new high-assurance controls added in 5.0."
               ],
               "zh": [
-                "等級 1(機會性 / 基礎):每個應用程式都應達到的最低基準。設計上幾乎可完全以黑箱方式測試,無需存取原始碼、設定或開發人員,適合低保證應用程式,也是所有人的第一步。",
-                "等級 2(標準 / 建議):適用於處理敏感資料與業務關鍵功能的多數應用程式。能防禦當今軟體中大多數的風險,是 OWASP 為多數專案建議採用的目標等級。",
-                "等級 3(進階 / 高保證):針對最關鍵的應用程式——執行高價值交易、保存敏感醫療資料,或需要最高信任程度者。要求深入而徹底的驗證,包含 5.0 版新增的高保證控制項。"
+                "等級 1（機會性 / 基礎）：每個應用程式都應達到的最低基準。設計上幾乎可完全以黑箱方式測試，無需存取原始碼、設定或開發人員，適合低保證應用程式，也是所有人的第一步。",
+                "等級 2（標準 / 建議）：適用於處理敏感資料與業務關鍵功能的多數應用程式。能防禦當今軟體中大多數的風險，是 OWASP 為多數專案建議採用的目標等級。",
+                "等級 3（進階 / 高保證）：針對最關鍵的應用程式——執行高價值交易、保存敏感醫療資料，或需要最高信任程度者。要求深入而徹底的驗證，包含 5.0 版新增的高保證控制項。"
               ]
             }
           }
@@ -730,14 +730,14 @@ window.SITE_PAGES = [
         "id": "core",
         "heading": {
           "en": "Chapter Structure (ASVS 5.0)",
-          "zh": "章節結構(ASVS 5.0)"
+          "zh": "章節結構（ASVS 5.0）"
         },
         "blocks": [
           {
             "type": "p",
             "text": {
               "en": "ASVS 5.0 (released May 2025) reorganized and renumbered the standard into 17 chapters, each grouping related requirements. Requirements use a <chapter>.<section>.<requirement> numbering format (e.g. 1.2.5). The standard contains roughly 350 individual, testable controls across these chapters.",
-              "zh": "ASVS 5.0(2025 年 5 月發布)將標準重新編排與編號為 17 個章節,各章節彙整相關需求。需求採用 <章>.<節>.<需求> 的編號格式(例如 1.2.5)。整份標準在這些章節中包含約 350 條可獨立測試的控制項。"
+              "zh": "ASVS 5.0（2025 年 5 月發布）將標準重新編排與編號為 17 個章節，各章節彙整相關需求。需求採用 <章>.<節>.<需求> 的編號格式（例如 1.2.5）。整份標準在這些章節中包含約 350 條可獨立測試的控制項。"
             }
           },
           {
@@ -763,21 +763,21 @@ window.SITE_PAGES = [
                 "V17 WebRTC — security requirements specific to real-time communications"
               ],
               "zh": [
-                "V1 編碼與淨化 — 輸出編碼、注入防護,以及安全處理不受信任的資料",
+                "V1 編碼與淨化 — 輸出編碼、注入防護，以及安全處理不受信任的資料",
                 "V2 驗證與業務邏輯 — 輸入驗證與業務邏輯完整性",
                 "V3 Web 前端安全 — 瀏覽器端防護、HTTP 標頭、CSP 與前端強化",
                 "V4 API 與 Web 服務 — REST、GraphQL 與 Web 服務安全",
                 "V5 檔案處理 — 檔案的安全上傳、儲存與處理",
-                "V6 身分驗證 — 憑證與驗證器生命週期,含密碼規則",
-                "V7 工作階段管理 — 工作階段(session)生命週期、權杖與逾時",
+                "V6 身分驗證 — 憑證與驗證器生命週期，含密碼規則",
+                "V7 工作階段管理 — 工作階段（session）生命週期、權杖與逾時",
                 "V8 授權 — 存取控制與權限執行",
                 "V9 自包含權杖 — JWT 與其他無狀態權杖安全",
-                "V10 OAuth 與 OIDC — OAuth 2.0 / OpenID Connect 授權伺服器與用戶端控制項(5.0 大幅擴充)",
-                "V11 密碼學 — 演算法、金鑰管理與後量子(post-quantum)規劃",
+                "V10 OAuth 與 OIDC — OAuth 2.0 / OpenID Connect 授權伺服器與用戶端控制項（5.0 大幅擴充）",
+                "V11 密碼學 — 演算法、金鑰管理與後量子（post-quantum）規劃",
                 "V12 安全通訊 — TLS 與傳輸層保護",
-                "V13 組態設定 — 安全預設值、機密管理,以及相依套件與建置設定",
+                "V13 組態設定 — 安全預設值、機密管理，以及相依套件與建置設定",
                 "V14 資料保護 — 機密性、隱私與敏感資料保護",
-                "V15 安全程式設計與架構 — 架構與程式層級防禦,含惡意程式碼考量",
+                "V15 安全程式設計與架構 — 架構與程式層級防禦，含惡意程式碼考量",
                 "V16 安全記錄與錯誤處理 — 記錄、監控與安全的錯誤處理",
                 "V17 WebRTC — 即時通訊專屬的安全需求"
               ]
@@ -787,7 +787,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Note: ASVS 5.0 removed the direct mappings to MITRE CWE that earlier versions carried (some links were ambiguous), with future cross-references planned via OWASP's Common Requirement Enumeration (CRE). The previous 4.0 structure used 14 chapters (V1 Architecture through V14 Configuration) with each requirement mapped to a CWE.",
-              "zh": "註:ASVS 5.0 移除了早期版本中對 MITRE CWE 的直接對應(部分連結語意模糊),未來的交叉參照計畫改透過 OWASP 的共同需求列舉(CRE)專案進行。先前的 4.0 結構則使用 14 個章節(V1 架構至 V14 組態),且每條需求都對應到一個 CWE。"
+              "zh": "註：ASVS 5.0 移除了早期版本中對 MITRE CWE 的直接對應（部分連結語意模糊），未來的交叉參照計畫改透過 OWASP 的共同需求列舉（CRE）專案進行。先前的 4.0 結構則使用 14 個章節（V1 架構至 V14 組態），且每條需求都對應到一個 CWE。"
             }
           }
         ]
@@ -810,11 +810,11 @@ window.SITE_PAGES = [
                 "Alongside the OWASP Top 10: the Top 10 raises awareness of the most critical risks, while ASVS provides the detailed, measurable requirements needed to actually defend against them."
               ],
               "zh": [
-                "作為驗證檢查表:選定目標等級(L1/L2/L3),逐條評估每項需求以產生涵蓋率報告。",
-                "驅動安全設計:在軟體開發生命週期(SDLC)早期,將需求作為架構與安全使用者故事的輸入,把控制項內建於設計中,而非事後補強。",
-                "用於採購與合約:以特定 ASVS 等級作為採購或委外軟體的客觀、可測試之驗收標準。",
-                "用於測試與保證:將 ASVS(定義「要做什麼」)與 OWASP Web 安全測試指南 WSTG(說明「如何測試」)搭配使用,以規劃與執行評估。",
-                "搭配 OWASP Top 10:Top 10 提升對最關鍵風險的認知,而 ASVS 提供實際防禦這些風險所需的詳細、可量測的需求。"
+                "作為驗證檢查表：選定目標等級（L1/L2/L3），逐條評估每項需求以產生涵蓋率報告。",
+                "驅動安全設計：在軟體開發生命週期（SDLC）早期，將需求作為架構與安全使用者故事的輸入，把控制項內建於設計中，而非事後補強。",
+                "用於採購與合約：以特定 ASVS 等級作為採購或委外軟體的客觀、可測試之驗收標準。",
+                "用於測試與保證：將 ASVS（定義「要做什麼」）與 OWASP Web 安全測試指南 WSTG（說明「如何測試」）搭配使用，以規劃與執行評估。",
+                "搭配 OWASP Top 10：Top 10 提升對最關鍵風險的認知，而 ASVS 提供實際防禦這些風險所需的詳細、可量測的需求。"
               ]
             }
           }
@@ -831,7 +831,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "ASVS has evolved steadily since 2008, with each major version expanding coverage and refining the requirement structure.",
-              "zh": "ASVS 自 2008 年以來持續演進,每個主要版本都擴大涵蓋範圍並精煉需求結構。"
+              "zh": "ASVS 自 2008 年以來持續演進，每個主要版本都擴大涵蓋範圍並精煉需求結構。"
             }
           },
           {
@@ -846,12 +846,12 @@ window.SITE_PAGES = [
                 "5.0.0 (May 30, 2025): launched at Global AppSec EU Barcelona — full reorganization into 17 chapters, rebalanced L1–L3, expanded OAuth/OIDC coverage, post-quantum crypto planning, and removal of direct CWE mappings."
               ],
               "zh": [
-                "1.0(2008–2009):首次發布,確立驗證標準的概念。",
-                "2.0(2014 年 8 月):更新需求集與結構。",
-                "3.0 / 3.0.1(2015–2016):重新編排章節並擴大涵蓋範圍。",
-                "4.0(2019 年 3 月):重大改版,整理為 14 個章節(V1–V14),導入三等級模型與 CWE 對應。",
-                "4.0.2(2020 年 10 月)與 4.0.3(2021 年 10 月):維護版本,修正與釐清內容。",
-                "5.0.0(2025 年 5 月 30 日):於 Global AppSec EU 巴塞隆納發布——全面重組為 17 個章節,重新平衡 L1–L3,擴充 OAuth/OIDC,新增後量子密碼學規劃,並移除直接的 CWE 對應。"
+                "1.0(2008–2009)：首次發布，確立驗證標準的概念。",
+                "2.0（2014 年 8 月）：更新需求集與結構。",
+                "3.0 / 3.0.1(2015–2016)：重新編排章節並擴大涵蓋範圍。",
+                "4.0（2019 年 3 月）：重大改版，整理為 14 個章節（V1–V14），導入三等級模型與 CWE 對應。",
+                "4.0.2（2020 年 10 月）與 4.0.3（2021 年 10 月）：維護版本，修正與釐清內容。",
+                "5.0.0（2025 年 5 月 30 日）：於 Global AppSec EU 巴塞隆納發布——全面重組為 17 個章節，重新平衡 L1–L3，擴充 OAuth/OIDC，新增後量子密碼學規劃，並移除直接的 CWE 對應。"
               ]
             }
           },
@@ -859,7 +859,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "ASVS is led by Daniel Cuthbert, Elar Lang, and Josh Grossman, supported by an active working group and a broad community of contributors. It is published free of charge under the Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0) license.",
-              "zh": "ASVS 由 Daniel Cuthbert、Elar Lang 與 Josh Grossman 主導,並由活躍的工作小組與廣大社群貢獻者支援。本標準以創用 CC 姓名標示-相同方式分享 4.0(CC BY-SA 4.0)授權免費發布。"
+              "zh": "ASVS 由 Daniel Cuthbert、Elar Lang 與 Josh Grossman 主導，並由活躍的工作小組與廣大社群貢獻者支援。本標準以創用 CC 姓名標示-相同方式分享 4.0(CC BY-SA 4.0)授權免費發布。"
             }
           }
         ]
@@ -937,7 +937,7 @@ window.SITE_PAGES = [
     ],
     "title": {
       "en": "OWASP Web Security Testing Guide (WSTG)",
-      "zh": "OWASP 網頁安全測試指南(WSTG)"
+      "zh": "OWASP 網頁安全測試指南（WSTG）"
     },
     "subtitle": {
       "en": "The premier methodology and checklist for testing the security of web applications and web services.",
@@ -950,7 +950,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "v4.2 stable (Dec 2020); v5.0 in development",
-        "zh": "v4.2 穩定版(2020 年 12 月);v5.0 開發中"
+        "zh": "v4.2 穩定版（2020 年 12 月）；v5.0 開發中"
       },
       "audience": {
         "en": "Penetration testers, security testers, developers",
@@ -975,14 +975,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The OWASP Web Security Testing Guide (WSTG) is the premier cybersecurity testing resource for web application developers and security professionals. It is a comprehensive, community-driven methodology for performing penetration tests and security assessments of web applications and web services, maintained as an OWASP Flagship project.",
-              "zh": "OWASP 網頁安全測試指南(WSTG)是網頁應用程式開發者與安全專業人員首選的資安測試資源。它是一套由社群驅動、內容完整的方法論,用於對網頁應用程式與網頁服務執行滲透測試與安全評估,並由 OWASP 以旗艦級專案的形式維護。"
+              "zh": "OWASP 網頁安全測試指南（WSTG）是網頁應用程式開發者與安全專業人員首選的資安測試資源。它是一套由社群驅動、內容完整的方法論，用於對網頁應用程式與網頁服務執行滲透測試與安全評估，並由 OWASP 以旗艦級專案的形式維護。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "Rather than a loose list of tips, WSTG provides a repeatable, structured framework: each individual test maps to a stable identifier (e.g. WSTG-INFO-02), so findings, reports, and tooling can reference an exact, versioned test that does not change meaning between releases. This makes it a de facto community standard adopted by pentesters, testers, and development teams worldwide.",
-              "zh": "WSTG 並非零散的建議清單,而是提供可重複、結構化的框架:每一項測試都對應到一個穩定識別碼(例如 WSTG-INFO-02),讓檢測結果、報告與工具能夠引用精確且帶版本的測試項目,且其意義不會隨版本更迭而改變。這使它成為全球滲透測試人員、測試人員與開發團隊普遍採用的實質社群標準。"
+              "zh": "WSTG 並非零散的建議清單，而是提供可重複、結構化的框架：每一項測試都對應到一個穩定識別碼（例如 WSTG-INFO-02），讓檢測結果、報告與工具能夠引用精確且帶版本的測試項目，且其意義不會隨版本更迭而改變。這使它成為全球滲透測試人員、測試人員與開發團隊普遍採用的實質社群標準。"
             }
           },
           {
@@ -1005,7 +1005,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The bulk of WSTG is organised into twelve top-level test categories, each with a four-character code prefix. The categories cover the full attack surface of a modern web application, from reconnaissance through business logic abuse to client-side and API weaknesses.",
-              "zh": "WSTG 的核心內容劃分為十二個頂層測試類別,每個類別都有一個四字元的代碼前綴。這些類別涵蓋現代網頁應用程式的完整攻擊面,從情資蒐集、商業邏輯濫用,一直到用戶端與 API 弱點。"
+              "zh": "WSTG 的核心內容劃分為十二個頂層測試類別，每個類別都有一個四字元的代碼前綴。這些類別涵蓋現代網頁應用程式的完整攻擊面，從情資蒐集、商業邏輯濫用，一直到用戶端與 API 弱點。"
             }
           },
           {
@@ -1026,18 +1026,18 @@ window.SITE_PAGES = [
                 "WSTG-APIT — API Testing: REST/GraphQL and web-service-specific testing"
               ],
               "zh": [
-                "WSTG-INFO — 情資蒐集:指紋辨識、應用程式測繪,以及揭露的中繼資料探查",
-                "WSTG-CONF — 組態與部署管理:伺服器、平台、TLS 與基礎架構的強化檢查",
-                "WSTG-IDNT — 身分管理:角色定義、註冊與帳號開通流程的缺陷",
-                "WSTG-ATHN — 身分驗證:憑證處理、暴力破解防護與登入邏輯",
-                "WSTG-ATHZ — 授權:權限提升、IDOR(不安全的直接物件參考)與存取控制繞過",
-                "WSTG-SESS — 工作階段管理:Cookie 屬性、固定攻擊與工作階段生命週期",
-                "WSTG-INPV — 輸入驗證:注入攻擊(SQL、XSS、命令等)與不當的輸入處理",
-                "WSTG-ERRH — 錯誤處理:透過錯誤訊息與堆疊追蹤造成的資訊外洩",
-                "WSTG-CRYP — 弱加密:傳輸安全、弱加密演算法,以及填充 / 加密缺陷",
-                "WSTG-BUSL — 商業邏輯:濫用正常流程,以及流程時序 / 完整性缺陷",
-                "WSTG-CLNT — 用戶端測試:DOM 型 XSS、CSP、點擊劫持與瀏覽器端問題",
-                "WSTG-APIT — API 測試:REST/GraphQL 與網頁服務專屬的測試"
+                "WSTG-INFO — 情資蒐集：指紋辨識、應用程式測繪，以及揭露的中繼資料探查",
+                "WSTG-CONF — 組態與部署管理：伺服器、平台、TLS 與基礎架構的強化檢查",
+                "WSTG-IDNT — 身分管理：角色定義、註冊與帳號開通流程的缺陷",
+                "WSTG-ATHN — 身分驗證：憑證處理、暴力破解防護與登入邏輯",
+                "WSTG-ATHZ — 授權：權限提升、IDOR（不安全的直接物件參考）與存取控制繞過",
+                "WSTG-SESS — 工作階段管理：Cookie 屬性、固定攻擊與工作階段生命週期",
+                "WSTG-INPV — 輸入驗證：注入攻擊（SQL、XSS、命令等）與不當的輸入處理",
+                "WSTG-ERRH — 錯誤處理：透過錯誤訊息與堆疊追蹤造成的資訊外洩",
+                "WSTG-CRYP — 弱加密：傳輸安全、弱加密演算法，以及填充 / 加密缺陷",
+                "WSTG-BUSL — 商業邏輯：濫用正常流程，以及流程時序 / 完整性缺陷",
+                "WSTG-CLNT — 用戶端測試：DOM 型 XSS、CSP、點擊劫持與瀏覽器端問題",
+                "WSTG-APIT — API 測試：REST/GraphQL 與網頁服務專屬的測試"
               ]
             }
           }
@@ -1054,14 +1054,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "WSTG frames testing as part of a Secure SDLC rather than a single end-of-project event. Its testing framework spans five phases: before development begins; during definition and design; during development; during deployment; and during maintenance and operations. Embedding tests across these phases shifts security left and reduces the cost of fixing defects.",
-              "zh": "WSTG 將測試定位為安全軟體開發生命週期(Secure SDLC)的一環,而非專案結束時的單一事件。其測試框架涵蓋五個階段:開發開始前、定義與設計期間、開發期間、部署期間,以及維運與營運期間。將測試嵌入這些階段可讓安全左移,降低修補缺陷的成本。"
+              "zh": "WSTG 將測試定位為安全軟體開發生命週期（Secure SDLC）的一環，而非專案結束時的單一事件。其測試框架涵蓋五個階段：開發開始前、定義與設計期間、開發期間、部署期間，以及維運與營運期間。將測試嵌入這些階段可讓安全左移，降低修補缺陷的成本。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "The guide supports black-box (no internal knowledge), grey-box (partial knowledge), and white-box (full source and configuration access) approaches, letting teams choose the depth that fits the engagement. It complements other OWASP standards: the ASVS defines what security verification requirements an application should meet, the OWASP Top 10 highlights the most critical risk categories, and WSTG provides the concrete how-to for verifying them.",
-              "zh": "本指南支援黑箱(無內部知識)、灰箱(部分知識)與白箱(可完整存取原始碼與組態)三種測試方式,讓團隊依專案需求選擇適當的深度。它與其他 OWASP 標準互補:ASVS 定義應用程式應達成的安全驗證需求,OWASP Top 10 點出最關鍵的風險類別,而 WSTG 則提供驗證這些項目的具體實作方法。"
+              "zh": "本指南支援黑箱（無內部知識）、灰箱（部分知識）與白箱（可完整存取原始碼與組態）三種測試方式，讓團隊依專案需求選擇適當的深度。它與其他 OWASP 標準互補：ASVS 定義應用程式應達成的安全驗證需求，OWASP Top 10 點出最關鍵的風險類別，而 WSTG 則提供驗證這些項目的具體實作方法。"
             }
           }
         ]
@@ -1084,11 +1084,11 @@ window.SITE_PAGES = [
                 "To map findings back to ASVS requirements and OWASP Top 10 categories for risk context"
               ],
               "zh": [
-                "作為滲透測試的方法論與檢查清單,確保每次專案都有一致且完整的涵蓋率",
-                "用於評估範圍界定、與客戶議定測試涵蓋範圍,以及撰寫工作說明書(SOW)",
+                "作為滲透測試的方法論與檢查清單，確保每次專案都有一致且完整的涵蓋率",
+                "用於評估範圍界定、與客戶議定測試涵蓋範圍，以及撰寫工作說明書（SOW）",
                 "以穩定的 WSTG 識別碼建立內部測試計畫並標準化報告",
                 "作為新進安全測試人員與開發者的訓練與上手資源",
-                "將檢測結果對應回 ASVS 需求與 OWASP Top 10 類別,提供風險脈絡"
+                "將檢測結果對應回 ASVS 需求與 OWASP Top 10 類別，提供風險脈絡"
               ]
             }
           }
@@ -1105,14 +1105,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "WSTG evolved from the OWASP Testing Guide, first published as v1 in 2004, followed by v2 (2007), v3 (2008), and the widely adopted v4 in 2014. The project was subsequently renamed the Web Security Testing Guide. Version 4.1 was released in April 2020, and the current stable release, version 4.2, followed on 3 December 2020, introducing new test scenarios and improved formatting alongside rolling updates on GitHub.",
-              "zh": "WSTG 源自 OWASP Testing Guide,最早於 2004 年發布 v1,接著推出 v2(2007)、v3(2008),以及在 2014 年廣受採用的 v4。此後專案更名為網頁安全測試指南(Web Security Testing Guide)。v4.1 於 2020 年 4 月發布,目前的穩定版 v4.2 則於 2020 年 12 月 3 日推出,引入新的測試情境與改良的排版,並在 GitHub 上持續滾動更新。"
+              "zh": "WSTG 源自 OWASP Testing Guide，最早於 2004 年發布 v1，接著推出 v2(2007)、v3(2008)，以及在 2014 年廣受採用的 v4。此後專案更名為網頁安全測試指南（Web Security Testing Guide）。v4.1 於 2020 年 4 月發布，目前的穩定版 v4.2 則於 2020 年 12 月 3 日推出，引入新的測試情境與改良的排版，並在 GitHub 上持續滾動更新。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "Development is now focused on version 5.0, worked on in the project's GitHub repository, which will refresh and expand the testing content. The latest in-progress material is always available from the repository, while v4.2 remains the recommended stable reference for production testing and reporting.",
-              "zh": "目前開發重心放在 v5.0,於專案的 GitHub 程式碼庫中進行,將更新並擴充測試內容。最新的開發中內容始終可在程式碼庫取得,而 v4.2 仍是正式測試與報告時建議引用的穩定版本。"
+              "zh": "目前開發重心放在 v5.0，於專案的 GitHub 程式碼庫中進行，將更新並擴充測試內容。最新的開發中內容始終可在程式碼庫取得，而 v4.2 仍是正式測試與報告時建議引用的穩定版本。"
             }
           }
         ]
@@ -1137,7 +1137,7 @@ window.SITE_PAGES = [
               {
                 "label": {
                   "en": "Stable version (latest)",
-                  "zh": "穩定版(最新)"
+                  "zh": "穩定版（最新）"
                 },
                 "url": "https://owasp.org/www-project-web-security-testing-guide/stable/"
               },
@@ -1184,11 +1184,11 @@ window.SITE_PAGES = [
     ],
     "title": {
       "en": "OWASP Mobile Application Security (MAS)",
-      "zh": "OWASP 行動應用程式安全 (MAS)"
+      "zh": "OWASP 行動應用程式安全（MAS）"
     },
     "subtitle": {
       "en": "The industry standard for mobile app security: MASVS standard, MASTG testing guide, and MAS Checklist for iOS & Android.",
-      "zh": "行動應用程式安全的業界標準:MASVS 標準、MASTG 測試指南與 MAS 檢核表,涵蓋 iOS 與 Android。"
+      "zh": "行動應用程式安全的業界標準：MASVS 標準、MASTG 測試指南與 MAS 檢核表，涵蓋 iOS 與 Android。"
     },
     "meta": {
       "type": {
@@ -1197,7 +1197,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "MASVS v2.1.0 (Jan 2024) · MASTG v1.7.0 (Oct 2024)",
-        "zh": "MASVS v2.1.0(2024 年 1 月)· MASTG v1.7.0(2024 年 10 月)"
+        "zh": "MASVS v2.1.0（2024 年 1 月）· MASTG v1.7.0（2024 年 10 月）"
       },
       "audience": {
         "en": "Mobile developers, penetration testers, security architects, app reviewers",
@@ -1205,7 +1205,7 @@ window.SITE_PAGES = [
       },
       "format": {
         "en": "Web + PDF standard, online testing guide, and YAML/Excel checklist",
-        "zh": "網頁 + PDF 標準、線上測試指南,以及 YAML/Excel 檢核表"
+        "zh": "網頁 + PDF 標準、線上測試指南，以及 YAML/Excel 檢核表"
       },
       "license": "CC BY-SA 4.0",
       "url": "https://owasp.org/www-project-mobile-app-security/"
@@ -1222,14 +1222,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP Mobile Application Security (MAS) is an OWASP flagship project whose mission is to define the industry standard for mobile application security. It provides a complete framework — a verification standard, a testing manual, and an assessment checklist — covering both Android and iOS. Security teams use it to verify app security, run penetration tests, define build requirements, and train staff.",
-              "zh": "OWASP 行動應用程式安全 (MAS) 是 OWASP 的旗艦專案,使命是為行動應用程式安全制定業界標準。它提供一套完整框架 — 驗證標準、測試手冊與評估檢核表 — 同時涵蓋 Android 與 iOS。資安團隊用它來驗證 App 安全性、執行滲透測試、定義開發需求,並進行人員培訓。"
+              "zh": "OWASP 行動應用程式安全（MAS） 是 OWASP 的旗艦專案，使命是為行動應用程式安全制定業界標準。它提供一套完整框架 — 驗證標準、測試手冊與評估檢核表 — 同時涵蓋 Android 與 iOS。資安團隊用它來驗證 App 安全性、執行滲透測試、定義開發需求，並進行人員培訓。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "MAS is widely referenced by app stores, enterprises, and regulators as a vendor-neutral baseline. Unlike a vulnerability top-10 list, it pairs prescriptive security requirements (MASVS) with concrete, reproducible test cases (MASTG), so the same controls can drive both secure development and independent assessment.",
-              "zh": "MAS 被應用程式商店、企業與監理機關廣泛引用,作為廠商中立的安全基準。與「Top 10 弱點清單」不同,它將規範性的安全需求 (MASVS) 與具體、可重現的測試案例 (MASTG) 對應起來,讓同一套控制項既能驅動安全開發,也能用於獨立評估。"
+              "zh": "MAS 被應用程式商店、企業與監理機關廣泛引用，作為廠商中立的安全基準。與「Top 10 弱點清單」不同，它將規範性的安全需求（MASVS） 與具體、可重現的測試案例（MASTG） 對應起來，讓同一套控制項既能驅動安全開發，也能用於獨立評估。"
             }
           }
         ]
@@ -1245,7 +1245,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The project ships three core deliverables that work together, plus a legacy ranking and an emerging weakness catalog:",
-              "zh": "本專案提供三項可協同運作的核心交付物,另有一份既有的排名清單與一份新興的弱點目錄:"
+              "zh": "本專案提供三項可協同運作的核心交付物，另有一份既有的排名清單與一份新興的弱點目錄："
             }
           },
           {
@@ -1259,11 +1259,11 @@ window.SITE_PAGES = [
                 "Mobile Top 10 — the legacy awareness ranking of common mobile risks, now superseded for verification by MASVS."
               ],
               "zh": [
-                "MASVS(行動應用程式安全驗證標準)— 定義安全行動 App「必須做到什麼」的標準,以可測試的安全控制項表示,並依領域分組。",
-                "MASTG(行動應用程式安全測試指南)— 涵蓋作業系統內部機制、逆向工程技術、工具與平台專屬測試案例的完整手冊,並對應回 MASVS 控制項。",
-                "MAS Checklist(檢核表)— 以試算表/YAML 形式提供,將每個 MASVS 控制項連結到對應的 MASTG 測試案例,用於追蹤與回報評估涵蓋率。",
-                "MASWE(beta)— 行動應用程式安全弱點列舉,作為標準與測試指南之間橋樑的常見行動弱點目錄。",
-                "Mobile Top 10 — 既有的行動風險意識排名清單,用於驗證用途已由 MASVS 取代。"
+                "MASVS（行動應用程式安全驗證標準）— 定義安全行動 App「必須做到什麼」的標準，以可測試的安全控制項表示，並依領域分組。",
+                "MASTG（行動應用程式安全測試指南）— 涵蓋作業系統內部機制、逆向工程技術、工具與平台專屬測試案例的完整手冊，並對應回 MASVS 控制項。",
+                "MAS Checklist（檢核表）— 以試算表/YAML 形式提供，將每個 MASVS 控制項連結到對應的 MASTG 測試案例，用於追蹤與回報評估涵蓋率。",
+                "MASWE(beta)— 行動應用程式安全弱點列舉，作為標準與測試指南之間橋樑的常見行動弱點目錄。",
+                "Mobile Top 10 — 既有的行動風險意識排名清單，用於驗證用途已由 MASVS 取代。"
               ]
             }
           }
@@ -1280,7 +1280,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "MASVS 2.x restructured the standard into eight technical control groups. Each group bundles the requirements for one security domain across both platforms:",
-              "zh": "MASVS 2.x 將標準重整為八個技術控制群組,每個群組整合了單一安全領域在兩個平台上的需求:"
+              "zh": "MASVS 2.x 將標準重整為八個技術控制群組，每個群組整合了單一安全領域在兩個平台上的需求："
             }
           },
           {
@@ -1297,14 +1297,14 @@ window.SITE_PAGES = [
                 "MASVS-PRIVACY — protect user privacy and handle personal data transparently and in line with regulations."
               ],
               "zh": [
-                "MASVS-STORAGE — 保護裝置上儲存的敏感資料,防止透過備份、日誌或 IPC 造成非預期外洩。",
-                "MASVS-CRYPTO — 使用強健且設定正確的加密機制,並安全地管理金鑰。",
-                "MASVS-AUTH — 落實健全的身分驗證與授權,包含安全處理憑證與生物辨識。",
-                "MASVS-NETWORK — 以 TLS 保護所有網路通訊,並驗證伺服器身分。",
+                "MASVS-STORAGE — 保護裝置上儲存的敏感資料，防止透過備份、日誌或 IPC 造成非預期外洩。",
+                "MASVS-CRYPTO — 使用強健且設定正確的加密機制，並安全地管理金鑰。",
+                "MASVS-AUTH — 落實健全的身分驗證與授權，包含安全處理憑證與生物辨識。",
+                "MASVS-NETWORK — 以 TLS 保護所有網路通訊，並驗證伺服器身分。",
                 "MASVS-PLATFORM — 安全地與平台 API、WebView、IPC 及行動作業系統互動。",
-                "MASVS-CODE — 維持程式碼品質,並讓第三方相依套件保持更新、無已知漏洞。",
-                "MASVS-RESILIENCE — 透過縱深防禦的強化措施,抵禦逆向工程與竄改。",
-                "MASVS-PRIVACY — 保護使用者隱私,並以透明且符合法規的方式處理個人資料。"
+                "MASVS-CODE — 維持程式碼品質，並讓第三方相依套件保持更新、無已知漏洞。",
+                "MASVS-RESILIENCE — 透過縱深防禦的強化措施，抵禦逆向工程與竄改。",
+                "MASVS-PRIVACY — 保護使用者隱私，並以透明且符合法規的方式處理個人資料。"
               ]
             }
           }
@@ -1321,7 +1321,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "MAS supports the full mobile security lifecycle. Developers use MASVS as a requirements catalog to define a target security level before coding; testers follow the MASTG methodology — static analysis, dynamic instrumentation, traffic interception, and reverse engineering — to validate each control on real devices and emulators for both iOS and Android.",
-              "zh": "MAS 支援完整的行動安全生命週期。開發者以 MASVS 作為需求目錄,在開發前定義目標安全等級;測試人員則依循 MASTG 方法論 — 靜態分析、動態插樁、流量攔截與逆向工程 — 在 iOS 與 Android 的實機與模擬器上驗證每一項控制項。"
+              "zh": "MAS 支援完整的行動安全生命週期。開發者以 MASVS 作為需求目錄，在開發前定義目標安全等級；測試人員則依循 MASTG 方法論 — 靜態分析、動態插樁、流量攔截與逆向工程 — 在 iOS 與 Android 的實機與模擬器上驗證每一項控制項。"
             }
           },
           {
@@ -1354,14 +1354,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The project grew from two parallel efforts: the Mobile Application Security Verification Standard (MASVS) and the Mobile Security Testing Guide (originally MSTG). In April 2023, MASVS 2.0 delivered a major refactor that simplified and reorganized the controls into the modern technical groups and renamed MSTG to MASTG, consolidating everything under the unified 'OWASP MAS' brand.",
-              "zh": "本專案源自兩條並行的工作:行動應用程式安全驗證標準 (MASVS) 與行動安全測試指南(原名 MSTG)。2023 年 4 月,MASVS 2.0 完成重大重構,將控制項簡化並重整為現代化的技術群組,同時將 MSTG 更名為 MASTG,整合在統一的「OWASP MAS」品牌之下。"
+              "zh": "本專案源自兩條並行的工作：行動應用程式安全驗證標準（MASVS） 與行動安全測試指南（原名 MSTG）。2023 年 4 月，MASVS 2.0 完成重大重構，將控制項簡化並重整為現代化的技術群組，同時將 MSTG 更名為 MASTG，整合在統一的「OWASP MAS」品牌之下。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "MASVS v2.1.0 (January 2024) added the MASVS-PRIVACY group and CycloneDX SBOM support, and is the current standard version. MASTG v1.7.0 (October 2024) completed the second phase of the testing-guide refactor, splitting content into Tests, Techniques, Tools, and Reference Apps to align with MASVS 2.x.",
-              "zh": "MASVS v2.1.0(2024 年 1 月)新增 MASVS-PRIVACY 群組與 CycloneDX SBOM 支援,為目前的標準版本。MASTG v1.7.0(2024 年 10 月)完成測試指南重構的第二階段,將內容拆分為 Tests、Techniques、Tools 與 Reference Apps,以對齊 MASVS 2.x。"
+              "zh": "MASVS v2.1.0（2024 年 1 月）新增 MASVS-PRIVACY 群組與 CycloneDX SBOM 支援，為目前的標準版本。MASTG v1.7.0（2024 年 10 月）完成測試指南重構的第二階段，將內容拆分為 Tests、Techniques、Tools 與 Reference Apps，以對齊 MASVS 2.x。"
             }
           }
         ]
@@ -1443,7 +1443,7 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "An open, measurable framework to assess and improve an organization's secure software development lifecycle.",
-      "zh": "一套開放、可量測的框架,用於評估並改善組織的安全軟體開發生命週期(SDLC)。"
+      "zh": "一套開放、可量測的框架，用於評估並改善組織的安全軟體開發生命週期（SDLC）。"
     },
     "meta": {
       "type": {
@@ -1452,15 +1452,15 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "SAMM v2.0.3 (2022); v2.0 announced Feb 2020",
-        "zh": "SAMM v2.0.3(2022 年);v2.0 於 2020 年 2 月發布"
+        "zh": "SAMM v2.0.3（2022 年）；v2.0 於 2020 年 2 月發布"
       },
       "audience": {
         "en": "Security leaders, CISOs, SDLC owners, AppSec program managers",
-        "zh": "資安主管、資安長(CISO)、SDLC 負責人、應用安全計畫管理者"
+        "zh": "資安主管、資安長（CISO）、SDLC 負責人、應用安全計畫管理者"
       },
       "format": {
         "en": "Reference model + assessment toolbox (spreadsheet)",
-        "zh": "參考模型 + 評估工具箱(試算表)"
+        "zh": "參考模型 + 評估工具箱（試算表）"
       },
       "license": "CC BY-SA 4.0",
       "url": "https://owasp.org/www-project-samm/"
@@ -1477,21 +1477,21 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP SAMM (Software Assurance Maturity Model) is an open framework that helps organizations formulate and implement a strategy for software security tailored to the specific risks the organization faces. It provides a measurable, risk-driven way to analyze and improve an organization's entire secure software development lifecycle (SDLC), and is deliberately technology- and process-agnostic so it fits any development methodology, language, or toolchain.",
-              "zh": "OWASP SAMM(軟體保障成熟度模型)是一套開放框架,協助組織針對自身面臨的特定風險,擬定並落實軟體安全策略。它提供一種可量測、以風險為導向的方式,用以分析並改善組織整個安全軟體開發生命週期(SDLC),且刻意保持技術與流程中立,因此可適用於任何開發方法論、程式語言或工具鏈。"
+              "zh": "OWASP SAMM（軟體保障成熟度模型）是一套開放框架，協助組織針對自身面臨的特定風險，擬定並落實軟體安全策略。它提供一種可量測、以風險為導向的方式，用以分析並改善組織整個安全軟體開發生命週期（SDLC），且刻意保持技術與流程中立，因此可適用於任何開發方法論、程式語言或工具鏈。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "SAMM is an OWASP Flagship project, led by Seba Deleersnyder and Bart De Win. Rather than mandating a single 'right' way to build software, it lets organizations evaluate their existing practices, define a balanced security assurance program in well-defined iterations, and demonstrate concrete, measurable improvements over time.",
-              "zh": "SAMM 是 OWASP 旗艦級專案,由 Seba Deleersnyder 與 Bart De Win 領導。它不規定建置軟體唯一「正確」的做法,而是讓組織評估現有實務、以明確定義的迭代來建立平衡的安全保障計畫,並隨時間展現具體、可量測的改善成果。"
+              "zh": "SAMM 是 OWASP 旗艦級專案，由 Seba Deleersnyder 與 Bart De Win 領導。它不規定建置軟體唯一「正確」的做法，而是讓組織評估現有實務、以明確定義的迭代來建立平衡的安全保障計畫，並隨時間展現具體、可量測的改善成果。"
             }
           },
           {
             "type": "quote",
             "text": {
               "en": "SAMM provides an effective and measurable way for all types of organizations to analyze and improve their software security posture.",
-              "zh": "SAMM 為各類型組織提供一種有效且可量測的方式,以分析並改善其軟體安全態勢。"
+              "zh": "SAMM 為各類型組織提供一種有效且可量測的方式，以分析並改善其軟體安全態勢。"
             }
           }
         ]
@@ -1507,7 +1507,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The SAMM v2 model is organized around five core Business Functions, each representing a critical area of activity in building and operating software. Each Business Function is broken down into three Security Practices, giving 15 practices in total.",
-              "zh": "SAMM v2 模型以五大核心業務功能(Business Functions)為架構,每一項代表建置與營運軟體時的關鍵活動領域。每個業務功能再細分為三項安全實務(Security Practices),合計共 15 項實務。"
+              "zh": "SAMM v2 模型以五大核心業務功能（Business Functions）為架構，每一項代表建置與營運軟體時的關鍵活動領域。每個業務功能再細分為三項安全實務（Security Practices），合計共 15 項實務。"
             }
           },
           {
@@ -1521,11 +1521,11 @@ window.SITE_PAGES = [
                 "Operations: Incident Management, Environment Management, Operational Management"
               ],
               "zh": [
-                "治理(Governance):策略與指標、政策與合規、教育與指引",
-                "設計(Design):威脅評估、安全需求、安全架構",
-                "實作(Implementation):安全建置、安全部署、缺陷管理",
-                "驗證(Verification):架構評估、需求導向測試、安全測試",
-                "營運(Operations):事件管理、環境管理、營運管理"
+                "治理（Governance）：策略與指標、政策與合規、教育與指引",
+                "設計（Design）：威脅評估、安全需求、安全架構",
+                "實作（Implementation）：安全建置、安全部署、缺陷管理",
+                "驗證（Verification）：架構評估、需求導向測試、安全測試",
+                "營運（Operations）：事件管理、環境管理、營運管理"
               ]
             }
           },
@@ -1533,7 +1533,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Each of the 15 Security Practices is further divided into two Streams, two related but distinct sets of activities that mature in parallel. Within each stream, activities are mapped to three Maturity Levels (1 to 3), expressing a progression from an initial, ad-hoc adoption (Level 1) through to comprehensive mastery and continuous improvement (Level 3).",
-              "zh": "15 項安全實務又各自細分為兩條工作流(Streams),即兩組相關但不同、並行成熟的活動。每條工作流中的活動對應到三個成熟度等級(1 至 3 級),呈現從初步、臨時性的採用(第 1 級)逐步進展到全面精通與持續改善(第 3 級)的成長路徑。"
+              "zh": "15 項安全實務又各自細分為兩條工作流（Streams），即兩組相關但不同、並行成熟的活動。每條工作流中的活動對應到三個成熟度等級（1 至 3 級），呈現從初步、臨時性的採用（第 1 級）逐步進展到全面精通與持續改善（第 3 級）的成長路徑。"
             }
           }
         ]
@@ -1549,7 +1549,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Organizations measure their current posture using the SAMM Assessment Toolbox, a spreadsheet available in both Microsoft Excel and Google Sheets formats. An Interview tab poses questions for each activity in the model, and as answers are recorded the Scorecard tab automatically calculates a maturity score for every Security Practice. The assessment can be run as a lightweight self-assessment or a more detailed evaluation via stakeholder interviews and workshops.",
-              "zh": "組織可使用 SAMM 評估工具箱(Assessment Toolbox)量測目前的態勢,該試算表同時提供 Microsoft Excel 與 Google 試算表兩種版本。其中「Interview」分頁針對模型中每項活動提出問題,當記錄答案時,「Scorecard」分頁會自動計算每項安全實務的成熟度分數。評估可採輕量自評,或透過利害關係人訪談與工作坊進行更詳細的評鑑。"
+              "zh": "組織可使用 SAMM 評估工具箱（Assessment Toolbox）量測目前的態勢，該試算表同時提供 Microsoft Excel 與 Google 試算表兩種版本。其中「Interview」分頁針對模型中每項活動提出問題，當記錄答案時，「Scorecard」分頁會自動計算每項安全實務的成熟度分數。評估可採輕量自評，或透過利害關係人訪談與工作坊進行更詳細的評鑑。"
             }
           },
           {
@@ -1563,11 +1563,11 @@ window.SITE_PAGES = [
                 "Optionally contribute anonymized results to SAMM Benchmarking to compare against peers"
               ],
               "zh": [
-                "依三個成熟度等級為 15 項實務評分,以掌握現況",
-                "將現況分數與目標成熟度進行比較,執行差距分析",
-                "建立優先排序的活動路線圖,於連續迭代中逐步彌補差距",
-                "定期重新評估以追蹤進度,並展現可量測的改善成效",
-                "(選用)將匿名化結果提交至 SAMM Benchmarking,以與同業比較"
+                "依三個成熟度等級為 15 項實務評分，以掌握現況",
+                "將現況分數與目標成熟度進行比較，執行差距分析",
+                "建立優先排序的活動路線圖，於連續迭代中逐步彌補差距",
+                "定期重新評估以追蹤進度，並展現可量測的改善成效",
+                "（選用）將匿名化結果提交至 SAMM Benchmarking，以與同業比較"
               ]
             }
           }
@@ -1584,7 +1584,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "SAMM is designed to be used iteratively rather than as a one-time audit. A typical adoption starts by measuring the organization's current software security posture, then setting realistic target maturity levels based on business risk, and finally building an improvement roadmap that sequences activities into achievable phases. Successive iterations raise maturity where it matters most.",
-              "zh": "SAMM 的設計是反覆迭代使用,而非一次性稽核。典型導入流程會先量測組織當前的軟體安全態勢,接著依業務風險設定務實的目標成熟度等級,最後建立改善路線圖,將活動排序成可達成的階段。透過連續迭代,在最關鍵之處提升成熟度。"
+              "zh": "SAMM 的設計是反覆迭代使用，而非一次性稽核。典型導入流程會先量測組織當前的軟體安全態勢，接著依業務風險設定務實的目標成熟度等級，最後建立改善路線圖，將活動排序成可達成的階段。透過連續迭代，在最關鍵之處提升成熟度。"
             }
           },
           {
@@ -1597,10 +1597,10 @@ window.SITE_PAGES = [
                 "Compare maturity against industry peers and report progress to leadership"
               ],
               "zh": [
-                "對現有能力進行基準量測,辨識最薄弱的實務並排定優先順序",
+                "對現有能力進行基準量測，辨識最薄弱的實務並排定優先順序",
                 "依組織的風險胃納定義目標成熟度輪廓",
-                "以共通、共享的詞彙推動並治理企業級應用安全(AppSec)計畫",
-                "與同業比較成熟度,並向高階主管回報進度"
+                "以共通、共享的詞彙推動並治理企業級應用安全（AppSec）計畫",
+                "與同業比較成熟度，並向高階主管回報進度"
               ]
             }
           }
@@ -1617,7 +1617,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "SAMM began as OpenSAMM 1.0, created by Pravir Chandra and released in 2009. The project subsequently moved under OWASP and evolved through the 1.x line (including v1.5). In February 2020 the project team published SAMM v2.0, a full rewrite that introduced the Streams concept and restructured the practices, with the model maintained at v2.0.3 (2022). The framework is published under the CC BY-SA 4.0 license and developed openly with community contributions.",
-              "zh": "SAMM 最初是由 Pravir Chandra 於 2009 年發布的 OpenSAMM 1.0。專案後續納入 OWASP 旗下,並沿著 1.x 系列演進(含 v1.5)。2020 年 2 月,專案團隊發布 SAMM v2.0,這是一次徹底改寫,引入工作流(Streams)概念並重整各項實務,目前模型維護在 v2.0.3(2022 年)。該框架以 CC BY-SA 4.0 授權發布,並以社群貢獻方式公開開發。"
+              "zh": "SAMM 最初是由 Pravir Chandra 於 2009 年發布的 OpenSAMM 1.0。專案後續納入 OWASP 旗下，並沿著 1.x 系列演進（含 v1.5）。2020 年 2 月，專案團隊發布 SAMM v2.0，這是一次徹底改寫，引入工作流（Streams）概念並重整各項實務，目前模型維護在 v2.0.3（2022 年）。該框架以 CC BY-SA 4.0 授權發布，並以社群貢獻方式公開開發。"
             }
           }
         ]
@@ -1692,12 +1692,12 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Community guidance for securing LLM & generative AI apps, home of the Top 10 for LLM Applications.",
-      "zh": "保護 LLM 與生成式 AI 應用的社群指南,LLM 應用程式 Top 10 的所在地。"
+      "zh": "保護 LLM 與生成式 AI 應用的社群指南，LLM 應用程式 Top 10 的所在地。"
     },
     "meta": {
       "type": {
         "en": "Guidance & community project (OWASP flagship)",
-        "zh": "指南與社群專案(OWASP 旗艦級)"
+        "zh": "指南與社群專案（OWASP 旗艦級）"
       },
       "latest": {
         "en": "Top 10 for LLM Applications 2025",
@@ -1726,14 +1726,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The OWASP GenAI Security Project is a global, community-driven and expert-led initiative that produces freely available open-source guidance for securing generative AI and large language model (LLM) systems. It began in 2023 as the OWASP Top 10 for LLM Applications and, after rapid adoption, expanded into a broad project covering the full GenAI security lifecycle.",
-              "zh": "OWASP 生成式 AI 安全專案是一個全球性、由社群驅動且專家領導的計畫,產出免費開源的指南,用以保護生成式 AI 與大型語言模型(LLM)系統。它於 2023 年以 OWASP LLM 應用程式 Top 10 起步,因迅速被採用而擴展成涵蓋整個生成式 AI 安全生命週期的大型專案。"
+              "zh": "OWASP 生成式 AI 安全專案是一個全球性、由社群驅動且專家領導的計畫，產出免費開源的指南，用以保護生成式 AI 與大型語言模型（LLM）系統。它於 2023 年以 OWASP LLM 應用程式 Top 10 起步，因迅速被採用而擴展成涵蓋整個生成式 AI 安全生命週期的大型專案。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "In March 2025 OWASP promoted it to flagship status. The community now spans over 600 contributing experts from more than 18 countries, over 130 companies, and nearly 8,000 active members, making it one of the most active references for practical AI security.",
-              "zh": "OWASP 於 2025 年 3 月將其升格為旗艦級專案。社群目前涵蓋來自 18 個以上國家的 600 多位貢獻專家、130 多家企業,以及將近 8,000 名活躍成員,使其成為實務 AI 安全領域最活躍的參考來源之一。"
+              "zh": "OWASP 於 2025 年 3 月將其升格為旗艦級專案。社群目前涵蓋來自 18 個以上國家的 600 多位貢獻專家、130 多家企業，以及將近 8,000 名活躍成員，使其成為實務 AI 安全領域最活躍的參考來源之一。"
             }
           }
         ]
@@ -1749,14 +1749,14 @@ window.SITE_PAGES = [
             "type": "h3",
             "text": {
               "en": "OWASP Top 10 for LLM Applications (2025)",
-              "zh": "OWASP LLM 應用程式 Top 10(2025 版)"
+              "zh": "OWASP LLM 應用程式 Top 10（2025 版）"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "The flagship deliverable lists the ten most critical security risks for applications built on LLMs. The 2025 edition refines earlier lists and adds risks specific to agentic and retrieval-augmented systems.",
-              "zh": "本專案的旗艦產出列出建構於 LLM 之上的應用程式最關鍵的十大安全風險。2025 版精煉了先前的清單,並新增了針對代理式(agentic)與檢索增強(RAG)系統的特定風險。"
+              "zh": "本專案的旗艦產出列出建構於 LLM 之上的應用程式最關鍵的十大安全風險。2025 版精煉了先前的清單，並新增了針對代理式（agentic）與檢索增強（RAG）系統的特定風險。"
             }
           },
           {
@@ -1775,15 +1775,15 @@ window.SITE_PAGES = [
                 "LLM10 Unbounded Consumption — uncontrolled resource use causing denial of service, runaway cost or model extraction."
               ],
               "zh": [
-                "LLM01 提示注入(Prompt Injection)— 經設計的輸入操縱模型做出非預期或惡意行為。",
+                "LLM01 提示注入（Prompt Injection）— 經設計的輸入操縱模型做出非預期或惡意行為。",
                 "LLM02 敏感資訊洩漏 — 透過模型輸出洩漏機密資料、個資或專有內容。",
                 "LLM03 供應鏈 — 開發與部署階段引入有漏洞的模型、資料集、外掛或相依套件。",
                 "LLM04 資料與模型下毒 — 遭汙染的訓練或微調資料破壞模型完整性與輸出品質。",
-                "LLM05 不當輸出處理 — 模型輸出在進入下游系統前未經充分驗證(XSS、SSRF、程式碼執行)。",
-                "LLM06 過度代理權限 — 在缺乏適當防護下,給予 LLM 過多工具、權限或自主性。",
-                "LLM07 系統提示外洩 — 系統提示外洩,進而暴露防護機制、機密或邏輯。",
+                "LLM05 不當輸出處理 — 模型輸出在進入下游系統前未經充分驗證（XSS、SSRF、程式碼執行）。",
+                "LLM06 過度代理權限 — 在缺乏適當防護下，給予 LLM 過多工具、權限或自主性。",
+                "LLM07 系統提示外洩 — 系統提示外洩，進而暴露防護機制、機密或邏輯。",
                 "LLM08 向量與嵌入弱點 — 向量資料庫、嵌入與 RAG 流程中的安全缺口。",
-                "LLM09 錯誤資訊 — 產生不實、偏誤或虛構內容(含幻覺),誤導使用者。",
+                "LLM09 錯誤資訊 — 產生不實、偏誤或虛構內容（含幻覺），誤導使用者。",
                 "LLM10 無限制資源耗用 — 不受控的資源使用導致阻斷服務、失控成本或模型萃取。"
               ]
             }
@@ -1801,7 +1801,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Beyond the Top 10, the project runs several specialized working groups (initiatives), each producing dedicated guidance, frameworks and tools for a slice of GenAI security.",
-              "zh": "除了 Top 10 之外,本專案還運作數個專門的工作小組(initiatives),各自針對生成式 AI 安全的特定面向產出專屬的指南、框架與工具。"
+              "zh": "除了 Top 10 之外，本專案還運作數個專門的工作小組（initiatives），各自針對生成式 AI 安全的特定面向產出專屬的指南、框架與工具。"
             }
           },
           {
@@ -1817,13 +1817,13 @@ window.SITE_PAGES = [
                 "AI Security Solutions Landscape — a directory categorizing commercial and open-source tooling that addresses GenAI risks."
               ],
               "zh": [
-                "代理式安全 Initiative — 為自主與多代理系統提供威脅建模與緩解措施(如 Agentic AI Threats & Mitigations 與 Multi-Agentic System Threat Modeling 指南)。",
-                "AI 紅隊與評估 — 提供方法論、基準與《GenAI Red Teaming Guide》,用以測試模型的漏洞與偏誤。",
-                "安全 AI 採用與治理 — 提供《AI Security Center of Excellence》指南與治理框架,協助安全、合乎倫理地導入 AI。",
-                "AI 威脅情資與應變 — 追蹤 LLM 如何被用於產生漏洞利用,並涵蓋深偽(deepfake)威脅準備與事件應變。",
+                "代理式安全 Initiative — 為自主與多代理系統提供威脅建模與緩解措施（如 Agentic AI Threats & Mitigations 與 Multi-Agentic System Threat Modeling 指南）。",
+                "AI 紅隊與評估 — 提供方法論、基準與《GenAI Red Teaming Guide》，用以測試模型的漏洞與偏誤。",
+                "安全 AI 採用與治理 — 提供《AI Security Center of Excellence》指南與治理框架，協助安全、合乎倫理地導入 AI。",
+                "AI 威脅情資與應變 — 追蹤 LLM 如何被用於產生漏洞利用，並涵蓋深偽（deepfake）威脅準備與事件應變。",
                 "資料安全 — 在生成式 AI 生命週期中保護訓練資料、嵌入與資料流的最佳實務。",
-                "風險與漏洞資料蒐集 / 對應 — 蒐集真實世界風險資料,並將 Top 10 對應至 NIST、ISO、MITRE 等框架。",
-                "AI 安全解決方案地景 — 一份分類目錄,整理因應生成式 AI 風險的商用與開源工具。"
+                "風險與漏洞資料蒐集 / 對應 — 蒐集真實世界風險資料，並將 Top 10 對應至 NIST、ISO、MITRE 等框架。",
+                "AI 安全解決方案地景 — 一份分類目錄，整理因應生成式 AI 風險的商用與開源工具。"
               ]
             }
           }
@@ -1840,7 +1840,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Teams use the Top 10 for LLM Applications as a checklist during design reviews, threat modeling and penetration testing of AI features, and as a shared vocabulary between developers, security and leadership. The deeper initiative guides support red teaming exercises, secure-adoption policy, agent architecture review and vendor evaluation.",
-              "zh": "團隊可在 AI 功能的設計審查、威脅建模與滲透測試中,把 LLM 應用程式 Top 10 當成檢核表,並作為開發、資安與管理層之間的共同語彙。各 initiative 的深入指南則可支援紅隊演練、安全採用政策、代理架構審查與供應商評估。"
+              "zh": "團隊可在 AI 功能的設計審查、威脅建模與滲透測試中，把 LLM 應用程式 Top 10 當成檢核表，並作為開發、資安與管理層之間的共同語彙。各 initiative 的深入指南則可支援紅隊演練、安全採用政策、代理架構審查與供應商評估。"
             }
           },
           {
@@ -1868,9 +1868,9 @@ window.SITE_PAGES = [
                 "2025 — The 2025 edition of the Top 10 for LLM Applications was published, and in March 2025 OWASP promoted the project to flagship status."
               ],
               "zh": [
-                "2023 年 — 首版 OWASP LLM 應用程式 Top 10 推出(2023 年 5 月 v1.0,2023 年 10 月 v1.1 更新),作為社群對 LLM 應用興起的回應。",
-                "2024 年 — 計畫從單一清單擴展,新增多個工作小組,並重新立章為更廣泛的 OWASP 生成式 AI 安全專案。",
-                "2025 年 — 發布 LLM 應用程式 Top 10 的 2025 版,並於 2025 年 3 月由 OWASP 升格為旗艦級專案。"
+                "2023 年 — 首版 OWASP LLM 應用程式 Top 10 推出（2023 年 5 月 v1.0,2023 年 10 月 v1.1 更新），作為社群對 LLM 應用興起的回應。",
+                "2024 年 — 計畫從單一清單擴展，新增多個工作小組，並重新立章為更廣泛的 OWASP 生成式 AI 安全專案。",
+                "2025 年 — 發布 LLM 應用程式 Top 10 的 2025 版，並於 2025 年 3 月由 OWASP 升格為旗艦級專案。"
               ]
             }
           }
@@ -1949,11 +1949,11 @@ window.SITE_PAGES = [
     ],
     "title": {
       "en": "OWASP AI Exchange",
-      "zh": "OWASP AI Exchange(AI 安全交流框架)"
+      "zh": "OWASP AI Exchange（AI 安全交流框架）"
     },
     "subtitle": {
       "en": "The world's open-source AI security & privacy guide and connective tissue to global AI standards.",
-      "zh": "全球開源 AI 安全與隱私指南,串接國際 AI 標準的「連接組織」。"
+      "zh": "全球開源 AI 安全與隱私指南，串接國際 AI 標準的「連接組織」。"
     },
     "meta": {
       "type": {
@@ -1962,7 +1962,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "Living document (continuous delivery; flagship since Mar 2025)",
-        "zh": "持續更新的活文件(continuous delivery;2025 年 3 月起為旗艦專案)"
+        "zh": "持續更新的活文件（continuous delivery；2025 年 3 月起為旗艦專案）"
       },
       "audience": {
         "en": "Security pros, AI/ML engineers, data scientists, standards bodies, policymakers",
@@ -1970,7 +1970,7 @@ window.SITE_PAGES = [
       },
       "format": {
         "en": "Single comprehensive website (300+ pages) + PDF, navigator diagram",
-        "zh": "單一完整網站(300+ 頁)+ PDF 與威脅導覽圖"
+        "zh": "單一完整網站（300+ 頁）+ PDF 與威脅導覽圖"
       },
       "license": "CC0 1.0 Universal (public domain dedication)",
       "url": "https://owaspai.org/"
@@ -1987,14 +1987,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP AI Exchange is described as 'the world's AI security guide': an openly licensed, 300+ page framework of practical threats and controls for securing AI and machine learning systems. It functions as a global think tank and as the key open-source input — the 'connective tissue' — feeding international AI security and privacy standards.",
-              "zh": "OWASP AI Exchange 自稱為「全球 AI 安全指南」:一套開放授權、超過 300 頁,涵蓋實務威脅與控制措施、用於保護 AI 與機器學習系統的框架。它同時是全球性的智庫,也是輸入國際 AI 安全與隱私標準的關鍵開源來源,扮演「連接組織」(connective tissue)的角色。"
+              "zh": "OWASP AI Exchange 自稱為「全球 AI 安全指南」：一套開放授權、超過 300 頁，涵蓋實務威脅與控制措施、用於保護 AI 與機器學習系統的框架。它同時是全球性的智庫，也是輸入國際 AI 安全與隱私標準的關鍵開源來源，扮演「連接組織」（connective tissue）的角色。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "It is released under CC0 1.0 — a public domain dedication that lets anyone freely copy, adapt and reuse the content without attribution (attribution is appreciated but not required), which is precisely what makes it usable as raw material inside formal standards.",
-              "zh": "其內容以 CC0 1.0 釋出 —— 一種公眾領域宣告(public domain dedication),任何人皆可自由複製、修改與再利用,無需署名(歡迎但不強制標示來源)。正是這種極寬鬆的授權,讓它得以成為正式標準的原始素材。"
+              "zh": "其內容以 CC0 1.0 釋出 —— 一種公眾領域宣告（public domain dedication），任何人皆可自由複製、修改與再利用，無需署名（歡迎但不強制標示來源）。正是這種極寬鬆的授權，讓它得以成為正式標準的原始素材。"
             }
           },
           {
@@ -2006,9 +2006,9 @@ window.SITE_PAGES = [
                 "Led by 70+ carefully selected experts: researchers, practitioners, vendors and data scientists."
               ],
               "zh": [
-                "由 Rob van der Veer 於 2022 年 10 月 22 日創立(最初名為「AI 安全與隱私指南」)。",
-                "於 2025 年 3 月獲頒 OWASP 旗艦專案(Flagship)地位。",
-                "由 70 多位精選專家共同維護:研究人員、實務工作者、廠商與資料科學家。"
+                "由 Rob van der Veer 於 2022 年 10 月 22 日創立（最初名為「AI 安全與隱私指南」）。",
+                "於 2025 年 3 月獲頒 OWASP 旗艦專案（Flagship）地位。",
+                "由 70 多位精選專家共同維護：研究人員、實務工作者、廠商與資料科學家。"
               ]
             }
           }
@@ -2025,7 +2025,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The framework maps threats across the AI lifecycle and pairs each with controls, organized into deep-dive sections: general (governance) controls, threats through use (input threats), development-time threats, runtime conventional security threats, plus AI security testing and AI privacy.",
-              "zh": "此框架沿 AI 生命週期對應威脅,並為每項威脅搭配控制措施,組織成數個深入章節:一般(治理)控制、使用階段威脅(輸入威脅)、開發階段威脅、執行階段傳統資安威脅,另含 AI 安全測試與 AI 隱私。"
+              "zh": "此框架沿 AI 生命週期對應威脅，並為每項威脅搭配控制措施，組織成數個深入章節：一般（治理）控制、使用階段威脅（輸入威脅）、開發階段威脅、執行階段傳統資安威脅，另含 AI 安全測試與 AI 隱私。"
             }
           },
           {
@@ -2037,9 +2037,9 @@ window.SITE_PAGES = [
                 "Runtime conventional security: traditional IT attacks adapted to AI assets, including injection via model output."
               ],
               "zh": [
-                "開發階段威脅:訓練資料下毒(data poisoning)、模型下毒(model poisoning)、供應鏈遭破壞,以及工程環境中的開發階段資料外洩。",
-                "執行/使用階段威脅:規避攻擊(對抗式輸入)、提示注入(直接與間接)、模型竊取/萃取、敏感資料揭露與成員推斷(membership inference),以及 AI 資源耗盡(模型 DoS)。",
-                "執行階段傳統資安:套用於 AI 資產的傳統 IT 攻擊,包含透過模型輸出進行的注入攻擊。"
+                "開發階段威脅：訓練資料下毒（data poisoning）、模型下毒（model poisoning）、供應鏈遭破壞，以及工程環境中的開發階段資料外洩。",
+                "執行/使用階段威脅：規避攻擊（對抗式輸入）、提示注入（直接與間接）、模型竊取/萃取、敏感資料揭露與成員推斷（membership inference），以及 AI 資源耗盡（模型 DoS）。",
+                "執行階段傳統資安：套用於 AI 資產的傳統 IT 攻擊，包含透過模型輸出進行的注入攻擊。"
               ]
             }
           },
@@ -2053,10 +2053,10 @@ window.SITE_PAGES = [
                 "Data-science defenses: training-data hardening (poison resistance), adversarial/evasion robustness, ensembles and quality control."
               ],
               "zh": [
-                "一般治理控制:AIPROGRAM、SECPROGRAM、DEVPROGRAM、SECDEVPROGRAM、CHECKCOMPLIANCE、SECEDUCATE,並包含限制不當模型行為與資料最小化。",
-                "開發階段控制:開發環境安全、資料隔離/保護、聯邦式學習(federated learning)與供應鏈管理。",
-                "執行階段應用控制:模型與輸入輸出完整性、模型機密性、存取控制、速率限制、輸入驗證與輸出過濾。",
-                "資料科學防禦:訓練資料強化(抗下毒)、對抗式/規避攻擊韌性、模型集成(ensemble)與品質控管。"
+                "一般治理控制：AIPROGRAM、SECPROGRAM、DEVPROGRAM、SECDEVPROGRAM、CHECKCOMPLIANCE、SECEDUCATE，並包含限制不當模型行為與資料最小化。",
+                "開發階段控制：開發環境安全、資料隔離/保護、聯邦式學習（federated learning）與供應鏈管理。",
+                "執行階段應用控制：模型與輸入輸出完整性、模型機密性、存取控制、速率限制、輸入驗證與輸出過濾。",
+                "資料科學防禦：訓練資料強化（抗下毒）、對抗式/規避攻擊韌性、模型集成（ensemble）與品質控管。"
               ]
             }
           }
@@ -2073,7 +2073,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Because it is CC0, AI Exchange acts as a standards feeder: its content is contributed directly into formal AI security and privacy standards, with founder Rob van der Veer serving as liaison officer and co-editor across the relevant bodies.",
-              "zh": "由於採用 CC0 授權,AI Exchange 得以作為「標準輸入來源」:其內容被直接貢獻進正式的 AI 安全與隱私標準,創辦人 Rob van der Veer 於相關組織擔任聯絡官(liaison officer)與共同編輯。"
+              "zh": "由於採用 CC0 授權，AI Exchange 得以作為「標準輸入來源」：其內容被直接貢獻進正式的 AI 安全與隱私標準，創辦人 Rob van der Veer 於相關組織擔任聯絡官（liaison officer）與共同編輯。"
             }
           },
           {
@@ -2087,11 +2087,11 @@ window.SITE_PAGES = [
                 "Aligns with NIST, ENISA and links security standards globally via OpenCRE."
               ],
               "zh": [
-                "ISO/IEC 27090(AI 安全指引):貢獻約 70 頁內容;預計 2026 年發布。",
-                "ISO/IEC 27091(AI 隱私):制定中,OWASP 參與工作小組。",
-                "歐盟 AI 法案 / CEN-CENELEC prEN 18282(AI 安全):OWASP 大幅貢獻內容;van der Veer 擔任共同編輯;2026 年初進入公眾諮詢。",
-                "OWASP 與 CEN/CENELEC 建立正式聯絡夥伴關係,並獲歐盟會員國一致通過。",
-                "與 NIST、ENISA 對齊,並透過 OpenCRE 在全球串接各項資安標準。"
+                "ISO/IEC 27090（AI 安全指引）：貢獻約 70 頁內容；預計 2026 年發布。",
+                "ISO/IEC 27091（AI 隱私）：制定中，OWASP 參與工作小組。",
+                "歐盟 AI 法案 / CEN-CENELEC prEN 18282（AI 安全）：OWASP 大幅貢獻內容；van der Veer 擔任共同編輯；2026 年初進入公眾諮詢。",
+                "OWASP 與 CEN/CENELEC 建立正式聯絡夥伴關係，並獲歐盟會員國一致通過。",
+                "與 NIST、ENISA 對齊，並透過 OpenCRE 在全球串接各項資安標準。"
               ]
             }
           },
@@ -2099,7 +2099,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "AI Exchange is complementary to the OWASP GenAI Security Project (home of the LLM Top 10): the two cross-reference each other, with AI Exchange providing the broad, standards-grade depth across all AI types (including predictive ML) while GenAI focuses on generative AI and agentic threats.",
-              "zh": "AI Exchange 與 OWASP GenAI Security Project(LLM Top 10 的所屬專案)互補:兩者互相交叉引用,AI Exchange 提供涵蓋所有 AI 類型(包含預測式 ML)、達標準等級的廣度與深度,而 GenAI 則聚焦生成式 AI 與代理式(agentic)威脅。"
+              "zh": "AI Exchange 與 OWASP GenAI Security Project（LLM Top 10 的所屬專案）互補：兩者互相交叉引用，AI Exchange 提供涵蓋所有 AI 類型（包含預測式 ML）、達標準等級的廣度與深度，而 GenAI 則聚焦生成式 AI 與代理式（agentic）威脅。"
             }
           }
         ]
@@ -2115,7 +2115,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Teams use AI Exchange as a single reference to build an AI security program, run threat modelling, select controls and prepare for regulation. The interactive Navigator diagram maps the relationships between threats, controls, risks and control types so users can drill from a risk to concrete mitigations.",
-              "zh": "團隊可將 AI Exchange 作為單一參考來源,用以建立 AI 安全計畫、進行威脅建模、選擇控制措施並為法規合規做準備。互動式 Navigator(導覽圖)呈現威脅、控制、風險與控制類型之間的關係,讓使用者能從某項風險逐層鑽研到具體緩解措施。"
+              "zh": "團隊可將 AI Exchange 作為單一參考來源，用以建立 AI 安全計畫、進行威脅建模、選擇控制措施並為法規合規做準備。互動式 Navigator（導覽圖）呈現威脅、控制、風險與控制類型之間的關係，讓使用者能從某項風險逐層鑽研到具體緩解措施。"
             }
           },
           {
@@ -2127,9 +2127,9 @@ window.SITE_PAGES = [
                 "Combine with the OWASP GenAI/LLM Top 10 for generative-AI-specific awareness."
               ],
               "zh": [
-                "將你的 AI 使用情境對應到開發階段與執行階段威脅,再挑選對應的控制措施。",
+                "將你的 AI 使用情境對應到開發階段與執行階段威脅，再挑選對應的控制措施。",
                 "把它當作法規橋樑 —— 其內容支撐即將發布的歐盟 AI 法案與 ISO 標準。",
-                "搭配 OWASP GenAI/LLM Top 10,補強生成式 AI 專屬的風險認知。"
+                "搭配 OWASP GenAI/LLM Top 10，補強生成式 AI 專屬的風險認知。"
               ]
             }
           }
@@ -2152,10 +2152,10 @@ window.SITE_PAGES = [
                 "2025–2026: Grows rapidly as the open-source bridge into ISO/IEC and EU AI Act standards."
               ],
               "zh": [
-                "2022 年 10 月:由 Rob van der Veer 以「AI 安全與隱私指南」之名啟動。",
-                "2023 年:更名為「AI Exchange」,強調全球協作與標準對齊。",
-                "2025 年 3 月:獲頒 OWASP 旗艦專案地位(與 GenAI Security Project 同時)。",
-                "2025–2026 年:迅速成長為輸入 ISO/IEC 與歐盟 AI 法案標準的開源橋樑。"
+                "2022 年 10 月：由 Rob van der Veer 以「AI 安全與隱私指南」之名啟動。",
+                "2023 年：更名為「AI Exchange」，強調全球協作與標準對齊。",
+                "2025 年 3 月：獲頒 OWASP 旗艦專案地位（與 GenAI Security Project 同時）。",
+                "2025–2026 年：迅速成長為輸入 ISO/IEC 與歐盟 AI 法案標準的開源橋樑。"
               ]
             }
           },
@@ -2163,7 +2163,7 @@ window.SITE_PAGES = [
             "type": "quote",
             "text": {
               "en": "The world's AI security guide — connecting practitioners, researchers, industry and policymakers to bring clarity to AI security.",
-              "zh": "全球 AI 安全指南 —— 連結實務工作者、研究人員、產業與政策制定者,為 AI 安全帶來清晰方向。"
+              "zh": "全球 AI 安全指南 —— 連結實務工作者、研究人員、產業與政策制定者，為 AI 安全帶來清晰方向。"
             }
           }
         ]
@@ -2238,7 +2238,7 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Full-stack Bill of Materials standard for software supply chain security and risk reduction.",
-      "zh": "全端物料清單(BOM)標準,用於軟體供應鏈安全與風險降低。"
+      "zh": "全端物料清單（BOM）標準，用於軟體供應鏈安全與風險降低。"
     },
     "meta": {
       "type": {
@@ -2247,7 +2247,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "Spec v1.7 (2025-10-21); ECMA-424",
-        "zh": "規範 v1.7(2025-10-21);ECMA-424"
+        "zh": "規範 v1.7(2025-10-21)；ECMA-424"
       },
       "audience": {
         "en": "AppSec, DevSecOps, compliance & procurement teams",
@@ -2272,14 +2272,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP CycloneDX is a full-stack Bill of Materials (BOM) standard that provides advanced supply chain capabilities for cyber risk reduction. It lets organizations describe exactly what a product is made of — software components, services, hardware, machine learning models, cryptographic assets and their dependencies — in a machine-readable, interoperable format.",
-              "zh": "OWASP CycloneDX 是一套全端物料清單(BOM)標準,提供進階的供應鏈能力以降低資安風險。它讓組織能以機器可讀、可互通的格式,精確描述一項產品由什麼構成——軟體元件、服務、硬體、機器學習模型、密碼學資產及其相依關係。"
+              "zh": "OWASP CycloneDX 是一套全端物料清單（BOM）標準，提供進階的供應鏈能力以降低資安風險。它讓組織能以機器可讀、可互通的格式，精確描述一項產品由什麼構成——軟體元件、服務、硬體、機器學習模型、密碼學資產及其相依關係。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "Originating in 2017 from the OWASP Dependency-Track ecosystem, CycloneDX became an OWASP flagship project in June 2021 and is now an official Ecma International standard published as ECMA-424. The latest specification is version 1.7, released on 2025-10-21.",
-              "zh": "CycloneDX 源於 2017 年的 OWASP Dependency-Track 生態系,於 2021 年 6 月成為 OWASP 旗艦專案,如今已是 Ecma International 的正式國際標準,以 ECMA-424 名義發布。最新規範版本為 1.7,於 2025-10-21 發布。"
+              "zh": "CycloneDX 源於 2017 年的 OWASP Dependency-Track 生態系，於 2021 年 6 月成為 OWASP 旗艦專案，如今已是 Ecma International 的正式國際標準，以 ECMA-424 名義發布。最新規範版本為 1.7，於 2025-10-21 發布。"
             }
           },
           {
@@ -2320,15 +2320,15 @@ window.SITE_PAGES = [
                 "VDR — Vulnerability Disclosure Report: discloses known vulnerabilities in a product"
               ],
               "zh": [
-                "SBOM — 軟體物料清單:軟體元件與函式庫的清單",
+                "SBOM — 軟體物料清單：軟體元件與函式庫的清單",
                 "SaaSBOM — 描述 SaaS 的服務、端點、資料流與信任邊界",
-                "HBOM — 硬體物料清單,涵蓋實體裝置與元件",
+                "HBOM — 硬體物料清單，涵蓋實體裝置與元件",
                 "ML-BOM / AI-BOM — 機器學習模型、資料集與 AI 透明度",
-                "CBOM — 密碼學物料清單:密碼學資產與演算法",
-                "OBOM — 維運物料清單:執行中/運作中的執行環境清單",
-                "MBOM — 製造物料清單,涵蓋建置與組裝流程",
-                "VEX — 漏洞可利用性交換:傳達漏洞的可利用性狀態",
-                "VDR — 漏洞揭露報告:揭露產品中已知的漏洞"
+                "CBOM — 密碼學物料清單：密碼學資產與演算法",
+                "OBOM — 維運物料清單：執行中/運作中的執行環境清單",
+                "MBOM — 製造物料清單，涵蓋建置與組裝流程",
+                "VEX — 漏洞可利用性交換：傳達漏洞的可利用性狀態",
+                "VDR — 漏洞揭露報告：揭露產品中已知的漏洞"
               ]
             }
           },
@@ -2352,13 +2352,13 @@ window.SITE_PAGES = [
                 "Digital signing and attestation for tamper-evidence and integrity"
               ],
               "zh": [
-                "格式:JSON、XML 與 Protocol Buffers(protobuf)",
-                "具備豐富中繼資料的元件清單,含識別碼(PURL、CPE、SWID)與授權資訊",
-                "相依關係圖,涵蓋直接與遞移(transitive)相依",
-                "譜系(pedigree)與來源(provenance)——記錄每個元件完整的血統與出處",
-                "服務建模,描述外部 API、端點與資料流",
-                "漏洞、VEX 與配方(formulation,記錄元件如何建置/部署)",
-                "數位簽章與證明(attestation),確保防竄改與完整性"
+                "格式：JSON、XML 與 Protocol Buffers(protobuf)",
+                "具備豐富中繼資料的元件清單，含識別碼（PURL、CPE、SWID）與授權資訊",
+                "相依關係圖，涵蓋直接與遞移（transitive）相依",
+                "譜系（pedigree）與來源（provenance）——記錄每個元件完整的血統與出處",
+                "服務建模，描述外部 API、端點與資料流",
+                "漏洞、VEX 與配方（formulation，記錄元件如何建置/部署）",
+                "數位簽章與證明（attestation），確保防竄改與完整性"
               ]
             }
           }
@@ -2375,7 +2375,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "CycloneDX is backed by a large ecosystem of official and community tools that generate, validate, merge and consume BOMs across languages and build systems. Generation can be automated in CI/CD pipelines and distributed through a BOM Repository Server for storage and exchange.",
-              "zh": "CycloneDX 擁有龐大的官方與社群工具生態系,可跨多種語言與建置系統來產生、驗證、合併及消費 BOM。產生流程可在 CI/CD 管線中自動化,並透過 BOM Repository Server 進行儲存與交換。"
+              "zh": "CycloneDX 擁有龐大的官方與社群工具生態系，可跨多種語言與建置系統來產生、驗證、合併及消費 BOM。產生流程可在 CI/CD 管線中自動化，並透過 BOM Repository Server 進行儲存與交換。"
             }
           },
           {
@@ -2392,7 +2392,7 @@ window.SITE_PAGES = [
                 "cdxgen — 支援多種生態系的多語言 SBOM/BOM 產生器",
                 "針對 Maven、Gradle、npm、Python 等的語言專屬產生器與外掛",
                 "於主流程式語言中產生與解析 BOM 的核心函式庫",
-                "BOM Repository Server,用於集中儲存、散布與交換",
+                "BOM Repository Server，用於集中儲存、散布與交換",
                 "OWASP Dependency-Track 原生消費 CycloneDX BOM 以進行持續分析"
               ]
             }
@@ -2410,7 +2410,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "CycloneDX is used to achieve software supply chain transparency, accelerate vulnerability management, enforce license compliance and meet regulatory requirements. Because a BOM enumerates every component and its provenance, teams can quickly answer questions like 'are we affected by this CVE?' or 'what cryptography are we shipping?'.",
-              "zh": "CycloneDX 用於達成軟體供應鏈透明度、加速漏洞管理、落實授權合規,並符合法規要求。由於 BOM 列舉了每個元件及其來源,團隊能快速回答諸如「我們是否受此 CVE 影響?」或「我們交付了哪些密碼學?」等問題。"
+              "zh": "CycloneDX 用於達成軟體供應鏈透明度、加速漏洞管理、落實授權合規，並符合法規要求。由於 BOM 列舉了每個元件及其來源，團隊能快速回答諸如「我們是否受此 CVE 影響？」或「我們交付了哪些密碼學？」等問題。"
             }
           },
           {
@@ -2424,9 +2424,9 @@ window.SITE_PAGES = [
               ],
               "zh": [
                 "供應鏈透明度——向客戶與稽核者提供可驗證的清單",
-                "漏洞管理——將元件對應到 CVE,並以 VEX 進行分流",
+                "漏洞管理——將元件對應到 CVE，並以 VEX 進行分流",
                 "授權合規——追蹤所有相依項的授權與義務",
-                "法規驅動——美國第 14028 號行政命令與歐盟網路韌性法案(CRA)"
+                "法規驅動——美國第 14028 號行政命令與歐盟網路韌性法案（CRA）"
               ]
             }
           }
@@ -2443,14 +2443,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "CycloneDX traces its origins to 2017, emerging from OWASP Dependency-Track (issue #52), with the 1.0 specification released in March 2018. It joined OWASP as a flagship project in June 2021 and has since gone through multiple backward-compatible revisions adding services, vulnerabilities, formulation, AI/ML and cryptography support.",
-              "zh": "CycloneDX 起源於 2017 年,脫胎自 OWASP Dependency-Track(issue #52),並於 2018 年 3 月發布 1.0 規範。它在 2021 年 6 月成為 OWASP 旗艦專案,之後歷經多次向後相容的修訂,陸續新增服務、漏洞、配方、AI/ML 與密碼學支援。"
+              "zh": "CycloneDX 起源於 2017 年，脫胎自 OWASP Dependency-Track(issue #52)，並於 2018 年 3 月發布 1.0 規範。它在 2021 年 6 月成為 OWASP 旗艦專案，之後歷經多次向後相容的修訂，陸續新增服務、漏洞、配方、AI/ML 與密碼學支援。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "In December 2023, Ecma International chartered Technical Committee TC54 for Software & System Transparency. In June 2024, CycloneDX v1.6 was ratified as an international standard and published as ECMA-424 (1st Edition). The specification continues to advance, with v1.7 released on 2025-10-21.",
-              "zh": "2023 年 12 月,Ecma International 成立軟體與系統透明度技術委員會 TC54。2024 年 6 月,CycloneDX v1.6 獲批准為國際標準並以 ECMA-424(第 1 版)發布。規範持續演進,v1.7 已於 2025-10-21 發布。"
+              "zh": "2023 年 12 月，Ecma International 成立軟體與系統透明度技術委員會 TC54。2024 年 6 月，CycloneDX v1.6 獲批准為國際標準並以 ECMA-424（第 1 版）發布。規範持續演進，v1.7 已於 2025-10-21 發布。"
             }
           }
         ]
@@ -2532,16 +2532,16 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Continuous SCA platform that consumes CycloneDX SBOMs to cut software supply chain risk across a portfolio.",
-      "zh": "持續性軟體組成分析平台,透過 CycloneDX SBOM 降低整個應用組合的軟體供應鏈風險。"
+      "zh": "持續性軟體組成分析平台，透過 CycloneDX SBOM 降低整個應用組合的軟體供應鏈風險。"
     },
     "meta": {
       "type": {
         "en": "Component analysis / SCA platform",
-        "zh": "軟體組成分析(SCA)平台"
+        "zh": "軟體組成分析（SCA）平台"
       },
       "latest": {
         "en": "v4.14.2 (May 2026); v5.0.0 in release-candidate",
-        "zh": "v4.14.2(2026 年 5 月);v5.0.0 釋出候選版本開發中"
+        "zh": "v4.14.2（2026 年 5 月）；v5.0.0 釋出候選版本開發中"
       },
       "audience": {
         "en": "AppSec teams, DevSecOps, builders & defenders",
@@ -2549,7 +2549,7 @@ window.SITE_PAGES = [
       },
       "format": {
         "en": "Self-hosted (Docker / Kubernetes / Java WAR)",
-        "zh": "自架部署(Docker / Kubernetes / Java WAR)"
+        "zh": "自架部署（Docker / Kubernetes / Java WAR）"
       },
       "license": "Apache-2.0",
       "url": "https://owasp.org/www-project-dependency-track/"
@@ -2566,21 +2566,21 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP Dependency-Track is an intelligent, continuous Software Composition Analysis (SCA) and component analysis platform. Instead of running point-in-time scans, it ingests CycloneDX Software Bill of Materials (SBOM) documents and continuously monitors every component, in every version of every application across an organization's entire portfolio, to identify and reduce risk in the software supply chain.",
-              "zh": "OWASP Dependency-Track 是一套智慧型、持續性的軟體組成分析(SCA)與元件分析平台。它不採用一次性的時間點掃描,而是吸收 CycloneDX 軟體物料清單(SBOM)文件,持續監控組織整個應用組合中每個應用程式、每個版本裡的每個元件,以辨識並降低軟體供應鏈風險。"
+              "zh": "OWASP Dependency-Track 是一套智慧型、持續性的軟體組成分析（SCA）與元件分析平台。它不採用一次性的時間點掃描，而是吸收 CycloneDX 軟體物料清單（SBOM）文件，持續監控組織整個應用組合中每個應用程式、每個版本裡的每個元件，以辨識並降低軟體供應鏈風險。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "It is an OWASP Flagship project with an API-first design, making it well suited to CI/CD automation. The system ships as two main parts, an API server and a frontend, and is typically deployed via Docker, Kubernetes, or an executable WAR.",
-              "zh": "它是 OWASP 旗艦級專案,採用 API 優先的設計,非常適合整合進 CI/CD 自動化流程。系統主要由 API 伺服器與前端兩個元件組成,通常透過 Docker、Kubernetes 或可執行的 WAR 檔部署。"
+              "zh": "它是 OWASP 旗艦級專案，採用 API 優先的設計，非常適合整合進 CI/CD 自動化流程。系統主要由 API 伺服器與前端兩個元件組成，通常透過 Docker、Kubernetes 或可執行的 WAR 檔部署。"
             }
           },
           {
             "type": "quote",
             "text": {
               "en": "Dependency-Track monitors component usage across all versions of every application in its portfolio in order to proactively identify risk across an organization.",
-              "zh": "Dependency-Track 監控其應用組合中每個應用程式所有版本的元件使用情形,以主動辨識整個組織的風險。"
+              "zh": "Dependency-Track 監控其應用組合中每個應用程式所有版本的元件使用情形，以主動辨識整個組織的風險。"
             }
           }
         ]
@@ -2607,13 +2607,13 @@ window.SITE_PAGES = [
               ],
               "zh": [
                 "涵蓋應用程式、函式庫、框架、容器、作業系統、韌體、硬體與服務的全組合元件清單",
-                "將元件與多個情資來源比對,辨識已知漏洞",
-                "可設定的政策引擎,落實安全、授權與營運風險政策",
-                "授權風險與合規分析,並對齊 NIST 與 CISA 規範",
-                "偵測過時、被竄改與已終止支援(EOL)的元件",
-                "支援 VEX(漏洞可利用性交換)並提供稽核 / 分流工作流程",
-                "風險評分與時間序列指標,並支援以 EPSS 為基礎的優先排序",
-                "完整的整合生態系,涵蓋 CI/CD、工單、即時通訊與應用安全工具"
+                "將元件與多個情資來源比對，辨識已知漏洞",
+                "可設定的政策引擎，落實安全、授權與營運風險政策",
+                "授權風險與合規分析，並對齊 NIST 與 CISA 規範",
+                "偵測過時、被竄改與已終止支援（EOL）的元件",
+                "支援 VEX（漏洞可利用性交換）並提供稽核 / 分流工作流程",
+                "風險評分與時間序列指標，並支援以 EPSS 為基礎的優先排序",
+                "完整的整合生態系，涵蓋 CI/CD、工單、即時通訊與應用安全工具"
               ]
             }
           }
@@ -2630,7 +2630,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Dependency-Track enriches SBOM analysis by correlating components against several vulnerability intelligence datasources, blending the results to improve coverage and accuracy.",
-              "zh": "Dependency-Track 透過將元件與多個漏洞情資來源比對,並融合各來源結果,以提升涵蓋率與準確度,進而強化 SBOM 分析。"
+              "zh": "Dependency-Track 透過將元件與多個漏洞情資來源比對，並融合各來源結果，以提升涵蓋率與準確度，進而強化 SBOM 分析。"
             }
           },
           {
@@ -2647,14 +2647,14 @@ window.SITE_PAGES = [
                 "EPSS (Exploit Prediction Scoring System) for exploitability-based prioritization"
               ],
               "zh": [
-                "國家漏洞資料庫(NVD)",
-                "OSV(開源漏洞資料庫,Google)",
+                "國家漏洞資料庫（NVD）",
+                "OSV（開源漏洞資料庫，Google）",
                 "GitHub Advisories 安全諮詢",
                 "Sonatype OSS Index",
                 "Trivy",
                 "Snyk",
                 "VulnDB(Risk Based Security)",
-                "EPSS(漏洞利用預測評分系統),用於以可利用性為基礎的優先排序"
+                "EPSS（漏洞利用預測評分系統），用於以可利用性為基礎的優先排序"
               ]
             }
           },
@@ -2668,10 +2668,10 @@ window.SITE_PAGES = [
                 "Authentication: OAuth 2.0 / OIDC SSO, Active Directory / LDAP, internal users, and API keys"
               ],
               "zh": [
-                "CI/CD:Jenkins 外掛、GitHub Actions,以及其他可透過 REST API 串接的管線工具",
-                "工單與通知:Jira、Slack、Microsoft Teams、Mattermost、電子郵件與 webhook",
-                "應用安全彙整:DefectDojo、ThreadFix、Fortify SSC 與 Kenna Security",
-                "身分驗證:OAuth 2.0 / OIDC 單一登入、Active Directory / LDAP、內部使用者與 API 金鑰"
+                "CI/CD：Jenkins 外掛、GitHub Actions，以及其他可透過 REST API 串接的管線工具",
+                "工單與通知：Jira、Slack、Microsoft Teams、Mattermost、電子郵件與 webhook",
+                "應用安全彙整：DefectDojo、ThreadFix、Fortify SSC 與 Kenna Security",
+                "身分驗證：OAuth 2.0 / OIDC 單一登入、Active Directory / LDAP、內部使用者與 API 金鑰"
               ]
             }
           }
@@ -2688,7 +2688,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "A typical workflow pairs SBOM generation with analysis: a CI/CD pipeline produces a CycloneDX SBOM during the build and uploads it to Dependency-Track via the REST API, the Jenkins plugin, or the web UI. From there the platform continuously re-evaluates that inventory as new vulnerability intelligence arrives.",
-              "zh": "典型的工作流程是將 SBOM 產生與分析配對:CI/CD 管線在建置過程中產生 CycloneDX SBOM,再透過 REST API、Jenkins 外掛或網頁介面上傳至 Dependency-Track。之後平台會在新的漏洞情資到來時,持續重新評估該元件清單。"
+              "zh": "典型的工作流程是將 SBOM 產生與分析配對：CI/CD 管線在建置過程中產生 CycloneDX SBOM，再透過 REST API、Jenkins 外掛或網頁介面上傳至 Dependency-Track。之後平台會在新的漏洞情資到來時，持續重新評估該元件清單。"
             }
           },
           {
@@ -2701,9 +2701,9 @@ window.SITE_PAGES = [
                 "Apply the policy engine and audit workflow to triage findings, record VEX justifications, and enforce gates"
               ],
               "zh": [
-                "在每次發布的 CI/CD 建置流程中,將 SBOM 上傳設為一個步驟",
-                "持續監控整個應用組合,讓新揭露的 CVE 能對應到已上線軟體,而無需重新掃描",
-                "設定告警(Slack、Teams、Jira、webhook),在出現新風險時通知團隊",
+                "在每次發布的 CI/CD 建置流程中，將 SBOM 上傳設為一個步驟",
+                "持續監控整個應用組合，讓新揭露的 CVE 能對應到已上線軟體，而無需重新掃描",
+                "設定告警（Slack、Teams、Jira、webhook），在出現新風險時通知團隊",
                 "運用政策引擎與稽核工作流程進行漏洞分流、記錄 VEX 判定理由並落實閘門控管"
               ]
             }
@@ -2721,7 +2721,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Dependency-Track originated in 2013 as a v1 desktop application. It was completely re-architected as a server platform in v3 (2018), then evolved into the modern API-first v4 platform. Development continues through the 4.x line, with the latest stable release being v4.14.2 (May 2026) and a major v5.0.0 currently in release-candidate stage.",
-              "zh": "Dependency-Track 起源於 2013 年的 v1 桌面應用程式。它在 v3(2018 年)被完全重新架構為伺服器平台,接著演進為現代 API 優先的 v4 平台。開發持續沿著 4.x 系列推進,最新穩定版為 v4.14.2(2026 年 5 月),而重大改版的 v5.0.0 目前處於釋出候選(RC)階段。"
+              "zh": "Dependency-Track 起源於 2013 年的 v1 桌面應用程式。它在 v3（2018 年）被完全重新架構為伺服器平台，接著演進為現代 API 優先的 v4 平台。開發持續沿著 4.x 系列推進，最新穩定版為 v4.14.2（2026 年 5 月），而重大改版的 v5.0.0 目前處於釋出候選（RC）階段。"
             }
           }
         ]
@@ -2796,7 +2796,7 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Probably the most modern and sophisticated insecure web app for security training and CTFs.",
-      "zh": "可能是最現代、最精緻的刻意不安全 Web 應用程式,用於資安訓練與 CTF。"
+      "zh": "可能是最現代、最精緻的刻意不安全 Web 應用程式，用於資安訓練與 CTF。"
     },
     "meta": {
       "type": {
@@ -2805,7 +2805,7 @@ window.SITE_PAGES = [
       },
       "latest": {
         "en": "v20.0.0 (released 2026-05-12)",
-        "zh": "v20.0.0(2026-05-12 發布)"
+        "zh": "v20.0.0（2026-05-12 發布）"
       },
       "audience": {
         "en": "Learners, trainers, pentesters and security tool vendors",
@@ -2830,21 +2830,21 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "OWASP Juice Shop bills itself as \"probably the most modern and sophisticated insecure web application.\" It is a deliberately vulnerable application built to be hacked, used for security training, awareness demonstrations, Capture-The-Flag (CTF) events and as a guinea pig for testing security tools against a real-world, JavaScript-heavy stack.",
-              "zh": "OWASP Juice Shop 自稱「可能是最現代、最精緻的不安全 Web 應用程式」。它是一個刻意設計成可被入侵的脆弱應用,用於資安訓練、資安意識展示、奪旗(CTF)競賽,也作為測試資安工具對抗真實世界、以 JavaScript 為主的技術棧的實驗對象。"
+              "zh": "OWASP Juice Shop 自稱「可能是最現代、最精緻的不安全 Web 應用程式」。它是一個刻意設計成可被入侵的脆弱應用，用於資安訓練、資安意識展示、奪旗（CTF）競賽，也作為測試資安工具對抗真實世界、以 JavaScript 為主的技術棧的實驗對象。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "It is the first JavaScript-only application listed in the OWASP Vulnerable Web Applications Directory. The front end is an Angular single-page application styled with Angular Material, while the back end is a Node.js / Express server exposing a RESTful API, with SQLite (via Sequelize) and a MarsDB NoSQL store backing the data.",
-              "zh": "它是 OWASP 脆弱 Web 應用程式目錄(VWA Directory)中第一個純 JavaScript 應用程式。前端是以 Angular Material 美化的 Angular 單頁應用(SPA),後端則是 Node.js / Express 伺服器並提供 RESTful API,資料層以 SQLite(透過 Sequelize)與 MarsDB(NoSQL)儲存。"
+              "zh": "它是 OWASP 脆弱 Web 應用程式目錄（VWA Directory）中第一個純 JavaScript 應用程式。前端是以 Angular Material 美化的 Angular 單頁應用（SPA），後端則是 Node.js / Express 伺服器並提供 RESTful API，資料層以 SQLite（透過 Sequelize）與 MarsDB(NoSQL)儲存。"
             }
           },
           {
             "type": "quote",
             "text": {
               "en": "Juice Shop encompasses vulnerabilities from the entire OWASP Top Ten along with many other security flaws found in real-world applications.",
-              "zh": "Juice Shop 涵蓋了整份 OWASP Top Ten 的弱點,以及許多在真實應用程式中發現的其他資安缺陷。"
+              "zh": "Juice Shop 涵蓋了整份 OWASP Top Ten 的弱點，以及許多在真實應用程式中發現的其他資安缺陷。"
             }
           }
         ]
@@ -2860,7 +2860,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Juice Shop deliberately contains vulnerabilities spanning the entire OWASP Top 10 and far beyond, so a single application can be used to teach almost every common web weakness class:",
-              "zh": "Juice Shop 刻意內建涵蓋整份 OWASP Top 10 並遠超其範圍的弱點,因此單一應用程式即可用來教學幾乎所有常見的 Web 弱點類別:"
+              "zh": "Juice Shop 刻意內建涵蓋整份 OWASP Top 10 並遠超其範圍的弱點，因此單一應用程式即可用來教學幾乎所有常見的 Web 弱點類別："
             }
           },
           {
@@ -2877,13 +2877,13 @@ window.SITE_PAGES = [
                 "Broken Anti-Automation, Unvalidated Redirects and Security through Obscurity"
               ],
               "zh": [
-                "注入(Injection)- SQL 注入與 NoSQL 注入",
+                "注入（Injection）- SQL 注入與 NoSQL 注入",
                 "失效的身分驗證與脆弱的工作階段 / 憑證處理",
-                "失效的存取控制與不安全的直接物件參考(IDOR)",
-                "跨網站指令碼(XSS)- 反射型、儲存型與 DOM 型",
+                "失效的存取控制與不安全的直接物件參考（IDOR）",
+                "跨網站指令碼（XSS）- 反射型、儲存型與 DOM 型",
                 "敏感資料外洩與加密相關缺陷",
-                "XML 外部實體(XXE)與不安全的反序列化",
-                "資安組態設定錯誤,以及使用脆弱 / 過期的元件",
+                "XML 外部實體（XXE）與不安全的反序列化",
+                "資安組態設定錯誤，以及使用脆弱 / 過期的元件",
                 "失效的防自動化機制、未驗證的轉址與以隱晦求安全"
               ]
             }
@@ -2901,7 +2901,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Hacking is gamified through 112 challenges of varying difficulty, rated from ★ (trivial) to ★★★★★★ (hardest). Your first task is usually to find the hidden Score Board, which then tracks your progress and unlocks a real-time push notification each time a challenge is solved over WebSocket.",
-              "zh": "入侵過程被遊戲化為 112 道難度各異的挑戰,評級從 ★(極簡單)到 ★★★★★★(最困難)。你的第一個任務通常是找出隱藏的計分板(Score Board),它會追蹤你的進度,並在每次解出挑戰時透過 WebSocket 即時推播通知。"
+              "zh": "入侵過程被遊戲化為 112 道難度各異的挑戰，評級從 ★（極簡單）到 ★★★★★★（最困難）。你的第一個任務通常是找出隱藏的計分板（Score Board），它會追蹤你的進度，並在每次解出挑戰時透過 WebSocket 即時推播通知。"
             }
           },
           {
@@ -2916,9 +2916,9 @@ window.SITE_PAGES = [
                 "A built-in Hacking Instructor offers interactive, step-by-step tutorials for beginners"
               ],
               "zh": [
-                "總共 112 道挑戰,其中 33 道附帶選用的修補程式碼(fix-the-code)挑戰,並有 13 道引導式教學",
+                "總共 112 道挑戰，其中 33 道附帶選用的修補程式碼（fix-the-code）挑戰，並有 13 道引導式教學",
                 "類別涵蓋注入、失效的身分驗證、敏感資料外洩與 XXE",
-                "類別涵蓋失效的存取控制、資安組態設定錯誤與跨網站指令碼(XSS)",
+                "類別涵蓋失效的存取控制、資安組態設定錯誤與跨網站指令碼（XSS）",
                 "類別涵蓋不安全的反序列化、脆弱元件與加密相關缺陷",
                 "類別涵蓋失效的防自動化、未驗證的轉址、以隱晦求安全與不當的輸入驗證",
                 "內建的 Hacking Instructor 為新手提供互動式、逐步的教學引導"
@@ -2938,21 +2938,21 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Juice Shop runs anywhere: from source via npm on Node.js, as an official Docker image, with Vagrant, or via one-click deploy to major cloud providers on Windows, macOS and Linux. It is highly customizable and supports re-theming and rebranding for tailored trainings.",
-              "zh": "Juice Shop 可在任何環境執行:在 Node.js 上以 npm 從原始碼啟動、使用官方 Docker 映像檔、透過 Vagrant,或在 Windows、macOS 與 Linux 上一鍵部署到主流雲端供應商。它高度可客製化,支援重新佈景與品牌化以打造客製化訓練。"
+              "zh": "Juice Shop 可在任何環境執行：在 Node.js 上以 npm 從原始碼啟動、使用官方 Docker 映像檔、透過 Vagrant，或在 Windows、macOS 與 Linux 上一鍵部署到主流雲端供應商。它高度可客製化，支援重新佈景與品牌化以打造客製化訓練。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "For competitions, the companion juice-shop-ctf-cli tool generates challenge data that can be imported into popular CTF frameworks such as CTFd, FBCTF and RootTheBox, while the MultiJuicer project orchestrates many isolated instances for multi-user classroom or event use.",
-              "zh": "在競賽方面,搭配的 juice-shop-ctf-cli 工具可產生挑戰資料,匯入 CTFd、FBCTF、RootTheBox 等熱門 CTF 框架;而 MultiJuicer 專案則可調度多個彼此隔離的執行個體,供多人課堂或活動使用。"
+              "zh": "在競賽方面，搭配的 juice-shop-ctf-cli 工具可產生挑戰資料，匯入 CTFd、FBCTF、RootTheBox 等熱門 CTF 框架；而 MultiJuicer 專案則可調度多個彼此隔離的執行個體，供多人課堂或活動使用。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "A free companion book, \"Pwning OWASP Juice Shop\" by project leader Björn Kimminich, documents every challenge with hints and full solutions and is published online and on Leanpub under CC BY-NC-ND 4.0.",
-              "zh": "由專案負責人 Björn Kimminich 撰寫的免費隨附書籍《Pwning OWASP Juice Shop》記錄了每一道挑戰的提示與完整解法,線上與 Leanpub 皆有提供,並以 CC BY-NC-ND 4.0 授權發布。"
+              "zh": "由專案負責人 Björn Kimminich 撰寫的免費隨附書籍《Pwning OWASP Juice Shop》記錄了每一道挑戰的提示與完整解法，線上與 Leanpub 皆有提供，並以 CC BY-NC-ND 4.0 授權發布。"
             }
           }
         ]
@@ -2968,7 +2968,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "Juice Shop was started in 2014 by Björn Kimminich and is now co-led with Jannik Hollenbach. It was promoted to OWASP Flagship project status in 2018, recognizing it as one of OWASP's most mature and widely used projects. Released under the permissive MIT License, it remains free and open source, with v20.0.0 shipped on 2026-05-12.",
-              "zh": "Juice Shop 由 Björn Kimminich 於 2014 年發起,目前與 Jannik Hollenbach 共同領導。它於 2018 年晉升為 OWASP 旗艦(Flagship)專案,代表它是 OWASP 最成熟且廣泛使用的專案之一。專案以寬鬆的 MIT 授權發布,維持免費且開源,v20.0.0 於 2026-05-12 推出。"
+              "zh": "Juice Shop 由 Björn Kimminich 於 2014 年發起，目前與 Jannik Hollenbach 共同領導。它於 2018 年晉升為 OWASP 旗艦（Flagship）專案，代表它是 OWASP 最成熟且廣泛使用的專案之一。專案以寬鬆的 MIT 授權發布，維持免費且開源，v20.0.0 於 2026-05-12 推出。"
             }
           }
         ]
@@ -3051,16 +3051,16 @@ window.SITE_PAGES = [
     },
     "subtitle": {
       "en": "Generic, engine-agnostic attack-detection rules that give web app firewalls a first line of defense.",
-      "zh": "通用且不綁定引擎的攻擊偵測規則集,為 Web 應用防火牆提供第一道防線。"
+      "zh": "通用且不綁定引擎的攻擊偵測規則集，為 Web 應用防火牆提供第一道防線。"
     },
     "meta": {
       "type": {
         "en": "WAF rule set (open source)",
-        "zh": "WAF 規則集(開源)"
+        "zh": "WAF 規則集（開源）"
       },
       "latest": {
         "en": "CRS 4.27.0 (June 2026); 4.25.0 is the first LTS line",
-        "zh": "CRS 4.27.0(2026 年 6 月);4.25.0 為首個 LTS 版本"
+        "zh": "CRS 4.27.0（2026 年 6 月）；4.25.0 為首個 LTS 版本"
       },
       "audience": {
         "en": "Ops, SRE and security engineers running a WAF",
@@ -3085,14 +3085,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The OWASP CRS (Core Rule Set) is a free, open-source collection of generic attack-detection rules for web application firewalls. It provides a first line of defense for web applications, targeting the OWASP Top Ten and other common threats while aiming to protect with a minimum of false positives. CRS is signature- and behaviour-based and ships independently of any single web app, so it can be dropped in front of almost any service.",
-              "zh": "OWASP CRS(核心規則集)是一套免費、開源的通用攻擊偵測規則,專為 Web 應用防火牆設計。它為 Web 應用提供第一道防線,聚焦 OWASP Top Ten 與其他常見威脅,並力求在最少誤判的前提下達成防護。CRS 同時採用特徵碼與行為偵測,且不依賴特定應用,因此幾乎可部署在任何服務之前。"
+              "zh": "OWASP CRS（核心規則集）是一套免費、開源的通用攻擊偵測規則，專為 Web 應用防火牆設計。它為 Web 應用提供第一道防線，聚焦 OWASP Top Ten 與其他常見威脅，並力求在最少誤判的前提下達成防護。CRS 同時採用特徵碼與行為偵測，且不依賴特定應用，因此幾乎可部署在任何服務之前。"
             }
           },
           {
             "type": "p",
             "text": {
               "en": "Although still widely known by its former name 'ModSecurity Core Rule Set', the project is now engine-agnostic: the same rules run on ModSecurity (Apache, Nginx, IIS) and on the Go-based Coraza engine. CRS 4 added a plugin architecture, early-blocking options, web-shell detection, improved UTF-8 handling and HTTP/3 support, and closed over 500 individual rule bypasses found through bug-bounty work.",
-              "zh": "儘管許多人仍以舊名「ModSecurity 核心規則集」稱呼它,此專案如今已不綁定特定引擎:同一份規則可在 ModSecurity(Apache、Nginx、IIS)以及以 Go 撰寫的 Coraza 引擎上運行。CRS 4 新增了外掛架構、提前封鎖(early-blocking)選項、Web shell 偵測、改良的 UTF-8 處理與 HTTP/3 支援,並透過漏洞獎勵計畫修補了 500 多個規則繞過問題。"
+              "zh": "儘管許多人仍以舊名「ModSecurity 核心規則集」稱呼它，此專案如今已不綁定特定引擎：同一份規則可在 ModSecurity（Apache、Nginx、IIS）以及以 Go 撰寫的 Coraza 引擎上運行。CRS 4 新增了外掛架構、提前封鎖（early-blocking）選項、Web shell 偵測、改良的 UTF-8 處理與 HTTP/3 支援，並透過漏洞獎勵計畫修補了 500 多個規則繞過問題。"
             }
           }
         ]
@@ -3125,13 +3125,13 @@ window.SITE_PAGES = [
                 "Outbound data and error leakage detection in responses"
               ],
               "zh": [
-                "SQL 注入(SQLi)以及 NoSQL/MongoDB 運算子注入",
-                "跨站腳本攻擊(XSS)",
-                "本地與遠端檔案引入(LFI/RFI)",
-                "遠端程式碼執行(RCE)與作業系統/shell 命令注入",
-                "PHP 與 Java 注入,以及伺服器端樣板注入(SSTI)",
-                "HTTP 協定違規、異常與強制檢查(方法、標頭、編碼)",
-                "掃描器、機器人與爬蟲偵測;Session 固著;常見應用層攻擊",
+                "SQL 注入（SQLi）以及 NoSQL/MongoDB 運算子注入",
+                "跨站腳本攻擊（XSS）",
+                "本地與遠端檔案引入（LFI/RFI）",
+                "遠端程式碼執行（RCE）與作業系統/shell 命令注入",
+                "PHP 與 Java 注入，以及伺服器端樣板注入（SSTI）",
+                "HTTP 協定違規、異常與強制檢查（方法、標頭、編碼）",
+                "掃描器、機器人與爬蟲偵測；Session 固著；常見應用層攻擊",
                 "回應中的對外資料外洩與錯誤訊息洩漏偵測"
               ]
             }
@@ -3164,12 +3164,12 @@ window.SITE_PAGES = [
                 "False-positive tuning via exclusion rules; rules use structured ID ranges (e.g. 9xxxxx) so categories and tuning are predictable."
               ],
               "zh": [
-                "異常評分(Anomaly Scoring):將偵測與封鎖解耦;每條命中的規則累加分數,超過閾值時才由單一封鎖規則觸發,有別於傳統各規則自行封鎖的做法。",
-                "區分入向(請求)與出向(回應)分數,預設閾值入向為 5、出向為 4;嚴重度對應加分(CRITICAL 5、ERROR 4、WARNING 3、NOTICE 2)。",
-                "偏執等級 PL1–PL4:PL1 為僅需少量調校的預設基準;等級越高,規則越嚴格、可攔下更多攻擊,但誤判也越多(PL4 用於守護「皇冠寶石」)。",
-                "執行偏執等級(Executing PL):讓較高 PL 的規則僅進行評分/偵測,可在影響封鎖前先測試更嚴格的偵測。",
-                "取樣模式(Sampling):僅讓一定比例的流量(例如從 1% 逐步提升到 100%)經過 CRS,以低風險方式漸進上線。",
-                "透過排除規則(exclusion rules)進行誤判調校;規則採用結構化的 ID 區段(例如 9xxxxx),使分類與調校可預期。"
+                "異常評分（Anomaly Scoring）：將偵測與封鎖解耦；每條命中的規則累加分數，超過閾值時才由單一封鎖規則觸發，有別於傳統各規則自行封鎖的做法。",
+                "區分入向（請求）與出向（回應）分數，預設閾值入向為 5、出向為 4；嚴重度對應加分（CRITICAL 5、ERROR 4、WARNING 3、NOTICE 2）。",
+                "偏執等級 PL1–PL4：PL1 為僅需少量調校的預設基準；等級越高，規則越嚴格、可攔下更多攻擊，但誤判也越多（PL4 用於守護「皇冠寶石」）。",
+                "執行偏執等級（Executing PL）：讓較高 PL 的規則僅進行評分/偵測，可在影響封鎖前先測試更嚴格的偵測。",
+                "取樣模式（Sampling）：僅讓一定比例的流量（例如從 1% 逐步提升到 100%）經過 CRS，以低風險方式漸進上線。",
+                "透過排除規則（exclusion rules）進行誤判調校；規則採用結構化的 ID 區段（例如 9xxxxx），使分類與調校可預期。"
               ]
             }
           }
@@ -3186,14 +3186,14 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "CRS is deployed in front of applications as a defense-in-depth layer, loaded by a WAF engine such as ModSecurity (with Apache, Nginx or IIS) or Coraza, and is also bundled by many cloud and CDN WAFs (AWS, Azure, Cloudflare, Fastly and others). A typical rollout starts in detection-only mode at PL1, uses sampling and log review to surface false positives, then writes targeted exclusion rules and raises the paranoia level before switching to blocking.",
-              "zh": "CRS 部署於應用之前,作為縱深防禦的一層,由 ModSecurity(搭配 Apache、Nginx 或 IIS)或 Coraza 等 WAF 引擎載入,也被許多雲端與 CDN WAF(AWS、Azure、Cloudflare、Fastly 等)內建採用。典型導入流程為:先以偵測模式在 PL1 啟用,透過取樣與日誌檢視找出誤判,再撰寫針對性的排除規則並提高偏執等級,最後才切換為封鎖模式。"
+              "zh": "CRS 部署於應用之前，作為縱深防禦的一層，由 ModSecurity（搭配 Apache、Nginx 或 IIS）或 Coraza 等 WAF 引擎載入，也被許多雲端與 CDN WAF（AWS、Azure、Cloudflare、Fastly 等）內建採用。典型導入流程為：先以偵測模式在 PL1 啟用，透過取樣與日誌檢視找出誤判，再撰寫針對性的排除規則並提高偏執等級，最後才切換為封鎖模式。"
             }
           },
           {
             "type": "quote",
             "text": {
               "en": "Setting a high paranoia level in blocking mode without adequate tuning to deal with false positives is very risky.",
-              "zh": "在未充分調校誤判的情況下,於封鎖模式啟用高偏執等級是非常危險的。"
+              "zh": "在未充分調校誤判的情況下，於封鎖模式啟用高偏執等級是非常危險的。"
             }
           }
         ]
@@ -3209,7 +3209,7 @@ window.SITE_PAGES = [
             "type": "p",
             "text": {
               "en": "The Core Rule Set began in 2006 within Breach Security and was later maintained by Trustwave SpiderLabs before becoming an independent OWASP flagship project. The 3.x series established anomaly scoring and paranoia levels as the modern model. CRS 4.0 shipped in 2023, adding the plugin system and making the rules engine-agnostic across ModSecurity and Coraza. Development now moves on a fast minor-release cadence; the latest release is 4.27.0 (June 2026), and 4.25.0 marks the first Long-Term Support (LTS) line, while support for the legacy CRS 3.3.x series ends in Q3 2026.",
-              "zh": "核心規則集始於 2006 年的 Breach Security,後由 Trustwave SpiderLabs 維護,最終成為獨立的 OWASP 旗艦專案。3.x 系列確立了異常評分與偏執等級此一現代模型。CRS 4.0 於 2023 年推出,新增外掛系統並讓規則跨 ModSecurity 與 Coraza 不再綁定引擎。如今開發以快速的次版本節奏推進;最新版本為 4.27.0(2026 年 6 月),而 4.25.0 為首個長期支援(LTS)版本;舊有的 CRS 3.3.x 系列支援將於 2026 年第三季結束。"
+              "zh": "核心規則集始於 2006 年的 Breach Security，後由 Trustwave SpiderLabs 維護，最終成為獨立的 OWASP 旗艦專案。3.x 系列確立了異常評分與偏執等級此一現代模型。CRS 4.0 於 2023 年推出，新增外掛系統並讓規則跨 ModSecurity 與 Coraza 不再綁定引擎。如今開發以快速的次版本節奏推進；最新版本為 4.27.0（2026 年 6 月），而 4.25.0 為首個長期支援（LTS）版本；舊有的 CRS 3.3.x 系列支援將於 2026 年第三季結束。"
             }
           }
         ]

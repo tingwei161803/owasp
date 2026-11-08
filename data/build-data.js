@@ -20,7 +20,7 @@ const SITE_META = {
   subtitle: { en: "A detailed, bilingual field guide to eleven OWASP flagship projects.",
               zh: "十一個 OWASP 旗艦專案的詳盡雙語導覽。" },
   footer:   { en: "Unofficial educational guide · content © OWASP under each project's own license.",
-              zh: "非官方教育用導覽 · 內容著作權屬 OWASP,依各專案授權條款。" }
+              zh: "非官方教育用導覽 · 內容著作權屬 OWASP，依各專案授權條款。" }
 };
 
 const CATEGORIES = [
@@ -133,7 +133,7 @@ const home = {
   slug: "home", layout: "hub", icon: "verified_user",
   title:    { en: "OWASP Flagship Projects", zh: "OWASP 旗艦專案" },
   subtitle: { en: "Eleven of OWASP's flagship projects — the standards, guides and tools that define modern application security. Search or filter by category, then open any card for a detailed bilingual breakdown.",
-              zh: "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選,再點任一張卡片查看詳盡的雙語解說。" },
+              zh: "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選，再點任一張卡片查看詳盡的雙語解說。" },
   stats: [
     { value: 11,  label: { en: "Flagship projects", zh: "旗艦專案" } },
     { value: 4,   label: { en: "Categories",        zh: "主題分類" } },
