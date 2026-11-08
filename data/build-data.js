@@ -40,6 +40,24 @@ const ORDER = [
   "dependency-track", "juice-shop", "crs"
 ];
 
+/* shelf metadata — the short name printed on each book spine and the library
+   call number on its catalogue card (category prefix + project code). Purely
+   presentational; every fact on the page still comes from research/*.json. */
+const CALL_PREFIX = { guide: "STD", ai: "AI", "supply-chain": "SBOM", tool: "TOOL" };
+const SHELF = {
+  "top-ten":          { short: "Top 10",           code: "T10" },
+  "asvs":             { short: "ASVS",             code: "ASVS" },
+  "wstg":             { short: "WSTG",             code: "WSTG" },
+  "mas":              { short: "MAS",              code: "MAS" },
+  "samm":             { short: "SAMM",             code: "SAMM" },
+  "genai-security":   { short: "GenAI Security",   code: "GENAI" },
+  "ai-exchange":      { short: "AI Exchange",      code: "AIX" },
+  "cyclonedx":        { short: "CycloneDX",        code: "CDX" },
+  "dependency-track": { short: "Dependency-Track", code: "DT" },
+  "juice-shop":       { short: "Juice Shop",       code: "JUICE" },
+  "crs":              { short: "CRS",              code: "CRS" }
+};
+
 /* fallback section headings (only used when a research file omits a heading) */
 const HEADINGS_BY_ID = {
   overview:    { en: "Overview",                  zh: "概述" },
@@ -100,6 +118,8 @@ const projects = ORDER.map(slug => {
     layout: "article",
     icon: raw.icon,
     category: raw.category,
+    short: (SHELF[slug] || {}).short || slug,
+    callno: (CALL_PREFIX[raw.category] || "GEN") + "." + ((SHELF[slug] || {}).code || slug.toUpperCase()),
     tags: raw.tags || [],
     title: asLang(raw.title),
     subtitle: asLang(raw.subtitle),
@@ -132,12 +152,17 @@ if (problems) { console.error("ABORT:", problems, "problem(s)"); process.exit(1)
 const home = {
   slug: "home", layout: "hub", icon: "verified_user",
   title:    { en: "OWASP Flagship Projects", zh: "OWASP 旗艦專案" },
+  headline: { en: "Eleven books that define application security",
+              zh: "十一本書，\n定義應用程式安全" },
   subtitle: { en: "Eleven of OWASP's flagship projects — the standards, guides and tools that define modern application security. Search or filter by category, then open any card for a detailed bilingual breakdown.",
               zh: "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選，再點任一張卡片查看詳盡的雙語解說。" },
   stats: [
-    { value: 11,  label: { en: "Flagship projects", zh: "旗艦專案" } },
-    { value: 4,   label: { en: "Categories",        zh: "主題分類" } },
-    { value: 25,  label: { en: "Years of OWASP",    zh: "OWASP 年資" } }
+    { value: 11,  label: { en: "Flagship projects", zh: "旗艦專案" },
+      line: { en: "{n} titles on the shelf", zh: "館藏 {n}" } },
+    { value: 4,   label: { en: "Categories",        zh: "主題分類" },
+      line: { en: "{n} categories", zh: "分類 {n}" } },
+    { value: 25,  label: { en: "Years of OWASP",    zh: "OWASP 年資" },
+      line: { en: "OWASP founded {n} years ago", zh: "OWASP 成立 {n} 年" } }
   ],
   categories: CATEGORIES
 };
@@ -155,6 +180,8 @@ const compare = {
     { key: "url",    label: { en: "Official site", zh: "官方網站" }, type: "link" }
   ],
   rows: projects.map(p => ({
+    slug:   p.slug,
+    catKey: p.category,
     name:   p.title,
     cat:    CAT_LABEL[p.category],
     type:   p.meta.type,

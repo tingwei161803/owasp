@@ -31,6 +31,10 @@ window.SITE_PAGES = [
       "en": "OWASP Flagship Projects",
       "zh": "OWASP 旗艦專案"
     },
+    "headline": {
+      "en": "Eleven books that define application security",
+      "zh": "十一本書，\n定義應用程式安全"
+    },
     "subtitle": {
       "en": "Eleven of OWASP's flagship projects — the standards, guides and tools that define modern application security. Search or filter by category, then open any card for a detailed bilingual breakdown.",
       "zh": "十一個 OWASP 旗艦專案——定義現代應用程式安全的標準、指南與工具。可搜尋或依分類篩選，再點任一張卡片查看詳盡的雙語解說。"
@@ -41,6 +45,10 @@ window.SITE_PAGES = [
         "label": {
           "en": "Flagship projects",
           "zh": "旗艦專案"
+        },
+        "line": {
+          "en": "{n} titles on the shelf",
+          "zh": "館藏 {n}"
         }
       },
       {
@@ -48,6 +56,10 @@ window.SITE_PAGES = [
         "label": {
           "en": "Categories",
           "zh": "主題分類"
+        },
+        "line": {
+          "en": "{n} categories",
+          "zh": "分類 {n}"
         }
       },
       {
@@ -55,6 +67,10 @@ window.SITE_PAGES = [
         "label": {
           "en": "Years of OWASP",
           "zh": "OWASP 年資"
+        },
+        "line": {
+          "en": "OWASP founded {n} years ago",
+          "zh": "OWASP 成立 {n} 年"
         }
       }
     ],
@@ -138,6 +154,8 @@ window.SITE_PAGES = [
     ],
     "rows": [
       {
+        "slug": "top-ten",
+        "catKey": "guide",
         "name": {
           "en": "OWASP Top 10",
           "zh": "OWASP Top 10"
@@ -157,6 +175,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-top-ten/"
       },
       {
+        "slug": "asvs",
+        "catKey": "guide",
         "name": {
           "en": "OWASP Application Security Verification Standard (ASVS)",
           "zh": "OWASP 應用程式安全驗證標準（ASVS）"
@@ -176,6 +196,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-application-security-verification-standard/"
       },
       {
+        "slug": "wstg",
+        "catKey": "guide",
         "name": {
           "en": "OWASP Web Security Testing Guide (WSTG)",
           "zh": "OWASP 網頁安全測試指南（WSTG）"
@@ -195,6 +217,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-web-security-testing-guide/"
       },
       {
+        "slug": "mas",
+        "catKey": "guide",
         "name": {
           "en": "OWASP Mobile Application Security (MAS)",
           "zh": "OWASP 行動應用程式安全（MAS）"
@@ -214,6 +238,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-mobile-app-security/"
       },
       {
+        "slug": "samm",
+        "catKey": "guide",
         "name": {
           "en": "OWASP SAMM",
           "zh": "OWASP SAMM 軟體保障成熟度模型"
@@ -233,6 +259,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-samm/"
       },
       {
+        "slug": "genai-security",
+        "catKey": "ai",
         "name": {
           "en": "OWASP GenAI Security Project",
           "zh": "OWASP 生成式 AI 安全專案"
@@ -252,6 +280,8 @@ window.SITE_PAGES = [
         "url": "https://genai.owasp.org/"
       },
       {
+        "slug": "ai-exchange",
+        "catKey": "ai",
         "name": {
           "en": "OWASP AI Exchange",
           "zh": "OWASP AI Exchange（AI 安全交流框架）"
@@ -271,6 +301,8 @@ window.SITE_PAGES = [
         "url": "https://owaspai.org/"
       },
       {
+        "slug": "cyclonedx",
+        "catKey": "supply-chain",
         "name": {
           "en": "OWASP CycloneDX",
           "zh": "OWASP CycloneDX"
@@ -290,6 +322,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-cyclonedx/"
       },
       {
+        "slug": "dependency-track",
+        "catKey": "tool",
         "name": {
           "en": "OWASP Dependency-Track",
           "zh": "OWASP Dependency-Track"
@@ -309,6 +343,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-dependency-track/"
       },
       {
+        "slug": "juice-shop",
+        "catKey": "tool",
         "name": {
           "en": "OWASP Juice Shop",
           "zh": "OWASP Juice Shop"
@@ -328,6 +364,8 @@ window.SITE_PAGES = [
         "url": "https://owasp.org/www-project-juice-shop/"
       },
       {
+        "slug": "crs",
+        "catKey": "tool",
         "name": {
           "en": "OWASP CRS (Core Rule Set)",
           "zh": "OWASP CRS 核心規則集"
@@ -353,6 +391,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "format_list_numbered",
     "category": "guide",
+    "short": "Top 10",
+    "callno": "STD.T10",
     "tags": [
       "web",
       "appsec",
@@ -628,6 +668,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "verified_user",
     "category": "guide",
+    "short": "ASVS",
+    "callno": "STD.ASVS",
     "tags": [
       "verification",
       "standard",
@@ -927,6 +969,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "checklist",
     "category": "guide",
+    "short": "WSTG",
+    "callno": "STD.WSTG",
     "tags": [
       "pentest",
       "methodology",
@@ -1173,6 +1217,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "phone_iphone",
     "category": "guide",
+    "short": "MAS",
+    "callno": "STD.MAS",
     "tags": [
       "mobile",
       "ios",
@@ -1429,6 +1475,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "trending_up",
     "category": "guide",
+    "short": "SAMM",
+    "callno": "STD.SAMM",
     "tags": [
       "maturity-model",
       "sdlc",
@@ -1678,6 +1726,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "smart_toy",
     "category": "ai",
+    "short": "GenAI Security",
+    "callno": "AI.GENAI",
     "tags": [
       "llm",
       "genai",
@@ -1939,6 +1989,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "psychology",
     "category": "ai",
+    "short": "AI Exchange",
+    "callno": "AI.AIX",
     "tags": [
       "ai-security",
       "ai-privacy",
@@ -2224,6 +2276,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "inventory_2",
     "category": "supply-chain",
+    "short": "CycloneDX",
+    "callno": "SBOM.CDX",
     "tags": [
       "sbom",
       "supply-chain",
@@ -2518,6 +2572,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "account_tree",
     "category": "tool",
+    "short": "Dependency-Track",
+    "callno": "TOOL.DT",
     "tags": [
       "sca",
       "sbom",
@@ -2782,6 +2838,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "local_cafe",
     "category": "tool",
+    "short": "Juice Shop",
+    "callno": "TOOL.JUICE",
     "tags": [
       "web-security",
       "training",
@@ -3036,6 +3094,8 @@ window.SITE_PAGES = [
     "layout": "article",
     "icon": "shield",
     "category": "tool",
+    "short": "CRS",
+    "callno": "TOOL.CRS",
     "tags": [
       "waf",
       "rules",
