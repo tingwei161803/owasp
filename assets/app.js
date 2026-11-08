@@ -41,26 +41,119 @@
       return '<header class="page-head"><h1>' + esc(t(p.title)) + "</h1>" + sub + "</header>";
     }
 
-    /* fact box shown at the top of each project (article) page. Labels are
-       picked per active language so a lang switch repaints them too. */
-    function metaStrip(m) {
-      if (!m) return "";
-      var en = L.state.lang === "en";
+    /* ---- the library vocabulary shared by the hub, compare and project pages ---- */
+    var en = L.state.lang === "en";
+    var ext = L.svg(L.icon.ext);
+    function projects() { return L.pages.filter(function (q) { return q.slug !== "home" && q.category; }); }
+    function catLabel(key) { return L.catLabel(key); }
+    function host(u) { try { return new URL(u).host.replace(/^www\./, ""); } catch (e) { return u; } }
+    /* "thicker" books are the longer entries on this site; series (category)
+       share a height, the way a publisher's series does on a real shelf */
+    var SERIES_H = { guide: 100, ai: 88, "supply-chain": 80, tool: 93 };
+    function entryLength(q) {
+      var n = 0;
+      (q.sections || []).forEach(function (s) {
+        (s.blocks || []).forEach(function (b) {
+          if (b.text) n += (b.text.en || "").length;
+          if (b.items && b.items.en) n += b.items.en.join(" ").length;
+        });
+      });
+      return n;
+    }
+    function shelfMetrics(list) {
+      var lens = list.map(entryLength);
+      var lo = Math.min.apply(null, lens), hi = Math.max.apply(null, lens), span = (hi - lo) || 1;
+      return list.map(function (q, i) {
+        return { w: r(1 + 0.9 * (lens[i] - lo) / span), h: SERIES_H[q.category] || 90 };
+      });
+    }
+
+    /* project page header: a library catalogue card */
+    function catCard(p) {
+      var m = p.meta || {};
       var rows = [
         { k: en ? "Type" : "類型", v: t(m.type) },
-        { k: en ? "Latest" : "最新版本", v: t(m.latest) },
-        { k: en ? "Audience" : "適用對象", v: t(m.audience) },
-        { k: en ? "Format" : "形式", v: t(m.format) },
-        { k: en ? "License" : "授權", v: m.license }
-      ].filter(function (r) { return r.v; });
-      var items = rows.map(function (r) {
-        return '<div class="meta-item"><span class="meta-k">' + esc(r.k) +
-          '</span><span class="meta-v">' + esc(r.v) + "</span></div>";
+        { k: en ? "Edition" : "最新版本", v: t(m.latest) },
+        { k: en ? "Licence" : "授權", v: m.license },
+        { k: en ? "Readers" : "適用對象", v: t(m.audience), wide: true },
+        { k: en ? "Format" : "形式", v: t(m.format), wide: true }
+      ].filter(function (x) { return x.v; });
+      var fields = rows.map(function (x) {
+        return '<div' + (x.wide ? ' class="f-wide"' : "") + "><dt>" + esc(x.k) + "</dt><dd>" + esc(x.v) + "</dd></div>";
       }).join("");
-      var link = m.url ? '<a class="meta-link" href="' + esc(m.url) + '" target="_blank" rel="noopener">' +
-        '<span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>' +
-        (en ? "Official site" : "官方網站") + "</a>" : "";
-      return '<div class="meta-strip">' + items + link + "</div>";
+      var link = m.url ?
+        '<div class="catcard__foot"><a class="borrow" href="' + esc(m.url) + '" target="_blank" rel="noopener">' +
+          esc(en ? "Borrow it at the official site" : "到官方網站借閱") + ext + "</a>" +
+          '<span class="catcard__host">' + esc(host(m.url)) + "</span></div>" : "";
+      return '<header class="catcard">' +
+        '<div class="catcard__top"><span class="catcard__call">' + esc(p.callno || "") + "</span>" +
+          '<a class="catcard__cat" href="index.html#shelf-' + esc(p.category) + '">' + esc(catLabel(p.category)) + "</a></div>" +
+        "<h1>" + esc(t(p.title)) + "</h1>" +
+        (t(p.subtitle) ? '<p class="catcard__sub">' + esc(t(p.subtitle)) + "</p>" : "") +
+        '<dl class="catcard__fields">' + fields + "</dl>" + link +
+      "</header>";
+    }
+
+    /* right-hand column of a project page: its shelf-mates + the whole shelf */
+    function related(p) {
+      var all = projects();
+      var mates = all.filter(function (q) { return q.category === p.category; });
+      var li = mates.map(function (q) {
+        var here = q.slug === p.slug;
+        return '<li><a class="rel cat-' + esc(q.category) + (here ? " rel--here" : "") + '" href="' + esc(L.pageHref(q)) + '"' +
+          (here ? ' aria-current="page"' : "") + "><span><b>" + esc(t(q.title)) + "</b><small>" + esc(q.callno || "") + "</small></span></a></li>";
+      }).join("");
+      var met = shelfMetrics(all);
+      var mini = all.map(function (q, i) {
+        return '<a class="cat-' + esc(q.category) + '" href="' + esc(L.pageHref(q)) + '" style="--h:' + met[i].h + '%" title="' +
+          esc(t(q.title)) + '" aria-label="' + esc(t(q.title)) + '"' + (q.slug === p.slug ? ' aria-current="page"' : "") + "></a>";
+      }).join("");
+      return '<aside class="related" aria-label="' + (en ? "Related projects" : "相關專案") + '">' +
+        "<section><h2>" + esc(en ? "On the same shelf" : "同一層書架") + " · " + esc(catLabel(p.category)) + "</h2><ul>" + li + "</ul></section>" +
+        "<section><h2>" + esc(en ? "The whole shelf" : "整排書架") + '</h2><div class="minishelf">' + mini + "</div></section>" +
+      "</aside>";
+    }
+
+    function pager(p) {
+      var all = projects(), i = all.map(function (q) { return q.slug; }).indexOf(p.slug);
+      if (i < 0) return "";
+      var prev = all[(i - 1 + all.length) % all.length], next = all[(i + 1) % all.length];
+      return '<nav class="pager" aria-label="' + (en ? "Previous and next project" : "上一本與下一本") + '">' +
+        '<a href="' + esc(L.pageHref(prev)) + '" rel="prev"><small>' + (en ? "Previous on the shelf" : "書架上的前一本") + "</small><b>" + esc(t(prev.title)) + "</b></a>" +
+        '<a href="' + esc(L.pageHref(next)) + '" rel="next"><small>' + (en ? "Next on the shelf" : "書架上的下一本") + "</small><b>" + esc(t(next.title)) + "</b></a>" +
+      "</nav>";
+    }
+
+    function legend(id, counts) {
+      var keys = ["guide", "ai", "supply-chain", "tool"];
+      var total = 0; keys.forEach(function (k) { total += counts[k] || 0; });
+      return '<div class="legend" id="' + id + '" role="group" aria-label="' + (en ? "Filter by category" : "依分類篩選") + '">' +
+        '<button class="legend__btn legend__btn--all" type="button" data-cat="" aria-pressed="true"><span class="legend__sw" aria-hidden="true"></span>' +
+          esc(en ? "All" : "全部") + ' <span class="legend__n">' + total + "</span></button>" +
+        keys.map(function (k) {
+          return '<button class="legend__btn cat-' + k + '" type="button" data-cat="' + k + '" aria-pressed="false" id="shelf-' + k + '">' +
+            '<span class="legend__sw" aria-hidden="true"></span>' + esc(catLabel(k)) + ' <span class="legend__n">' + (counts[k] || 0) + "</span></button>";
+        }).join("") + "</div>";
+    }
+    function countByCat(list) {
+      var c = {}; list.forEach(function (q) { c[q.category] = (c[q.category] || 0) + 1; }); return c;
+    }
+    function searchBox(id, ph) {
+      return '<label class="searchbox">' + L.svg(L.icon.search) +
+        '<input id="' + id + '" class="search" type="search" autocomplete="off" placeholder="' + esc(ph) + '" aria-label="' + esc(ph) + '" /></label>';
+    }
+    function wireLegend(box, onPick) {
+      var btns = [].slice.call(box.querySelectorAll(".legend__btn"));
+      btns.forEach(function (b) {
+        b.addEventListener("click", function () {
+          btns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+          onPick(b.dataset.cat || "");
+        });
+      });
+      return function select(cat) {
+        btns.forEach(function (x) { x.setAttribute("aria-pressed", (x.dataset.cat || "") === cat ? "true" : "false"); });
+        onPick(cat);
+      };
     }
 
     function barChart(series, accent) {
@@ -107,6 +200,32 @@
         '<path class="line-path" d="' + path + '" fill="none" />' + dots + labels + "</svg>";
     }
 
+    /* the last slot of the catalogue: a pointer to the side-by-side register */
+    function registerCard() {
+      return '<a class="icard icard--register" href="compare.html">' +
+        '<span class="icard__top"><span class="icard__call">REG.ALL</span></span>' +
+        '<h3 class="icard__title">' + esc(en ? "All eleven, side by side" : "十一本並排比較") + "</h3>" +
+        '<p class="icard__sum">' + esc(en ? "The register lists every project's category, type, latest edition and official site in one sortable table."
+          : "對照表把每個專案的類別、類型、最新版本與官方網站排成一張可排序的表。") + "</p>" +
+        '<span class="icard__go">' + esc(en ? "Open the register" : "打開對照表") + "</span>" +
+      "</a>";
+    }
+
+    function indexCard(q) {
+      var m = q.meta || {};
+      return '<a class="icard cat-' + esc(q.category) + '" data-item href="' + esc(L.pageHref(q)) + '">' +
+        '<span class="icard__top"><span class="icard__call">' + esc(q.callno || "") + "</span>" +
+          '<span class="icard__cat">' + esc(catLabel(q.category)) + "</span></span>" +
+        '<h3 class="icard__title">' + esc(t(q.title)) + "</h3>" +
+        '<p class="icard__sum">' + esc(t(q.subtitle)) + "</p>" +
+        '<dl class="icard__fields">' +
+          (t(m.latest) ? "<div><dt>" + (en ? "Edition" : "版次") + "</dt><dd>" + esc(t(m.latest)) + "</dd></div>" : "") +
+          ((q.tags || []).length ? "<div><dt>" + (en ? "Subjects" : "主題") + "</dt><dd>" + esc((q.tags || []).join(", ")) + "</dd></div>" : "") +
+        "</dl>" +
+        '<span class="icard__hole" aria-hidden="true"></span>' +
+      "</a>";
+    }
+
     /* =====================================================================
        LAYOUT REGISTRY
        ===================================================================== */
@@ -116,29 +235,39 @@
          Cards are real <a href> links to each project's detail page. The grid
          is painted + filtered in WIRE.hub so search/chips can re-run it. */
       hub: function (p) {
-        var stats = (p.stats || []).map(function (s) {
-          return '<div class="hero__stat" data-item>' +
-            '<b class="hero__stat-value" data-count="' + esc(String(s.value)) + '">0</b>' +
-            '<span class="hero__stat-label">' + esc(t(s.label)) + "</span></div>";
+        var list = projects(), met = shelfMetrics(list);
+        var line = (p.stats || []).map(function (s) {
+          return "<span>" + esc((t(s.line) || "{n} " + t(s.label)).replace("{n}", String(s.value))) + "</span>";
         }).join("");
-        var cats = (p.categories || []).map(function (c) {
-          return '<button class="chip" type="button" data-cat="' + esc(c.key) + '">' +
-            esc(c[L.state.lang] || c.en) + "</button>";
+        var spines = list.map(function (q, i) {
+          return '<li style="--w:' + met[i].w + ';--i:' + i + '"><a class="spine cat-' + esc(q.category) + '" data-cat="' + esc(q.category) + '" ' +
+            'href="' + esc(L.pageHref(q)) + '" style="--h:' + met[i].h + '%" title="' + esc(t(q.title)) + '">' +
+            '<span class="spine__name" aria-hidden="true">' + esc(q.short || t(q.title)) + "</span>" +
+            '<span class="spine__label" aria-hidden="true"><b>' + esc((q.callno || "").split(".")[0]) + "</b>" + esc((q.callno || "").split(".")[1] || "") + "</span>" +
+            '<span class="sr-only">' + esc(t(q.title)) + "</span>" +
+          "</a></li>";
         }).join("");
-        var allLabel = L.state.lang === "en" ? "All" : "全部";
-        var toolbar =
-          '<div class="toolbar">' +
-            '<input id="hubSearch" class="search" type="search" autocomplete="off" ' +
-              'placeholder="' + (L.state.lang === "en" ? "Search projects…" : "搜尋專案…") + '" ' +
-              'aria-label="' + (L.state.lang === "en" ? "Search projects" : "搜尋專案") + '" />' +
-            (cats ? '<div class="chips" id="hubChips"><button class="chip chip--active" type="button" data-cat="">' +
-              esc(allLabel) + "</button>" + cats + "</div>" : "") +
-          "</div>";
-        return head(p) +
-          (stats ? '<div class="hero__stats">' + stats + "</div>" : "") +
-          toolbar +
-          '<p class="result-count" id="hubCount" aria-live="polite"></p>' +
-          '<div class="grid" id="hubGrid"></div>';
+        return '<section class="hero" aria-labelledby="heroTitle">' +
+            '<div class="hero__text">' +
+              '<p class="catline">' + line + "</p>" +
+              '<h1 class="hero__title" id="heroTitle">' + (t(p.headline) || t(p.title)).split("\n").map(function (ln) { return "<span>" + esc(ln) + "</span>"; }).join("") + "</h1>" +
+              '<p class="hero__sub">' + esc(t(p.subtitle)) + "</p>" +
+            "</div>" +
+            '<div class="shelfwrap">' +
+              '<ul class="shelf" id="hubShelf" aria-label="' + (en ? "The shelf: eleven OWASP flagship projects" : "書架：十一個 OWASP 旗艦專案") + '">' + spines + "</ul>" +
+              '<div class="board" aria-hidden="true"></div>' +
+              legend("hubChips", countByCat(list)) +
+            "</div>" +
+          "</section>" +
+          '<section class="catalogue" aria-labelledby="catTitle">' +
+            '<div class="catalogue__head">' +
+              '<div><h2 id="catTitle">' + (en ? "The card catalogue" : "館藏目錄卡") + "</h2>" +
+              '<p class="catalogue__note">' + (en ? "One card per project. Open a card for the full entry." : "一個專案一張卡，點開看完整條目。") + "</p></div>" +
+              searchBox("hubSearch", en ? "Search the catalogue…" : "搜尋館藏…") +
+              '<p class="result-count" id="hubCount" aria-live="polite"></p>' +
+            "</div>" +
+            '<div class="cards" id="hubGrid">' + list.map(indexCard).join("") + registerCard() + "</div>" +
+          "</section>";
       },
 
       /* ---- gallery: search + chips + card grid + dialog ---- */
@@ -176,8 +305,7 @@
             if (b.type === "links") {
               var ls = (b.links || []).map(function (l) {
                 return '<li><a class="reslink" href="' + esc(l.url) + '" target="_blank" rel="noopener">' +
-                  '<span class="material-symbols-rounded" aria-hidden="true">open_in_new</span>' +
-                  "<span>" + esc(t(l.label)) + "</span></a></li>";
+                  "<span>" + esc(t(l.label)) + "</span>" + ext + "</a></li>";
               }).join("");
               return '<ul class="reslinks">' + ls + "</ul>";
             }
@@ -187,12 +315,13 @@
             'aria-labelledby="' + esc(s.id) + '-h"><h2 id="' + esc(s.id) + '-h">' + esc(t(s.heading)) + "</h2>" + blocks + "</section>";
         }).join("");
         return '<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>' +
-          head(p) +
-          metaStrip(p.meta) +
+          catCard(p) +
           '<div class="article-layout">' +
-            '<nav class="toc" aria-label="Contents"><div class="toc__inner">' + toc + "</div></nav>" +
+            '<nav class="toc" aria-label="' + (en ? "Contents" : "目次") + '"><p class="toc__title">' + (en ? "Contents" : "本篇目次") + "</p>" +
+              '<div class="toc__inner">' + toc + "</div></nav>" +
             '<div class="article-body prose">' + body + "</div>" +
-          "</div>";
+            related(p) +
+          "</div>" + pager(p);
       },
 
       /* ---- dashboard: stat cards + bar + line + table ---- */
@@ -240,16 +369,16 @@
         return head(p) + '<ol class="timeline">' + items + "</ol>";
       },
 
-      /* ---- table: searchable + sortable ---- */
+      /* ---- table: the accession register — filter by shelf, search, sort ---- */
       table: function (p) {
-        return head(p) +
-          '<div class="toolbar">' +
-            '<input id="search" class="search" type="search" autocomplete="off" ' +
-              'placeholder="' + (L.state.lang === "en" ? "Search…" : "搜尋…") + '" ' +
-              'aria-label="' + (L.state.lang === "en" ? "Search" : "搜尋") + '" />' +
-            '<div class="chips" id="tableChips"></div>' +
-          "</div>" +
-          '<div class="table-wrap"><table class="data-table" id="dataTable"><thead></thead><tbody></tbody></table></div>';
+        var rows = p.rows || [];
+        var counts = {}; rows.forEach(function (row) { counts[row.catKey] = (counts[row.catKey] || 0) + 1; });
+        return '<header class="page-head"><h1>' + esc(t(p.title)) + "</h1>" +
+            (t(p.subtitle) ? '<p class="page-head__sub">' + esc(t(p.subtitle)) + "</p>" : "") + "</header>" +
+          '<div class="toolbar">' + legend("tableChips", counts) + searchBox("search", en ? "Search the register…" : "搜尋對照表…") + "</div>" +
+          '<div class="table-scroll" tabindex="0" role="region" aria-label="' + esc(t(p.title)) + '">' +
+            '<table class="register" id="dataTable"><thead></thead><tbody></tbody></table></div>' +
+          '<p class="scroll-hint">' + (en ? "Swipe the table sideways to see every column." : "表格可左右滑動，看完所有欄位。") + "</p>";
       },
 
       /* ---- bento: asymmetric tile grid ---- */
@@ -359,51 +488,45 @@
        ===================================================================== */
     var WIRE = {
       hub: function (p) {
-        animateCounters();
         var grid = document.getElementById("hubGrid");
         var search = document.getElementById("hubSearch");
         var count = document.getElementById("hubCount");
-        var chips = [].slice.call(pageEl.querySelectorAll("#hubChips .chip"));
-        var projects = L.pages.filter(function (q) { return q.slug !== "home" && q.category; });
-        var catLabel = {};
-        (p.categories || []).forEach(function (c) { catLabel[c.key] = { en: c.en, zh: c.zh }; });
+        var shelf = document.getElementById("hubShelf");
+        var list = projects();
         var st = { q: "", cat: "" };
 
         function matches(q) {
           if (st.cat && q.category !== st.cat) return false;
           if (!st.q) return true;
-          var cl = catLabel[q.category] || {};
-          var hay = (t(q.title) + " " + t(q.subtitle) + " " + (q.tags || []).join(" ") +
-            " " + (cl.en || "") + " " + (cl.zh || "")).toLowerCase();
+          var hay = (t(q.title) + " " + t(q.subtitle) + " " + (q.tags || []).join(" ") + " " + (q.callno || "") + " " +
+            (q.short || "") + " " + catLabel(q.category)).toLowerCase();
           return hay.indexOf(st.q) !== -1;
         }
         function paint() {
-          var rows = projects.filter(matches);
-          grid.innerHTML = rows.map(function (q) {
-            var tags = (q.tags || []).slice(0, 4).map(function (g) { return '<span class="tag">' + esc(g) + "</span>"; }).join("");
-            var cl = catLabel[q.category] || {};
-            return '<a class="card card--proj" data-item href="' + esc(L.pageHref(q)) + '" ' +
-                'aria-label="' + esc(t(q.title)) + '">' +
-              '<span class="card__top">' +
-                '<span class="material-symbols-rounded card__icon" aria-hidden="true">' + esc(q.icon || "label") + "</span>" +
-                '<span class="card__cat">' + esc(cl[L.state.lang] || cl.en || "") + "</span>" +
-              "</span>" +
-              '<h3 class="card__title">' + esc(t(q.title)) + "</h3>" +
-              '<p class="card__summary">' + esc(t(q.subtitle)) + "</p>" +
-              (tags ? '<div class="card__tags">' + tags + "</div>" : "") + "</a>";
-          }).join("");
-          if (count) count.textContent = rows.length + (L.state.lang === "en" ? " project(s)" : " 個專案");
+          var rows = list.filter(matches), hit = {}, filtered = !!(st.q || st.cat);
+          rows.forEach(function (q) { hit[q.slug] = true; });
+          grid.innerHTML = (rows.length ? rows.map(indexCard).join("") :
+            '<p class="cards__empty">' + (en ? "No card matches. Try another word or pick “All”." : "沒有符合的目錄卡，換個關鍵字或選「全部」。") + "</p>") +
+            (filtered ? "" : registerCard());
+          shelf.classList.toggle("shelf--filtered", filtered);
+          [].forEach.call(shelf.querySelectorAll(".spine"), function (a) {
+            var slug = a.getAttribute("href").replace(/\.html$/, "");
+            a.classList.toggle("is-match", !!hit[slug]);
+          });
+          if (count) count.textContent = filtered ?
+            (en ? rows.length + " of " + list.length + " cards" : "符合 " + rows.length + " 張，共 " + list.length + " 張") : "";
         }
         if (search) search.addEventListener("input", function () { st.q = this.value.trim().toLowerCase(); paint(); });
-        chips.forEach(function (chip) {
-          chip.addEventListener("click", function () {
-            chips.forEach(function (c) { c.classList.remove("chip--active"); });
-            chip.classList.add("chip--active");
-            st.cat = chip.dataset.cat || "";
-            paint();
-          });
-        });
+        var select = wireLegend(document.getElementById("hubChips"), function (cat) { st.cat = cat; paint(); });
+        /* #shelf-<category> deep links (used by the category link on project pages) */
+        function fromHash() {
+          var m = /^#shelf-(.+)$/.exec(location.hash);
+          if (m && ["guide", "ai", "supply-chain", "tool"].indexOf(m[1]) !== -1) select(m[1]);
+        }
+        window.addEventListener("hashchange", fromHash);
+        teardowns.push(function () { window.removeEventListener("hashchange", fromHash); });
         paint();
+        fromHash();
       },
 
       gallery: function (p) {
@@ -518,24 +641,40 @@
         var table = document.getElementById("dataTable");
         var thead = table.querySelector("thead"), tbody = table.querySelector("tbody");
         var search = document.getElementById("search");
-        var chipsBox = document.getElementById("tableChips");
+        var rows = p.rows || [];
         var cols = p.columns || [];
-        var st = { q: "", filter: "", sortKey: null, dir: 1 };
-        var filterCol = cols.filter(function (c) { return c.filter; })[0];
+        var st = { q: "", cat: "", sortKey: null, dir: 1 };
+        var bySlug = {}; projects().forEach(function (q) { bySlug[q.slug] = q; });
 
         function cellText(row, c) { var v = row[c.key]; return typeof v === "object" ? t(v) : String(v == null ? "" : v); }
         function rowMatches(row) {
-          if (filterCol && st.filter && cellText(row, filterCol) !== st.filter) return false;
+          if (st.cat && row.catKey !== st.cat) return false;
           if (!st.q) return true;
-          return cols.some(function (c) { return cellText(row, c).toLowerCase().indexOf(st.q) !== -1; });
+          return cols.some(function (c) { return cellText(row, c).toLowerCase().indexOf(st.q) !== -1; }) ||
+            ((bySlug[row.slug] || {}).callno || "").toLowerCase().indexOf(st.q) !== -1;
+        }
+        function cell(row, c) {
+          var q = bySlug[row.slug] || {};
+          if (c.key === "name") {
+            return '<th scope="row" class="col-name"><a class="reg-name cat-' + esc(row.catKey) + '" href="' + esc(row.slug ? row.slug + ".html" : "#") + '">' +
+              '<span class="reg-name__dot" aria-hidden="true"></span><span><span class="reg-name__t">' + esc(cellText(row, c)) + "</span>" +
+              '<span class="reg-name__c">' + esc(q.callno || "") + "</span></span></a></th>";
+          }
+          if (c.key === "cat") return '<td class="col-cat"><span class="reg-cat cat-' + esc(row.catKey) + '">' + esc(cellText(row, c)) + "</span></td>";
+          if (c.type === "link") {
+            var u = row[c.key];
+            return '<td class="col-url"><a class="reg-link" href="' + esc(u) + '" target="_blank" rel="noopener" title="' + esc(u) + '">' + esc(host(u)) + ext + "</a></td>";
+          }
+          return '<td class="col-' + esc(c.key) + '">' + esc(cellText(row, c)) + "</td>";
         }
         function paintHead() {
           thead.innerHTML = "<tr>" + cols.map(function (c) {
-            var arrow = st.sortKey === c.key ? (st.dir > 0 ? " ▲" : " ▼") : "";
-            return '<th class="th-sort" data-key="' + esc(c.key) + '" role="button" tabindex="0" aria-label="Sort by ' +
-              esc(t(c.label)) + '">' + esc(t(c.label)) + esc(arrow) + "</th>";
+            var on = st.sortKey === c.key;
+            return '<th scope="col" class="col-' + esc(c.key) + '" data-key="' + esc(c.key) + '" tabindex="0" aria-sort="' +
+              (on ? (st.dir > 0 ? "ascending" : "descending") : "none") + '">' + esc(t(c.label)) +
+              '<span class="sort" aria-hidden="true">' + (on ? (st.dir > 0 ? "↑" : "↓") : "") + "</span></th>";
           }).join("") + "</tr>";
-          [].forEach.call(thead.querySelectorAll(".th-sort"), function (th) {
+          [].forEach.call(thead.querySelectorAll("th"), function (th) {
             th.addEventListener("click", function () { sortBy(th.dataset.key); });
             th.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); sortBy(th.dataset.key); } });
           });
@@ -547,39 +686,13 @@
         function paint() {
           paintHead();
           var col = cols.filter(function (c) { return c.key === st.sortKey; })[0];
-          var rows = (p.rows || []).filter(rowMatches).slice();
-          if (col) {
-            rows.sort(function (a, b) {
-              var va = a[col.key], vb = b[col.key];
-              if (col.type === "num") return (Number(va) - Number(vb)) * st.dir;
-              return String(typeof va === "object" ? t(va) : va).localeCompare(String(typeof vb === "object" ? t(vb) : vb)) * st.dir;
-            });
-          }
-          tbody.innerHTML = rows.map(function (row) {
-            return "<tr data-item>" + cols.map(function (c) {
-              if (c.type === "link") {
-                var u = row[c.key];
-                return '<td><a class="row-link" href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(u) + "</a></td>";
-              }
-              return "<td>" + esc(cellText(row, c)) + "</td>";
-            }).join("") + "</tr>";
-          }).join("");
+          var list = rows.filter(rowMatches).slice();
+          if (col) list.sort(function (a, b) { return cellText(a, col).localeCompare(cellText(b, col)) * st.dir; });
+          tbody.innerHTML = list.length ? list.map(function (row) {
+            return "<tr>" + cols.map(function (c) { return cell(row, c); }).join("") + "</tr>";
+          }).join("") : '<tr><td colspan="' + cols.length + '">' + (en ? "No project matches." : "沒有符合的專案。") + "</td></tr>";
         }
-        if (filterCol) {
-          var vals = [];
-          (p.rows || []).forEach(function (row) { var v = cellText(row, filterCol); if (vals.indexOf(v) === -1) vals.push(v); });
-          var allLabel = L.state.lang === "en" ? "All" : "全部";
-          chipsBox.innerHTML = '<button class="chip chip--active" type="button" data-v="">' + esc(allLabel) + "</button>" +
-            vals.map(function (v) { return '<button class="chip" type="button" data-v="' + esc(v) + '">' + esc(v) + "</button>"; }).join("");
-          [].forEach.call(chipsBox.querySelectorAll(".chip"), function (chip) {
-            chip.addEventListener("click", function () {
-              [].forEach.call(chipsBox.querySelectorAll(".chip"), function (c) { c.classList.remove("chip--active"); });
-              chip.classList.add("chip--active");
-              st.filter = chip.dataset.v || "";
-              paint();
-            });
-          });
-        }
+        wireLegend(document.getElementById("tableChips"), function (cat) { st.cat = cat; paint(); });
         if (search) search.addEventListener("input", function () { st.q = this.value.trim().toLowerCase(); paint(); });
         paint();
       },
@@ -731,7 +844,7 @@
       var p = L.currentPage();
       if (!p) { pageEl.innerHTML = '<p class="empty">No page data.</p>'; return; }
       var fn = RENDERERS[p.layout] || RENDERERS.gallery;
-      pageEl.className = "page page--" + p.layout;
+      pageEl.className = "page page--" + p.layout + (p.category ? " cat-" + p.category : "");
       pageEl.innerHTML = fn(p);
       var w = WIRE[p.layout];
       if (w) w(p);
