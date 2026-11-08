@@ -2,7 +2,9 @@
 
 > 一個詳盡、雙語(中 / EN)、可互動的純靜態網站,整理 OWASP 十一個旗艦(Flagship)專案——定義現代應用程式安全的標準、指南與工具。
 
-本站把 OWASP 官方資料整理成「一個總覽首頁 + 每個專案一頁深入解說 + 一張跨專案對照表」。內容於 **2026 年 6 月**由各專案**官方來源**擷取整理(含最新版本資訊,如 Top 10:2025、ASVS 5.0、CycloneDX 1.7 / ECMA-424、LLM Top 10:2025 等),並保留官方連結。採零建置(zero-build)的 HTML / CSS / JS + Material Design 3 技術棧,可直接部署到 GitHub Pages。
+本站把 OWASP 官方資料整理成「一個總覽首頁 + 每個專案一頁深入解說 + 一張跨專案對照表」。內容於 **2026 年 6 月**由各專案**官方來源**擷取整理(含最新版本資訊,如 Top 10:2025、ASVS 5.0、CycloneDX 1.7 / ECMA-424、LLM Top 10:2025 等),並保留官方連結。採零建置(zero-build)的 HTML / CSS / JS,可直接部署到 GitHub Pages。
+
+視覺上把 11 個專案當成一座資安標準圖書館的館藏：首頁是一排依分類上色的書背（指南與標準=藏青、AI 安全=梅紫、供應鏈 / SBOM=森林綠、工具=磚紅），下方是館藏目錄卡；每個專案頁的開頭是一張圖書館目錄卡（索書號、版次、授權），同一個分類色會跟著專案出現在書背、卡片邊條、對照表與頁首。字體為 Source Serif 4 / Noto Serif TC（標題）、IBM Plex Sans / Noto Sans TC（內文）與 IBM Plex Mono（索書號）。
 
 ---
 
@@ -56,14 +58,14 @@
 
 ```
 owasp/
-├── index.html              # 中文首頁(hub:搜尋 + 分類 + 專案卡片)
+├── index.html              # 中文首頁(書架 + 分類篩選 + 館藏目錄卡)
 ├── compare.html            # 專案對照表(可排序 / 篩選)
 ├── <slug>.html             # 11 個專案各自的詳情頁(article)
 ├── en/                     # 同樣 13 頁的英文版,一個網址一種語言
 ├── sitemap.xml             # 中英兩種語言的 26 個網址
 ├── assets/
-│   ├── styles.css          # MD3 設計 token + 元件樣式
-│   ├── shell.js            # 共用 chrome:app bar / 跨頁導覽 / footer / dialog / 語言・主題
+│   ├── styles.css          # 設計 token(紙張 / 墨色 / 四個分類色)+ 元件樣式
+│   ├── shell.js            # 共用 chrome:app bar(首頁・對照表・專案選單)/ footer / 語言・主題
 │   └── app.js              # 版型引擎:依 data-page 選 renderer 渲染
 ├── data/
 │   ├── data.js             # 產生的資料層(window.SITE_META + SITE_PAGES)— 勿手改
@@ -129,4 +131,4 @@ uv run --with playwright python <skill>/scripts/verify.py --dir .
 
 ---
 
-<sub>純靜態網站 · Material Design 3。</sub>
+<sub>純靜態網站 · 零建置。</sub>
